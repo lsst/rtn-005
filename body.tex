@@ -2,12 +2,12 @@
 
 This document provides a guide to the \VRO approach to project management.
 See also the the operations proposal \citeds{LDO-31}
-In operations there is no Primavera and no \gls{EVMS}.
+In operations there is no \gls{Primavera} and no \gls{EVMS}.
 
 \section{Useful Contacts}
 \label{sec:contacts}
 
-The \RO Director is Robert Blum and the Deputy Director  is Amanda Bauer.
+The \RO \gls{Director} is Robert Blum and the Deputy \gls{Director}  is Amanda Bauer.
 They are the first point of contact for all issues regarding project management within \RO.
 
 
@@ -32,7 +32,7 @@ Thus:
 \gls{WBS} & Description & Lead\tabularnewline
 \hline
 \endhead
-NUM & DESC  & Lead\tabularnewline
+NUM & \gls{DESC}  & Lead\tabularnewline
 \hline
 \end{longtable}
 
@@ -51,7 +51,7 @@ Structure}\label{organization-breakdown-structure}
 
 A \gls{CA} is the intersection between the \gls{WBS} and the \gls{OBS}.
 Each \gls{CA} falls under the purview of a \gls{CAM}.
-Typically within DM, a single \gls{CAM} is responsible for the whole of a third level \gls{WBS}.
+Typically within \gls{DM}, a single \gls{CAM} is responsible for the whole of a third level \gls{WBS}.
 That is, the manager at the lead institution for a particular component is responsible for all work performed on that \gls{WBS} \gls{element}, even if some of that work is performed at another institution.
 
 \subsection{Level of Effort Work}
@@ -68,7 +68,7 @@ However, in certain cases such as operations of pipelines or other systems, \gls
 Our first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
 However, as above, we generally aspire to minimize the fraction of \gls{LOE}: T/CAMs are therefore encouraged to explicitly schedule as much developer time as is possible.
 
-Note that all \gls{LOE} work should be invoiced to the ``00'' fourth-level \gls{WBS} element (1.02C.03.00, 1.02C.04.00, etc)
+Note that all \gls{LOE} work should be invoiced to the ``00'' fourth-level \gls{WBS} \gls{element} (1.02C.03.00, 1.02C.04.00, etc)
 
 \section{Estimating Effort}
 \label{sec:effort}
@@ -77,13 +77,13 @@ Note that all \gls{LOE} work should be invoiced to the ``00'' fourth-level \gls{
 The Project assumes that a full-time individual works for a total of
 1,800 hours per year: this figure is \emph{after} all vacations, sick
 leave, etc are taken into account. Staff appointed to ``developer''
-positions are expected to devote this effort directly to LSST.
+positions are expected to devote this effort directly to \gls{LSST}.
 
 Appointment as a ``scientist'' includes a 20\% personal research time
 allowance. That is, scientists are expected to devote 1,440 hours per
-year to LSST, and the remainder of their time to personal research.
+year to \gls{LSST}, and the remainder of their time to personal research.
 
-Personal research time is \emph{not} chargeable to LSST under any \gls{WBS} or
+Personal research time is \emph{not} chargeable to \gls{LSST} under any \gls{WBS} or
 account, including level of effort. The Project expects to pay the full
 rate for an individual with research time who contributes 1,440 hours to
 the project, and does not require any accounting of the remaining 360
@@ -95,21 +95,21 @@ be helpful to consider the following examples:
 A developer for which the total annual cost (salary, overheads, etc) is
 \(A\) charges an hourly rate of \(A / 1800\).
 
-A scientist with total annual cost \(B\) charges an hourly rate of
-\(B / 1440\).
+A scientist with total annual cost \(\gls{B}\) charges an hourly rate of
+\(\gls{B} / 1440\).
 
 No further corrections are necessary. In particular, there is no
 difference in the way working hours are measured, or the conversion of
 \glspl{SP} to hours.
 
-Our base assumption is that 30\% of an individual's LSST time (i.e. 540 hours/year for a developer, 432 hours/year for a scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
+Our base assumption is that 30\% of an individual's \gls{LSST} time (i.e. 540 hours/year for a developer, 432 hours/year for a scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
 This work is counted as \gls{LOE} (and, as such, is charged to the relevant ``00'' fourth level \gls{WBS} \gls{element}, as described in \S\ref{sec:loe}).
 It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
 
 Assuming no variation throughout the year, we therefore expect 105 hours of productive work from a developer, or 84 hours from a scientist, per month.
 Note that this is averaged across the year: some months, such as those containing major holidays, will naturally involve less working time than others: the remainder will necessarily include more working time to compensate.
 
-Rather than working in hours, our Jira based system uses Story Points (SP), with one SP being defined as equivalent to four hours of effort by a competent developer.
+Rather than working in hours, our Jira based system uses Story Points (\gls{SP}), with one \gls{SP} being defined as equivalent to four hours of effort by a competent developer.
 Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per \emph{average} month respectively.
 
 \begin{table}
@@ -131,12 +131,12 @@ Scientist & 1440     &  84            & 21.00 \\
 \subsubsection{Newcomers}
 \label{sec:newcomers}
 
-New or inexperienced developers, even when devoting their full attention to story-pointed work, will likely be less productive than their more experienced peers.
+New or inexperienced developers, even when devoting their full attention to \gls{story}-pointed work, will likely be less productive than their more experienced peers.
 In this case, the ratio of hours to \glspl{SP} increases, but the number of hours remains constant.
 
 Note that specific activities related on ``onboarding'' and getting up to speed with the project can be ticketed as regular work.
 For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{SP}.
-Typically, this will assigned to the ``00'' (management) element of the \gls{WBS} (\S\ref{sec:wbs}).
+Typically, this will assigned to the ``00'' (management) \gls{element} of the \gls{WBS} (\S\ref{sec:wbs}).
 
 \subsubsection{Technical Managers and other Leadership Roles}
 
@@ -154,7 +154,7 @@ The plan for the duration of construction is embodied in:
 \item
   A series of \emph{epic}, which describe major pieces of
   technical work. Epics are associated with concrete, albeit
-  high-level, deliverables (in the shape of milestones, below), and have
+  high-level, deliverables (in the \gls{shape} of milestones, below), and have
   specific resource loads (staff assignments), start dates, and
   durations.
 \item
@@ -179,7 +179,7 @@ specified by a single team lead/technical manager.
 
 Some of these are exposed to external reviewers: it is vital that these
 be delivered on time and to specification. Low-level milestones are
-defined for use within DM, but even here properly adhering to the plan
+defined for use within \gls{DM}, but even here properly adhering to the plan
 is vital: your colleagues in other teams will use these milestones to
 align their schedules with yours, so they rely on you to be accurate.
 
@@ -290,7 +290,7 @@ to meet our objectives. However, it is not a natural fit to our usual
 planning process, as it is speculative in its nature: it is often
 impossible to produce a series of logical steps that will lead to the
 required result. We acknowledge, therefore, that scheduling an \gls{epic} to
-deliver some particular new algorithm based on the results of research
+deliver some particular new \gls{algorithm} based on the results of research
 is impossible: we cannot predict with any confidence when the
 breakthrough will occur.
 
@@ -332,7 +332,7 @@ Obviously, this will impact the labor available for other activities in the next
 \label{sec:execution}
 
 Having defined defined the plan for a \gls{cycle} following \S\ref{sec:cycle-plan}, we execute it by means of a series of month-long sprints.
-In this section, we detail the procedures teams are expected to follow during the cycle.
+In this section, we detail the procedures teams are expected to follow during the \gls{cycle}.
 
 \subsection{Defining Stories}
 \label{sec:defining-stories}
@@ -404,7 +404,7 @@ Broadly, executing a sprint falls into three stages:
   not the total time invested.
   However, we should \textit{also} record the true \glspl{SP} expended on the issue.
   This makes it possible to review the quality of our estimates at the end of the sprint.
-  Each individual, with guidance from their T/CAM, should use this information as they strive to improve the accuracy of their planning and estimating.
+  Each individual, with guidance from their \gls{T/CAM}, should use this information as they strive to improve the accuracy of their planning and estimating.
 
   Avoid adding more stories to a sprint in progress unless it is
   unavoidable (for example, the \gls{story} describes a critical bug that must
@@ -413,7 +413,7 @@ Broadly, executing a sprint falls into three stages:
   stories may be pushed out of a sprint as soon as it is obvious it is
   unrealistic to expect them to be completed.
 \item
-  Review.
+  \gls{Review}.
 
   At the end of the sprint, step back and consider what has been
   achieved. What worked well? What did not? How can these problems be
@@ -435,7 +435,7 @@ configured for either
 \href{https://en.wikipedia.org/wiki/Scrum_(software_development)}{Scrum}
 or \href{https://en.wikipedia.org/wiki/Kanban_(development)}{Kanban}
 style work as appropriate: the former is suitable for planned
-development activities (e.g. Science Pipelines development); the latter
+development activities (e.g. \gls{Science Pipelines} development); the latter
 for servicing user requests (e.g. providing developer support).
 
 \subsection{Closing Epics}
@@ -495,9 +495,9 @@ Please remind your team of the best practice in this respect (\jira{RFC-147}).
 It is the responsibility of technical managers to ensure that new tickets are handled appropriately, updating the schedule to include them where necessary.
 
 It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
-This indicates which manager is responsible for seeing that the work is completed successfully.
+This indicates which manager is responsible for \gls{seeing} that the work is completed successfully.
 Available teams, and the associated managers, are listed in the \href{https://developer.lsst.io/processes/jira_agile.html}{Developer Guide}; generally speaking, they align with the the work breakdown structure described in \S\ref{sec:wbs}.
-Where there is uncertainty about which team should be responsible for a particular ticket, the “System Management” team may be used to indicate that the DM Project Manager is responsible for assigning the work.
+Where there is uncertainty about which team should be responsible for a particular ticket, the “System Management” team may be used to indicate that the \gls{DM} \gls{Project Manager} is responsible for assigning the work.
 
 Please regularly monitor \gls{JIRA} for incomplete tickets and update them appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
@@ -521,18 +521,18 @@ be aware of
 
 \begin{itemize}
 \item
-  The LSST \href{https://project.lsst.org/onboarding}{New Employee
+  The \gls{LSST} \href{https://project.lsst.org/onboarding}{New Employee
   Onboarding} material, and
 \end{itemize}
 
 and direct new recruits to them when they join your team\footnote{As per \S\ref{sec:newcomers}, remember that newcomers should be allocated \glspl{SP} for working through this material.}.
 
 The responsible hirere must also complete an \href{https://project.lsst.org/onboarding/form}{onboarding form} for the new recruit.
-When members of staff team leave the project, the T/CAM should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
+When members of staff team leave the project, the \gls{T/CAM} should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
 
 
 \section{Opne issues}
 
 \begin{itemize}
-\item Kanban for LOE operations work
+\item Kanban for \gls{LOE} operations work
 \end{itemize}
