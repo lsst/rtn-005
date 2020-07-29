@@ -17,6 +17,8 @@ one.*
 *.fot
 *.cb
 *.cb2
+*.xdv
+*.old
 
 
 ## Intermediate documents:
