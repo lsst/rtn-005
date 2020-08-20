@@ -1,21 +1,34 @@
 \section{Introduction}
 
-This document provides a guide to the \VRO approach to project management.
+This document provides a guide to the \VRO  approach to project management.
 See also the the operations proposal \citeds{LDO-31}
-In operations there is no \gls{Primavera} and no \gls{EVMS}.
+In operations, there is no \gls{Primavera} or \gls{EVMS} as there are for the Rubin Construction Project.
+
+There are a few main ways work will be managed, all within an Agile framework. The Agile method is a set of practices that allow the ability to adapt and respond to change through collaboration between self-managing, cross-functional teams.  We focus on the people doing the work and how they work together, instead of organizing the program into functional silos.  
+
+This framework allows the multidisciplinary Rubin team to operate the facility and generate nightly data products while continuously improving efficiency of workflows ('kanban' style), as well as iteratively responding to user feedback on a longer timescale to maximize the scientific benefit of annual data releases ('scrum' style).  
+
+Some examples that will use the kanban style are the daily functionality checks needed for nightly operations of the telescope or the regular monitoring of progress toward achieving milestones and reporting to governing organizations. For either of these examples, we will maintain a set of tasks that need to be performed in sequence every cycle.  Each task could be described individually inside a JIRA ticket and grouped together in a set, so that any person doing the daily checks, for example, could be assigned the set of tasks, open the tickets, comment on results, pass additional work onto others as needed, and mark the tickets done as the work is completed. In this way, the completion of the checklist of tasks is transparent and traceable and can be monitored, and the efficiency of the steps in the flow of work can be improved upon continuously. 
+
+Examples of scrum-like work include improving algorithms in response to user community feedback and other incremental work needed to produce the annual data releases.
+
+In this document, we lay out the procedural details for how we define and carry out plans, following the framework described above, to deliver on our milestones, maintain visibility in our workflows, remain responsive to change, and offer staff the ability to innovate and collaborate. 
+
 
 \section{Useful Contacts}
 \label{sec:contacts}
 
-The \RO \gls{Director} is Robert Blum and the Deputy \gls{Director}  is Amanda Bauer.
+The \RO Acting \gls{Director}  is Robert Blum and the Interim Deputy \gls{Director}  is Amanda Bauer.
 They are the first point of contact for all issues regarding project management within \RO.
 
 
 The  Project Controls Specialist is Cathy Petry.
-She keeps on top of our budgets and how the fit in WeBud the NOIRLab budgeting system and milestones and reporting.
+She monitors the budgets and maintains details within WeBud, the NOIRLab budgeting system. She assists in tracking milestones and reporting.
 
 \section{Associate Directors}
 \label{sec:tcam}
+
+Rubin Operations has four operational Departments and the Director’s Office: RDO (Rubin Director’s Office), ROO (Rubin Observatory Operations), RDP (Rubin Data Production), RSP (Rubin System Performance), and REO (Rubin Education and Public Outreach). Each operational Department is lead by an Associate Director.
 
 \section{Formal Organizational Structure}
 \label{sec:structure}
@@ -51,16 +64,15 @@ Structure}\label{organization-breakdown-structure}
 
 A \gls{CA} is the intersection between the \gls{WBS} and the \gls{OBS}.
 Each \gls{CA} falls under the purview of a \gls{CAM}.
-Typically within \gls{DM}, a single \gls{CAM} is responsible for the whole of a third level \gls{WBS}.
+Typically within Data Production, a single \gls{CAM} is responsible for the whole of a third level \gls{WBS}.
 That is, the manager at the lead institution for a particular component is responsible for all work performed on that \gls{WBS} \gls{element}, even if some of that work is performed at another institution.
 
 \subsection{Level of Effort Work}
 \label{sec:loe}
 
-The implicit assumption in the earned value technique outlined above is that all work corresponds to a specific deliverable.
-However, parts of our work do not: every member of the team will find it necessary to attend meetings or take part in other activities which do not directly map to deployed code.
+There is work throughout Operations that will be recorded as a \gls{LOE}. These activities include attending meetings, reporting on milestones or taking part in other activities which do not directly map to deployed code.
 This may be particularly the case for technical managers or others in leadership roles within the project.
-This work is referred to as \gls{LOE}: it is assumed to earn value simply through the passage of time.
+With \gls{LOE} work is assumed to earn value simply through the passage of time.
 
 In general, we strive to minimize the fraction of our effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
 However, in certain cases such as operations of pipelines or other systems, \gls{LOE} is perfectly acceptable.
@@ -92,7 +104,7 @@ hours.
 When reporting actual costs (\S\ref{sec:actuals}), it may
 be helpful to consider the following examples:
 
-A developer for which the total annual cost (salary, overheads, etc) is
+A developer or technician for which the total annual cost (salary, overheads, etc) is
 \(A\) charges an hourly rate of \(A / 1800\).
 
 A scientist with total annual cost \(\gls{B}\) charges an hourly rate of
@@ -148,11 +160,11 @@ The ratio of hours to \glspl{SP} remains constant, but the number of hours decre
 
 The authoritative summary of the long-term planning system make be found in ...
 Here we expand upon the details of that system.
-The plan for the duration of construction is embodied in:
+The plan for pre-operations and Survey Operations is embodied in:
 
 \begin{enumerate}
 \item
-  A series of \emph{epic}, which describe major pieces of
+  A series of \emph{epics}, which describe major pieces of
   technical work. Epics are associated with concrete, albeit
   high-level, deliverables (in the \gls{shape} of milestones, below), and have
   specific resource loads (staff assignments), start dates, and
@@ -168,24 +180,23 @@ Milestones are allocated to one of four levels, defined as follows:
 
 \begin{description}
 \item[Level 1]
-These are at the full observatory level owend by the directors office
+These are at the full observatory level owned by the directors office
 \item[Level 2]
 These reflect cross department commitments. As such, they must be defined
-in consultation with the directors office
+in consultation with the Director's Office
 \item[Level 3]
-These are internal to a particular department and assigned to a team  and can therefore be
-specified by a single team lead/technical manager.
+These are internal to a particular Department and assigned to a team  and can therefore be specified by a single team lead.
 \end{description}
 
 Some of these are exposed to external reviewers: it is vital that these
 be delivered on time and to specification. Low-level milestones are
-defined for use within \gls{DM}, but even here properly adhering to the plan
+defined for use within Departments, but even here properly adhering to the plan
 is vital: your colleagues in other teams will use these milestones to
 align their schedules with yours, so they rely on you to be accurate.
 
 Epics should help achieve milestones i.e. they may be blocking issues on the milestones.
 A detailed description of work for a given \gls{epic} is known, it can and should be described in \gls{JIRA}.
-This shoudl be assigned to the appropriate \glspl{cycle}.
+This should be assigned to the appropriate \glspl{cycle}.
 
 
 
@@ -211,13 +222,13 @@ carefully controlled.
 \label{sec:cycle-plan}
 
 Short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
-Before the start of a \gls{cycle}, \ldots
+Before the start of a \gls{cycle}, milestones should be confirmed by the Director's Office.
 
 \subsection{Defining The Plan}
 
 \subsubsection{Scoping Work}
 
-The first essential step of developing the short term plan is to produce an outline of the programme of work to be executed.
+The first essential step of developing the short term plan is to produce an outline of the program of work to be executed.
 In general, this should flow directly from the long term plan (\S\ref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
 
 While developing the \gls{cycle}, please:
@@ -531,7 +542,7 @@ The responsible hirere must also complete an \href{https://project.lsst.org/onbo
 When members of staff team leave the project, the \gls{T/CAM} should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
 
 
-\section{Opne issues}
+\section{Open issues}
 
 \begin{itemize}
 \item Kanban for \gls{LOE} operations work
