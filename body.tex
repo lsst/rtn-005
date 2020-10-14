@@ -1,23 +1,32 @@
 \section{Introduction}
 
+
 This document provides a guide to the \VRO \   approach to annual planning.
 See also the the operations proposal \citeds{LDO-31}
 In operations, there is no \gls{Primavera} or \gls{EVMS} as there are for the Rubin Construction Project.
 
-There are a few main ways work will be managed, some within an Agile framework (particularly for data release planning). The Agile method is a set of practices that allow the ability to adapt and respond to change through collaboration between self-managing, cross-functional teams.  To the extent possible, we focus on the people doing the work and how they work together. 
+There are a few main ways work will be managed, some within an Agile framework (particularly for data release planning). 
+The Agile method is a set of practices that allow the ability to adapt and respond to change through collaboration between self-managing, cross-functional teams.  
+To the extent possible, we focus on the people doing the work and how they work together. 
 
-This framework allows the multidisciplinary Rubin team to operate the facility and generate nightly data products while continuously improving efficiency of workflows ('kanban' style\footnote{Kanban is a visual system for managing work as it moves through a process. Kanban is a concept related to lean and just-in-time (JIT) production, where it is used as a scheduling system that tells you what to produce, when to produce it, and how much to produce.}), as well as iteratively responding to user feedback on a longer timescale to maximize the scientific benefit of annual data releases ('scrum' style\footnote{https:\/\/en.wikipedia.org\/wiki\/Scrum\_(software\_development)}).  
+This framework allows the multidisciplinary Rubin team to operate the facility and generate nightly data products while continuously improving efficiency of workflows (``Kanban'' style\footnote{Kanban is a visual system for managing work as it moves through a process. 
+Kanban is a concept related to lean and just-in-time (JIT) production, where it is used as a scheduling system that tells you what to produce, when to produce it, and how much to produce.}), 
+as well as iteratively responding to user feedback on a longer timescale to maximize the scientific benefit of annual data releases (``scrum'' style\footnote{https:\/\/en.wikipedia.org\/wiki\/Scrum\_(software\_development)}).  
 
-Some examples that will use the kanban style are the daily functionality checks needed for nightly operations of the telescope or the regular monitoring of progress toward achieving milestones and reporting to governing organizations. For either of these examples, we will maintain a set of tasks that need to be performed in sequence every cycle.  Each task could be described individually inside a JIRA ticket and grouped together in a set, so that any person doing the daily checks, for example, could be assigned the set of tasks, open the tickets, comment on results, pass additional work onto others as needed, and mark the tickets done as the work is completed. In this way, the completion of the checklist of tasks is transparent and traceable and can be monitored, and the efficiency of the steps in the flow of work can be improved upon continuously. 
+Some examples that will use the kanban style are the daily functionality checks needed for nightly operations of the telescope or the regular monitoring of progress toward achieving milestones and reporting to governing organizations.
+For either of these examples, we will maintain a set of tasks that need to be performed in sequence every cycle.
+Each task could be described individually inside a JIRA ticket and grouped together in a set, so that any person doing the daily checks, for example, could be assigned the set of tasks, open the tickets, comment on results, pass additional work onto others as needed, and mark the tickets done as the work is completed.
+In this way, the completion of the checklist of tasks is transparent and traceable and can be monitored, and the efficiency of the steps in the flow of work can be improved upon continuously.
 
-Examples of scrum-like work include improving algorithms in response to user community feedback and other incremental work needed to produce the annual data releases.
+Examples of scrum-like work include improving algorithms in response to user community feedback, optimizing the observing strategy as the survey progresses, and other incremental work needed to produce the annual data releases.
 
-In this document, we lay out the procedural details for how we define and carry out plans, following the framework described above, to deliver on our milestones, maintain visibility in our workflows, remain responsive to change, and offer staff the ability to innovate and collaborate. 
+In this document, we lay out the procedural details for how we define and carry out plans, following the framework described above, to deliver on our milestones, maintain visibility in our workflows, remain responsive to change, and offer staff the ability to innovate and collaborate.
 
 \section{Rubin Program Management}
 \label{sec:contacts}
 
 The Rubin Observatory Acting \ \gls{Director}  is Robert Blum and the Interim Deputy \gls{Director} for NOIRLab is Amanda Bauer and the Deputy Director for SLAC is Phil Marshall.
+
 They are the first point of contact for all issues regarding project management within \RO.
 
 The  Program Coordinator is Cathy Petry.
@@ -34,21 +43,26 @@ Rubin Operations has four operational Departments and the Director’s Office: R
 \subsection{Work Breakdown Structure}
 \label{sec:wbs}
 
-
-The \gls{WBS} provides a hierarchical description of the activity based organization of Rubin. In operations, the WBS is not as formal as in a construction project, but it provides a useful structure to organize Rubin Operations and plan annual work around. Rubin if the level one of the WBS, the departments are level 2, and teams within the departments are level 3. Individual roles on operations are level 4.   
+The \gls{WBS} provides a hierarchical description of the activity based organization of Rubin. 
+In operations, the WBS is not as formal as in a construction project, but it provides a useful structure to organize Rubin Operations and plan annual work around. 
+Rubin is the level 1 of the WBS, the departments are level 2, and teams within the departments are level 3. 
+Individual roles on operations are level 4.   
 
 Thus:
 
+% PJM: The WBS Activities table down to level 3 is a very big table. Do we need the table below to name the dept/team/group as well as the description of the activity? I think we can introduce these items in teh table even though they are not referred to until the next subsection.
 \begin{longtable}[]{@{}lll@{}}
 \hline
 \gls{WBS} & Description \tabularnewline
 \hline
 \endhead
+
 1 & Rubin Director's Office  \tabularnewline
 2 & Rubin Observatory Operations  \tabularnewline
 3 & Rubin Data Production \tabularnewline
 4 & Rubin System Performance  \tabularnewline
 5 & Rubin Education and Public Outreach \tabularnewline
+
 \hline
 \end{longtable}
 
@@ -59,32 +73,28 @@ Thus:
 %The fourth level always contains a ``00'' \gls{element}, which is used to capture management and \gls{LOE} work, and may contain other fourth level, or even deeper, structure.
 %Nodes in the \gls{WBS} tree are referred to as \glspl{element}.
 
-%\subsection{Organization Breakdown
-%Structure}\label{organization-breakdown-structure}
-
 %\subsection{The Control Account Manager}
 %\label{sec:cam}
 
-%A \gls{CA} is the intersection between the \gls{WBS} and the \gls{OBS}.
-%Each \gls{CA} falls under the purview of a \gls{CAM}.
-%Typically within Data Production, a single \gls{CAM} is responsible for the whole of a third level \gls{WBS}.
-%That is, the manager at the lead institution for a particular component is responsible for all work performed on that \gls{WBS} \gls{element}, even if some of that work is performed at another institution.
+Detailed work is planned in advance of each financial year at the team level. 
+Team leads will work with department heads to develop plans for activities that address specific milestones, projects, and level of effort activity. 
+Highest level milestones are reported regularly throughout the fiscal year to SLAC, AURA, NSF and DOE. 
 
-Detailed work is planned in advance of each financial year at the team level. Team leads will work with department heads to develop plans for activities that address specific milestones, projects, and level of effort activity. Highest level milestones are reported regularly thought the fiscal year to SLAC, AURA, NSF and DOE. 
 
 \subsection{Level of Effort Work}
 \label{sec:loe}
 
-There is work throughout Operations that will be recorded as a \gls{LOE}. These activities include attending meetings, reporting on milestones or taking part in other activities which do not directly map to deployed code.
+There is work throughout Rubin Operations that will be recorded as a \gls{LOE}. These activities include attending meetings, reporting on milestones or taking part in other activities which do not directly map to deployed code.
 This may be particularly the case for technical managers or others in leadership roles within the project.
-With \gls{LOE} work is assumed to earn value simply through the passage of time.
+With \gls{LOE} work is assumed to earn value (informally) simply through the passage of time.
 
 In general, we strive to minimize the fraction of our effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
 However, in certain cases such as operations and maintenance of telescope and facility systems, pipelines or other systems, \gls{LOE} is perfectly acceptable.
 
-Our first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables. Technical staff in Chile at the summit facility may spend a much more significant fraction of time as  \gls{LOE}.
-However, as above, we generally aspire to minimize the fraction of \gls{LOE} for development activity,
-% This is true for development work. We need to prioritize reliable operations. : team leads are therefore encouraged to explicitly schedule as much developer time as is possible.
+As an example, our first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables. 
+Technical staff in Chile at the summit facility may spend a much more significant fraction of time as  \gls{LOE}.
+However, as above, we generally aspire to minimize the fraction of \gls{LOE} for development activity.
+
 
 %Note that all \gls{LOE} work should be invoiced to the ``00'' fourth-level \gls{WBS} \gls{element} (1.02C.03.00, 1.02C.04.00, etc)
 
@@ -92,44 +102,38 @@ However, as above, we generally aspire to minimize the fraction of \gls{LOE} for
 \label{sec:effort}
 
 \subsection{Basic Assumptions}
-The Project assumes that a full-time individual works for a total of
-1,800 hours per year: this figure is \emph{after} all vacations, sick
-leave, etc are taken into account. Staff appointed to ``developer''
-positions are expected to devote this effort directly to \gls{LSST}.
+The Construction Project assumes that a full-time individual works for a total of 1,800 hours per year: this figure is \emph{after} all vacations, sick leave, etc are taken into account.
+The Rubin operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin operations uses 1800 hours per year as a fiducial value for effort estimation purposes.
 
-Appointment as a ``scientist'' includes a 20\% personal research time
-allowance. That is, scientists are expected to devote 1,440 hours per
-year to \gls{LSST}, and the remainder of their time to personal research.
+% PJM: generalize to ops staff
+% Staff appointed to ``developer''
+% positions are expected to devote this effort directly to \gls{LSST}.
+In general, staff in Rubin operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
 
-%Personal research time
-%is \emph{not} chargeable to \gls{LSST} under any \gls{WBS} or
-%account, including level of effort. 
+Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the Rubin Operations Plan for details).
+That is, scientists are expected to devote 1,440 hours per
+year to operations activity, and the remainder of their time to personal research.
+
+Personal research time is charged to Rubin along with the operations role time, the logic being that 
+scientists in operations roles must be engaged in research as well in order to succeed in their operations role.
 Rubin expects to pay the full
 rate for an individual with research time who contributes 1,440 hours to
-operations. This is handled through indirect rates at both NOIRLab and direct charges to research accounts at SLAC. Science time is included in the sub contracts of our partners at affiliated institutions through indirect charges similar to the case for NOIRLab.
-%, and does not require any accounting of the remaining 360 hours.
+operations. This is handled through indirect rates at both NOIRLab and direct charges to research accounts at SLAC. 
+Science time is included in the sub contracts of our partners at affiliated institutions through indirect charges 
+similar to the case for NOIRLab.
 
 %When reporting actual costs (\S\ref{sec:actuals}), it may
 %be helpful to consider the following examples:
 
-%A developer or technician for which the total annual cost (salary, overheads, etc) is
-%\(A\) charges an hourly rate of \(A / 1800\).
-
-%A scientist with total annual cost \(\gls{B}\) charges an hourly rate of
-%\(\gls{B} / 1440\).
-
-%No further corrections are necessary. In particular, there is no
-%difference in the way working hours are measured, or the conversion of
-%glspl{SP} to hours.
-
-Our base assumption is that 30\% of an individual's \gls{LSST} time (i.e. 540 hours/year for a developer, 432 hours/year for a scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
+In Data Production, our base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
 This work is counted as \gls{LOE} (and, as such, is charged to the relevant ``00'' fourth level \gls{WBS} \gls{element}, as described in \S\ref{sec:loe}).
 It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
 
 Assuming no variation throughout the year, we therefore expect 105 hours of productive work from a developer, or 84 hours from a scientist, per month.
 Note that this is averaged across the year: some months, such as those containing major holidays, will naturally involve less working time than others: the remainder will necessarily include more working time to compensate. For other staff, the \gls{LOE} will be higher but include much more day to day activity than for the developer case.
 
-Rather than working in hours, our JIRA based system uses Story Points (\gls{SP}), with one \gls{SP} being defined as equivalent to four hours of effort by a competent developer.
+Rather than working in hours, our Jira based system uses Story Points (\gls{SP}), with one \gls{SP} being defined as equivalent to four hours of effort (half a day's work) by a competent developer.
+
 Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per \emph{average} month respectively.
 
 \begin{table}
@@ -138,11 +142,11 @@ Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per
           & \multicolumn{2}{c}{Hours} & \multicolumn{1}{c}{\glspl{SP}} \\
           & Per year & Per month      & Per month \\
 \hline
-Developer & 1800     & 105            & 26.25 \\
-Scientist & 1440     &  84            & 21.00 \\
+Full-time Developer & 1800     & 105            & 26.25 \\
+Full-time Scientist & 1440     &  84            & 21.00 \\
 \hline
 \end{longtable}
-\caption{Expected working rates for developers and scientists.}
+\caption{Expected working rates for developers and scientists. Technicians and engineers follow the same rates as developers.}
 \label{tab:working-rate}
 \end{table}
 
@@ -166,25 +170,21 @@ The ratio of hours to \glspl{SP} remains constant, but the number of hours decre
 \section{Long Term Planning}
 \label{sec:long-term-plan}
 
-The authoritative summary of the long-term planning system may be found in (find a POP process document).
+The authoritative summary of the long-term planning system may be found in any POP process document.
+
 Here we expand upon the details of that system.
 The plan for pre-operations and Survey Operations is embodied in:
 
+% PJM: milestones come first, logically:
 \begin{enumerate}
-\item
-  A series of \emph{epics}, which describe major pieces of
-  technical work. Epics are associated with concrete, albeit
-  high-level, deliverables (in the \gls{shape} of milestones, below), and have
-  specific resource loads (staff assignments), start dates, and
-  durations.
-\item
-  \emph{Milestones} represent the delivery or availability of specific
-  functionality. Each planning package culminates in a milestone, and
-  may contain other milestones describing intermediate results.
+    \item
+        A set of \emph{Milestones}, each of which represents the delivery or availability of specific functionality. Each planning package culminates in a milestone, and may contain other milestones describing intermediate results.
+    \item
+        A series of \emph{epics}, which describe major pieces of technical work. Epics are associated with concrete, albeit high-level, deliverables in the \gls{shape} of the above milestones, and have specific resource loads (staff assignments), start dates, and durations.
 \end{enumerate}
 
-
-Milestones are allocated to one of four levels, defined as follows:
+Milestones are allocated to one of four levels, defined as follows:% PJM: Can we not design a scheme where we use the term "level" to label both the WBS activities AND the milestones? We seem so close! As it is, though, I think we have to write the following text:
+\footnote{Note that the level of the milestone is logically distinct from the level of the WBS and OBS, even though the same term (``level'') is used to label both. In the OBS, level 0 is the Observatory, level 1 is the departments, level 2 is the teams, and level 3 is the groups within the teams. We take care to always disambiguate ``WBS level'' from ``milestone level'' and never use the term ``level'' without these qualifiers preceding it.}
 
 \begin{description}
 %this is not consistent with NOIRLab or our current FY21 plan. We need to discuss an decide how to capture these. Could be one or two RDO level MS and several L2 MS for each department both of which show up in the POP. Or we keep the Major MS classification and have several of those in each Dep. Suppose we had one or two L1 milestones like Annual DR. Then all the current Major MS in our sheet could be L2s that point at that.
@@ -197,15 +197,14 @@ in consultation with the Director's Office
 These are internal to a particular Department and assigned to a team  and can therefore be specified by a single team lead.
 \end{description}
 
-Some of these are exposed to external reviewers: it is vital that these
-be delivered on time and to specification. Low-level milestones are
-defined for use within Departments, but even here properly adhering to the plan
-is vital: your colleagues in other teams will use these milestones to
-align their schedules with yours, so they rely on you to be accurate.
+Some of these milestones are exposed to external reviewers: it is vital that these be delivered on time and to specification.
+Low-level (3 and beyond) milestones are defined for use within Departments, but even here properly adhering to the plan is vital: your colleagues in other teams will use these milestones to align their schedules with yours, so they rely on you to be accurate.
 
 Epics should help achieve milestones i.e. they may be blocking issues on the milestones.
 A detailed description of work for a given \gls{epic} is known, it can and should be described in \gls{JIRA}.
 This should be assigned to the appropriate \glspl{cycle}.
+
+% PJM: need text describing clearly how sequeneces of epics build up to a milestone - and how the epics will be tracked such that progress towards the milestones is evident.
 
 \subsection{Planning Research Work}
 \label{sec:long-term-research}
