@@ -1,5 +1,6 @@
 \documentclass[DM,authoryear,toc]{lsstdoc}
 % lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
+
 \input{meta}
 
 % Package imports go here.
@@ -7,8 +8,8 @@
 % Local commands go here.
 
 %If you want glossaries
-%\input{aglossary.tex}
-%\makeglossaries
+\input{aglossary.tex}
+\makeglossaries
 
 \title{Management principles and use of Jira for Rubin Operations}
 
@@ -16,7 +17,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-William O'Mullane
+William O'Mullane,  Amanda Bauer, Robert Blum, Phil Marshall
 }
 
 \setDocRef{RTN-005}
@@ -28,7 +29,7 @@ William O'Mullane
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-We would like to give some guidelines for management of effort in Rubin ops and possibly more so in pre ops while we have more build up.
+This document describes guidelines for the management of effort in Vera C. Rubin Operations. It describes the process for agile-based work, including tasks that are carried out with regularity (nightly or monthly, etc), long-term development work that iteratively incorporates user feedback, and Level of Effort work as well.
 }
 
 % Change history defined here.
@@ -47,8 +48,7 @@ We would like to give some guidelines for management of effort in Rubin ops and 
 % Frequently for a technote we do not want a title page  uncomment this to remove the title page and changelog.
 % use \mkshorttitle to remove the extra pages
 
-% ADD CONTENT HERE
-% You can also use the \input command to include several content files.
+\input{body}
 
 \appendix
 % Include all the relevant bib files.
@@ -58,10 +58,9 @@ We would like to give some guidelines for management of effort in Rubin ops and 
 \bibliography{local,lsst,lsst-dm,refs_ads,refs,books}
 
 % Make sure lsst-texmf/bin/generateAcronyms.py is in your path
-\section{Acronyms} \label{sec:acronyms}
-\input{acronyms.tex}
-% If you want glossary uncomment below -- comment out the two lines above
-%\printglossaries
+%\section{Acronyms} \label{sec:acronyms}
+%\input{acronyms.tex}
+\printglossaries
 
 
 

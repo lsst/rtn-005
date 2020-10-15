@@ -1,0 +1,572 @@
+\section{Introduction}
+
+
+This document provides a guide to the \VRO \   approach to annual planning.
+See also the the operations proposal \citeds{LDO-31}
+In operations, there is no \gls{Primavera} or \gls{EVMS} as there are for the Rubin Construction Project.
+
+There are a few main ways work will be managed, some within an Agile framework (particularly for data release planning). 
+The Agile method is a set of practices that allow the ability to adapt and respond to change through collaboration between self-managing, cross-functional teams.  
+To the extent possible, we focus on the people doing the work and how they work together. 
+
+This framework allows the multidisciplinary Rubin team to operate the facility and generate nightly data products while continuously improving efficiency of workflows (``Kanban'' style\footnote{Kanban is a visual system for managing work as it moves through a process. 
+Kanban is a concept related to lean and just-in-time (JIT) production, where it is used as a scheduling system that tells you what to produce, when to produce it, and how much to produce.}), 
+as well as iteratively responding to user feedback on a longer timescale to maximize the scientific benefit of annual data releases (``scrum'' style\footnote{https:\/\/en.wikipedia.org\/wiki\/Scrum\_(software\_development)}).  
+
+Some examples that will use the kanban style are the daily functionality checks needed for nightly operations of the telescope or the regular monitoring of progress toward achieving milestones and reporting to governing organizations.
+For either of these examples, we will maintain a set of tasks that need to be performed in sequence every cycle.
+Each task could be described individually inside a JIRA ticket and grouped together in a set, so that any person doing the daily checks, for example, could be assigned the set of tasks, open the tickets, comment on results, pass additional work onto others as needed, and mark the tickets done as the work is completed.
+In this way, the completion of the checklist of tasks is transparent and traceable and can be monitored, and the efficiency of the steps in the flow of work can be improved upon continuously.
+
+Examples of scrum-like work include improving algorithms in response to user community feedback, optimizing the observing strategy as the survey progresses, and other incremental work needed to produce the annual data releases.
+
+In this document, we lay out the procedural details for how we define and carry out plans, following the framework described above, to deliver on our milestones, maintain visibility in our workflows, remain responsive to change, and offer staff the ability to innovate and collaborate.
+
+\section{Rubin Operations Leadership and Annual Reporting}
+\label{sec:contacts}
+
+The Rubin Observatory Acting \ \gls{Director}  is Robert Blum, the Interim Deputy \gls{Director} for NOIRLab is Amanda Bauer, and the Deputy \gls{Director} for SLAC is Phil Marshall.
+They are the first point of contact for all issues regarding project management within \RO.
+
+The Program Coordinator is Cathy Petry.
+She monitors the budgets and maintains details within WeBud, the NOIRLab budgeting system. 
+She assists in developing the annual Program Operating Plan (POP), tracking milestones and reporting. 
+On the SLAC side, Christine Soldahl is the Business Manager who handles similar tasks. 
+
+The POP is a defined report and process for NOIRLab. 
+Rubin Operations considers the POP to be a Rubin activity, which informs both NOIRLab and SLAC leadership of the annual Rubin activity including milestones and budget. 
+For NOIRLab, the Rubin POP is integrated and delivered to NSF for the next fiscal year at the end of the current fiscal year. 
+For SLAC, the POP informs SLAC's annual planning, which culminates in a Field Work Proposal (FWP) for all SLAC High Energy Physics activity including Rubin. 
+
+The FWP is delivered in June of the current fiscal year, and covers the federal budget request for the next two fiscal years. 
+The FWP is previewed to SLAC management and DOE in February in advance of the final delivery in June. 
+Because the POP for NSF and FWP for DOE are out of phase, Rubin does high level planning in early Q2 of the financial year. 
+Detailed activity planning, including lower level milestones, continues though the year in advance of the next year. 
+This detailed planning is the subject of this document.
+
+\section{Formal Organizational Structure}
+\label{sec:structure}
+
+Rubin Operations has four operational Departments in addition to the Director’s Office: RDO (Rubin Director’s Office), ROO (Rubin Observatory Operations), RDP (Rubin Data Production), RPF (Rubin System Performance), and REO (Rubin Education and Public Outreach). 
+Each operational Department is lead by an Associate Director.
+
+\subsection{Work Breakdown Structure}
+\label{sec:wbs}
+
+The \gls{WBS} provides a hierarchical description of the activity based organization of Rubin. 
+In operations, the WBS is not as formal as in a construction project, but it provides a useful structure to organize Rubin Operations and plan annual work around. 
+Rubin is the level 1 of the WBS, the departments are level 2, and teams within the departments are level 3. 
+Individual roles on operations are level 4.   
+
+Thus:
+
+% PJM: The WBS Activities table down to level 3 is a very big table. Do we need the table below to name the dept/team/group as well as the description of the activity? I think we can introduce these items in teh table even though they are not referred to until the next subsection.
+\begin{longtable}[]{@{}lll@{}}
+\hline
+\gls{WBS} & Description \tabularnewline
+\hline
+\endhead
+
+1 & Rubin Director's Office  \tabularnewline
+2 & Rubin Observatory Operations  \tabularnewline
+3 & Rubin Data Production \tabularnewline
+4 & Rubin System Performance  \tabularnewline
+5 & Rubin Education and Public Outreach \tabularnewline
+
+\hline
+\end{longtable}
+
+%\subsection{The Control Account Manager}
+%\label{sec:cam}
+
+Detailed work is planned in advance of each financial year at the team level. 
+Team leads will work with department associate directors to develop plans for activities that address specific milestones, projects, and level of effort activity. 
+Highest level milestones are reported regularly throughout the fiscal year to SLAC, AURA, NSF and DOE. 
+
+
+\subsection{Level of Effort Work}
+\label{sec:loe}
+
+There is work throughout Rubin Operations that will be recorded as a \gls{LOE}. 
+These activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to deployed code.
+This may be particularly the case for technical managers or others in leadership roles.
+\gls{LOE} work is assumed to earn value (informally) simply through the passage of time.
+
+In general, we strive to minimize the fraction of effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
+However, in certain cases such as operations and maintenance of telescope and facility systems, pipelines or other systems, \gls{LOE} is perfectly acceptable.
+
+As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables. 
+Technical staff in Chile at the summit facility may spend a much more significant fraction of time as  \gls{LOE}.
+However, as above, we generally aspire to minimize the fraction of \gls{LOE} for development activity.
+
+
+\section{Estimating Effort}
+\label{sec:effort}
+
+\subsection{Basic Assumptions}
+Rubin Operations assumes that a full-time individual works for a total of 1,800 hours per year: this figure is \emph{after} all vacations, sick leave, etc are taken into account.
+The Rubin operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin operations uses 1,800 hours per year as a fiducial value for effort estimation purposes.
+
+% PJM: generalize to ops staff
+% Staff appointed to ``developer''
+% positions are expected to devote this effort directly to \gls{LSST}.
+In general, staff in Rubin operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
+
+Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the Rubin Operations Plan for details).
+That is, scientists are expected to devote 1,440 hours per
+year to operations activity, and the remainder of their time to personal research.
+
+Personal research time is charged to Rubin along with the operations role time, the logic being that 
+scientists in operations roles must be engaged in research as well in order to succeed in their operations role.
+Rubin expects to pay the full rate for an individual with research time who contributes 1,440 hours to
+operations. 
+This is handled through indirect rates at both NOIRLab and direct charges to research accounts at SLAC. 
+Science time is included in the subcontracts of our partners at affiliated institutions through indirect charges 
+similar to the case for NOIRLab.
+
+%When reporting actual costs (\S\ref{sec:actuals}), it may
+%be helpful to consider the following examples:
+
+In Data Production, the base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
+This work is counted as \gls{LOE}.
+It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
+
+Assuming no variation throughout the year, we therefore expect 105 hours of productive work from a developer, or 84 hours from a scientist, per month.
+Note that this is averaged across the year: some months, such as those containing major holidays, will naturally involve less working time than others: the remainder will necessarily include more working time to compensate. For other staff, the \gls{LOE} will be higher but include much more day to day activity than for the developer case.
+
+Rather than working in hours, our Jira based system uses Story Points (\gls{SP}), with one \gls{SP} being defined as equivalent to four hours of effort (half a day's work) by a competent developer.
+
+Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per \emph{average} month respectively.
+
+\begin{table}
+\begin{longtable}[]{@{}lrrr@{}}
+\hline
+          & \multicolumn{2}{c}{Hours} & \multicolumn{1}{c}{\glspl{SP}} \\
+          & Per year & Per month      & Per month \\
+\hline
+Full-time Developer & 1800     & 105            & 26.25 \\
+Full-time Scientist & 1440     &  84            & 21.00 \\
+\hline
+\end{longtable}
+\caption{Expected working rates for developers and scientists. Technicians and engineers follow the same rates as developers.}
+\label{tab:working-rate}
+\end{table}
+
+\subsection{Special Cases}
+
+\subsubsection{Newcomers}
+\label{sec:newcomers}
+
+New or inexperienced developers, even when devoting their full attention to \gls{story}-pointed work, will likely be less productive than their more experienced peers.
+In this case, the ratio of hours to \glspl{SP} increases, but the number of hours remains constant.
+
+Note that specific activities related on ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
+For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{SP}.
+
+\subsubsection{Technical Managers and other Leadership Roles}
+
+Individuals in leadership roles may find it necessary to assign a larger fraction of their time to \gls{LOE} type work, and therefore spend fewer hours generating \glspl{SP}.
+The ratio of hours to \glspl{SP} remains constant, but the number of hours decreases.
+
+\section{Long Term Planning}
+\label{sec:long-term-plan}
+
+The authoritative summary of the long-term planning system may be found in any POP process document.
+
+Here we expand upon the details of that system.
+The plan for pre-operations and Survey Operations is embodied in:
+
+% PJM: milestones come first, logically:
+\begin{enumerate}
+    \item
+        A set of \emph{Milestones}, each of which represents the delivery or availability of specific functionality. Each planning package culminates in a milestone, and may contain other milestones describing intermediate results.
+    \item
+        A series of \emph{epics} describe major pieces of work. Epics are associated with concrete, albeit high-level, deliverables in the \gls{shape} of the above milestones, and have specific resource loads (staff assignments), start dates, and durations.
+\end{enumerate}
+
+Milestones are allocated to one of four levels, defined as follows:
+
+\begin{description}
+\item[Level 1]
+These are at the full observatory level and owned by the Directors Office. 
+An example is the completion of an annual Data Release.
+\item[Level 2]
+These reflect effort within a Department and are owned by an Associate Director, or are cross-Department commitments. 
+As such, they must be defined in consultation with the Director's Office.
+\item[Level 3]
+These are internal to a particular Department and assigned to a team and can therefore be specified by a single team lead.
+\end{description}
+
+Some of these milestones are exposed to external reviewers (usually reserved for Level 1 milestones): it is vital that these be delivered on time and to specification.
+Low-level (3 and beyond) milestones are defined for use within Departments, but even here properly adhering to the plan is vital: your colleagues in other teams will use these milestones to align their schedules with yours, so they rely on you to be accurate.
+
+Epics should help achieve milestones i.e. they may be blocking issues on the milestones.
+When a detailed description of work for a given \gls{epic} is known, it is described in \gls{JIRA}.
+It should then be assigned to the appropriate \glspl{cycle}.
+
+% PJM: need text describing clearly how sequeneces of epics build up to a milestone - and how the epics will be tracked such that progress towards the milestones is evident.
+
+\subsection{Planning Research Work}
+\label{sec:long-term-research}
+
+In order for \RO  to reach its science goals, new algorithmic or engineering approaches must sometimes be researched.
+It is appropriate to budget time for this research work in planning packages.
+
+
+\subsection{Epic-Based Long Term Plans}
+
+As long as they have not been scheduled for the current \gls{cycle}, these \glspl{epic} can be freely created and changed at any time, without any sort of approval process.
+
+Fine grained planning of this sort can be useful for ``bottom-up''
+analysis of the work to be performed and validation of the resources
+needed to implement a particular planning package. Thinking through the
+plan in this way can help in building up a detailed plan in a flexible,
+agile way, while also ensuring that scope, cost and schedule are
+carefully controlled.
+
+\section{Short Term Planning}
+\label{sec:cycle-plan}
+
+Short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
+Before the start of a \gls{cycle}, milestones should be confirmed by the Director's Office.
+
+\subsection{Defining The Plan}
+
+\subsubsection{Scoping Work}
+
+The first essential step of developing the short term plan is to produce an outline of the program of work to be executed.
+In general, this should flow directly from the long term plan (\S\ref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
+
+While developing the \gls{cycle}, please:
+
+\begin{itemize}
+\item
+  Do not add \emph{artificial} padding or buffers to make the schedule look good;
+\item
+  Do budget appropriate time for handling bugs and emergent issues;
+\item
+  Reserve time for planning the following \gls{cycle}: it will have to be defined before this \gls{cycle} is complete;
+\item
+  Leave time for other necessary activities, such as cross-team collaboration meetings and writing documentation.
+\item
+  Per the \gls{cycle} cadence (\S\ref{sec:cycle-cadence}), ensure that new development will conclude (or, at a minimum, be in a releasable state) in time for the end of \gls{cycle} release.
+\end{itemize}
+
+Obviously, ensure that the program of work being developed is achievable by your team in the time available: ultimately, you will want to compare the number of \glspl{SP} your team is able to deliver (\S\ref{sec:effort}) with the sum of the \glspl{SP} in the \glspl{epic} you have scheduled (\S\ref{sec:planning-epics}), while also considering the skills and availability of your team.
+It is better to under-commit and over-deliver than vice-versa, but, ideally, aim to estimate accurately.
+
+\subsubsection{Defining Epics}
+\label{sec:planning-epics}
+
+The plan for a six month \gls{cycle} fundamentally consists of a set of resource loaded \glspl{epic} defined in \gls{JIRA}.
+Each \gls{epic} loaded into the plan must have:
+
+\begin{itemize}
+\item
+  A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' (\S\ref{sec:bucket});
+\item
+  The \texttt{cycle} field set to the appropriate \gls{cycle};
+\item
+  The \texttt{wbs} field set to the appropriate \gls{WBS} \emph{leaf} \gls{element}.
+\item
+  The \texttt{Story Points} field set to a (non-zero!) estimate of the effort required to complete the \gls{epic} in terms of \glspl{SP} (see \S\ref{sec:effort}).
+  \item
+  Tagged with the appropriate L3 or L2 milestone that the epic will contribute to schieving (or achieve in its totality).
+\end{itemize}
+
+Be aware that: (Amanda: I don't think all of the following bullets are true or necessary in the Operations non-EVMS era.  Should clarify with Cathy and Wil.) 
+
+\begin{itemize}
+\item
+  An \gls{epic} may only be assigned to a single \gls{cycle}.
+  It is not possible to define an \gls{epic} that crosses the \gls{cycle} boundary (see \S\ref{sec:cycle-close} for the procedure when an \gls{epic} is not complete by the end of the \gls{cycle}).
+\item
+  An \gls{epic} may only be assigned to a single \gls{WBS} leaf \gls{element}.
+  It is not possible to define \glspl{epic} that cover multiple \gls{WBS} \glspl{element}.
+  See \S\ref{sec:cross-team} for information on scheduling work which requires resources from multiple \glspl{element}.
+\item
+  An \gls{epic} must descend from a single planning package (see \S\ref{sec:long-term-plan}).
+\item
+  Indeed, where possible management activities \emph{should} be scheduled as \glspl{epic} with concrete deliverables in this \gls{element} rather than being handled as \gls{LOE}.
+\item
+  The \gls{epic} should be at an appropriate level of granularity.
+  While short \glspl{epic} (a few \glspl{SP}) may be suitable for some activities, in general \glspl{epic} will describe a few months of developer-time.
+  \Glspl{epic} allocated multiple hundreds of \gls{story} points are likely too broad to be accurately estimated.
+\end{itemize}
+
+
+Although it is possible---indeed, encouraged---to set the \texttt{assignee} field in \gls{JIRA} to the individual who is expected to carry out the bulk of the work in an \gls{epic}, this does not provide sufficient granularity for those cases when more than one person will be contributing.
+
+In fact, it is only required to provide a staff assignment in terms of ``resource types'' (i.e. scientists, senior scientists, developers, senior developers, etc).
+In practice, to ensure your team is evenly loaded, it is usually necessary to break it down to named individuals.
+
+
+\subsubsection{Scheduling Research Work}
+\label{sec:research}
+
+%who gets research time of this type? All developers or just scientists. This is confusing since most people will think in terms of scientific research. NOIRLab engineers will get professional development time. 
+As discussed in \S\ref{sec:long-term-research}, research is sometimes required
+to meet our objectives. However, it is not a natural fit to our usual
+planning process, as it is speculative in its nature: it is often
+impossible to produce a series of logical steps that will lead to the
+required result. We acknowledge, therefore, that scheduling an \gls{epic} to
+deliver some particular new \gls{algorithm} based on the results of research
+is impossible: we cannot predict with any confidence when the
+breakthrough will occur.
+
+We therefore schedule research in \gls{timebox}ed \glspl{epic}: we allocate a certain amount of time based on the resources available, rather than on an estimate of time to completion.
+However, note that these \gls{timebox}ed \glspl{epic} should still provide concrete deliverables: they are not open-ended ``buckets'' as discussed elsewhere.
+
+\subsubsection{Bucket Epics}
+\label{sec:bucket}
+
+Some work is ``emergent'': we can predict in advance that it will be necessary, but we cannot predict exactly what form it will take.
+The typical example of this is fixing bugs: we can reasonably assume that bugs will be discovered in the codebase and will need to be addressed, but we cannot predict in advance what those bugs will be.
+
+This can be included in the schedule by defining a ``bucket'' \gls{epic} in which stories can be created when necessary during the course of a \gls{cycle}.
+Make clear in the description of the \gls{epic} that this is its intended purpose: every \gls{epic} should either have a concrete deliverable or be a bucket.
+
+Bucket \glspl{epic} have some similarities with \gls{LOE} work.
+As such, we acknowledge that they are necessary, but seek to minimize the fraction of our resources assigned to them.
+If more than a relatively small fraction of the work for a \gls{cycle} is assigned to bucket \glspl{epic}, please consider whether this is really necessary and appropriate.
+
+Be aware that even bucket \glspl{epic} must be assigned to a specific \emph{leaf} \gls{element} of the \gls{WBS}.
+That is, it is not in general possible to define an \gls{epic} which handles bug reports or emergent feature requests across the whole of the codebase unless a specific \gls{WBS} leaf \gls{element} is devoted to maintenance activities of this type.
+Instead, it may be necessary to define a different bucket \gls{epic} for each leaf of the \gls{WBS} tree.
+
+
+\subsection{Closing the Cycle}
+\label{sec:cycle-close}
+
+Assuming everything has gone to plan, by the end of a \gls{cycle} all deliverables should be verified and the corresponding \glspl{epic} should be marked as \texttt{done}.
+Marking an \gls{epic} as \texttt{done} asserts that the concrete deliverable associated with the \gls{epic} has been provided.
+
+Epics which are in progress at the end of the \gls{cycle} cannot be closed until they have been completed.
+These \glspl{epic} will spill over into the subsequent \gls{cycle}.
+It is \emph{not} appropriate to close an in-progress \gls{epic} with a concrete deliverable until that deliverable has been achieved: instead, a variance will be shown until the \gls{epic} can be closed.
+Obviously, this will impact the labor available for other activities in the next \gls{cycle}.
+(This does not apply to bucket \glspl{epic} (\S\ref{sec:bucket}), which are, by their nature, \gls{timebox}ed within the \gls{cycle}).
+
+
+\section{Execution}
+\label{sec:execution}
+
+Having defined the plan for a \gls{cycle} following \S\ref{sec:cycle-plan}, we (RDP and RPF) execute it by means of a series of month-long sprints.
+In this section, we detail the procedures teams are expected to follow during the \gls{cycle}.
+
+\subsection{Defining Stories}
+\label{sec:defining-stories}
+
+Epics have already been defined as part of the \gls{cycle} plan (see \S\ref{sec:planning-epics}).
+However, the \gls{epic} is not at an appropriate level for scheduling day-to-day work.
+Rather, each \gls{epic} is broken down into a series of self-contained ``stories''.
+A \gls{story} describes a planned activity worth between a small fraction of a SP and several \glspl{SP} (more than about 10 is likely an indication that the \gls{story} has not been sufficiently refined).
+It must be possible to schedule a \gls{story} within a single sprint, so no \gls{story} should ever be allocated more than 26 \glspl{SP}.
+
+The process for breaking \glspl{epic} down into stories is not mandated. In
+some circumstances, it may be appropriate for the technical manager to
+provide a breakdown; in others, they may request input from the
+developer who is actually going to be doing the work, or even hold a
+brainstorming session involving the wider team. This is a management
+decision.
+
+It is not required to break all \glspl{epic} down into stories before the \gls{cycle} begins: it may be more appropriate to first schedule a few exploratory stories and use them to inform the development of the rest of the \gls{epic}.
+However, do break \glspl{epic} down to describe the stories which will be worked in an upcoming sprint (\S\ref{sec:sprinting}) before the sprint starts.
+When doing so, you may wish to leave some spare time to handle emergent work (discussed in \S\ref{sec:bugs}).
+
+Note that there is no relationship enforced between the \gls{SP} total estimated for the \gls{epic} and the sum of the \glspl{SP} of its constituent stories.
+It is therefore possible to over- or under-load an \gls{epic}.
+This will have obvious ramifications for the schedule.
+
+\subsection{Sprinting}
+\label{sec:sprinting}
+
+Each team organizes its work around periods of work called sprints.
+A sprint comprises a defined collection of stories which will be addressed over the course of the month.
+These stories are not necessarily (indeed, not generally) all drawn from the same \gls{epic}: rather, while \glspl{epic} divide the \gls{cycle} along logical grounds, sprints divide it along the time axes.
+
+Broadly, executing a sprint falls into three stages:
+
+\begin{enumerate}
+\item
+  Preparation.
+
+  The team assigns the work that will be addressed during the sprint by choosing from the pre-defined stories (\S\ref{sec:defining-stories}).
+  Each team member should be assigned a plausible amount of work, based on the per-\gls{story} \gls{SP} estimates and the likely working rate of the developer (see \S\ref{sec:effort}).
+
+  The process by which work is assigned to team members is a local
+  management decision: the orthodox approach is to call a team-wide
+  meeting and discuss it, but other approaches are possible (one-to-one
+  interactions between developers and technical manager, managerial
+  fiat, etc).
+
+  Do not overload developers. Take vacations and holidays into account.
+  The sprint should describe a plausible amount of work for the time
+  available.
+\item
+  Execution.
+
+  Daily management during the sprint is a local decision. Suggested best
+  practice includes holding regular ``standup'' meetings, at which
+  developers discuss their current activities and try to resolve
+  ``blockers'' which are preventing them from making progress.
+
+  Stories should be executed following the instructions in the
+  \href{http://developer.lsst.io/}{Developer Guide} as regards workflow,
+  coding standards, review requirements, and so on. It is important to
+  ensure that completed stories are marked as \texttt{done}:
+  experience suggests that this can easily be forgotten as developers
+  rush on to the next challenge, but it is required to enable us to
+  properly track earned value as per \S\ref{sec:cycle-value}.
+
+  When completing a \gls{story} we do not change the number of \glspl{SP} assigned to
+  it: the \gls{SP} total reflects our initial estimate of the work involved,
+  not the total time invested.
+  However, we should \textit{also} record the true \glspl{SP} expended on the issue.
+  This makes it possible to review the quality of our estimates at the end of the sprint.
+  Each individual, with guidance from their \gls{T/CAM}, should use this information as they strive to improve the accuracy of their planning and estimating.
+
+  Avoid adding more stories to a sprint in progress unless it is
+  unavoidable (for example, the \gls{story} describes a critical bug that must
+  be addressed before proceeding). A sprint should always stay current
+  and should be up-to-date with reality; if necessary, already scheduled
+  stories may be pushed out of a sprint as soon as it is obvious it is
+  unrealistic to expect them to be completed.
+\item
+  \gls{Review}.
+
+  At the end of the sprint, step back and consider what has been
+  achieved. What worked well? What did not? How can these problems be
+  avoided for next time? Was your estimate of the amount of work that
+  could be finished in the sprint accurate? If not, how can it be
+  improved in future? Refer to the
+  \href{https://en.wikipedia.org/wiki/Burn_down_chart}{burn-down chart}
+  for the sprint, and, if it diverged from the ideal, understand why.
+
+  Again, the form the review takes is a local management decision: it
+  may involve all team members, or just a few.
+\end{enumerate}
+
+We use \gls{JIRA}'s
+\href{https://www.atlassian.com/software/jira/agile}{Agile} capabilities
+to manage our sprints. Each technical manager is responsible for
+defining and maintaining their own agile board. The board may be
+configured for either
+\href{https://en.wikipedia.org/wiki/Scrum_(software_development)}{Scrum}
+or \href{https://en.wikipedia.org/wiki/Kanban_(development)}{Kanban}
+style work as appropriate: the former is suitable for planned
+development activities (e.g. \gls{Science Pipelines} development); the latter
+for servicing user requests (e.g. providing developer support).
+
+\subsection{Closing Epics}
+\label{sec:epic-close}
+
+\subsubsection{Completing the Work}
+\label{sec:epic-done}
+
+An \gls{epic} may be marked as \texttt{done} when:
+
+\begin{enumerate}
+\item
+  It contains at least one completed \gls{story};
+\item
+  There are no more incomplete \glspl{story} defined within it;
+\item
+  There are no plans to add more \glspl{story};
+\item
+  (If applicable, i.e. it is not a bucket, as defined in \S\ref{sec:bucket}) its concrete deliverable has been achieved.
+\end{enumerate}
+
+Note that it is not permitted to close an \gls{epic} without defining at least one \gls{story} within it.
+Empty \glspl{epic} can never be completed.
+
+\subsection{Handling Bugs \& Emergent Work}
+\label{sec:bugs}
+
+\subsubsection{Receiving Bug Reports}\label{receiving-bug-reports}
+
+Members of the project who have access to \gls{JIRA} may report bugs or make feature requests directly using \gls{JIRA}.
+As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor \gls{JIRA} for relevant tickets and ensure they are handled appropriately.
+
+Our code repositories are exposed to the world in general through \href{https://github.com/lsst/}{GitHub}.
+Each repository on GitHub has a bug tracker associated with it.
+Members of the public may report issues or make requests on the GitHub trackers.
+Per the \href{https://developer.lsst.io/processes/workflow.html}{Developer Workflow}, all new work must be associated with a \gls{JIRA} ticket number before it can be committed to the repository.
+It is therefore the responsibility of technical managers to file a \gls{JIRA} ticket corresponding to the GitHub ticket, to keep them synchronized with relevant information, and to ensure that the GitHub ticket is closed when the issue is resolved in \gls{JIRA}.
+
+The GitHub issue trackers are, in some sense, not a core part of our
+workflow, but they are fundamental to community expectations of how they
+can interact with the project. Ensure that issues reported on GitHub are
+serviced promptly.
+
+In some cases, the technical manager responsible for a given repository
+is obvious, and they can be expected to take the lead on handling
+tickets. Often, this is not the case: repositories regularly span team
+boundaries. Work together to ensure that all tickets are handled.
+
+\subsubsection{Issue Types}\label{issue-types}
+
+
+\subsection{Jira Maintenance}
+\label{sec:jira-maintenance}
+
+At any time, new tickets may be added to \gls{JIRA} by team members.
+Please remind your team of the best practice in this respect (\jira{RFC-147}).
+It is the responsibility of technical managers to ensure that new tickets are handled appropriately, updating the schedule to include them where necessary.
+
+It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
+This indicates which manager is responsible for \gls{seeing} that the work is completed successfully.
+Available teams, and the associated managers, are listed in the \href{https://developer.lsst.io/processes/jira_agile.html}{Developer Guide}; generally speaking, they align with the the work breakdown structure described in \S\ref{sec:wbs}.
+Where there is uncertainty about which team should be responsible for a particular ticket, the “System Management” team may be used to indicate that the \gls{DM} \gls{Project Manager} is responsible for assigning the work.
+
+Please regularly monitor \gls{JIRA} for incomplete tickets and update them appropriately.
+Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
+
+\subsection{Coordination Standup}
+\label{sec:sup}
+
+\section{Tracking Progress and Standard Reporting Cycle}
+\label{sec:reporting-cycle}
+ Cathy ?
+ 
+\subsection{Tracking Progress toward Milestones}
+
+Progress on completing epics is visualized in Smartsheet.  
+Smartsheet lists all Level 1 through Level 3 milestones in a gantt-chart style view.  
+Each Level 1 milestone is achieved by completing a series of Level 2 and/or Level 3 milestones.  
+Smartsheet tracks Story Points marked as complete in individual \gls{JIRA} epics in real time. 
+Progress on individual milestones is shown as the weighted total of Story Points within each epic contributing to the successful completion of the milestone. 
+ 
+\subsection{Reporting Cycle}
+ 
+High level milestone progress will be reported to SLAC and NOIRLab regularly. 
+NOIRLab reports will flow quarterly (or monthly) to the NSF. 
+Rubin will show progress on all L1 milestones and any L2 milestones called out in the POP. 
+
+
+\section{Personnel}
+
+\subsection{Staffing Changes}
+\label{sec:staffing}
+
+In addition to onboarding procedures at your local institution, please
+be aware of
+
+\begin{itemize}
+\item
+  The \gls{LSST} \href{https://project.lsst.org/onboarding}{New Employee
+  Onboarding} material, and
+\end{itemize}
+
+and direct new recruits to them when they join your team\footnote{As per \S\ref{sec:newcomers}, remember that newcomers should be allocated \glspl{SP} for working through this material.}.
+
+The responsible hirere must also complete an \href{https://project.lsst.org/onboarding/form}{onboarding form} for the new recruit.
+When members of staff team leave the project, the \gls{T/CAM} should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
+
+
+\section{Open issues}
+
+\begin{itemize}
+\item Kanban for \gls{LOE} operations work
+\item Need section on more procedural driven work on mountain and DF.
+\end{itemize}
