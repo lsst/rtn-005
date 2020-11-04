@@ -124,9 +124,6 @@ This is handled through indirect rates at both NOIRLab and direct charges to res
 Science time is included in the subcontracts of our partners at affiliated institutions through indirect charges 
 similar to the case for NOIRLab.
 
-%When reporting actual costs (\S\ref{sec:actuals}), it may
-%be helpful to consider the following examples:
-
 In Data Production, the base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
 This work is counted as \gls{LOE}.
 It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
@@ -171,40 +168,50 @@ The ratio of hours to \glspl{SP} remains constant, but the number of hours decre
 \section{Long Term Planning}
 \label{sec:long-term-plan}
 
-The authoritative summary of the long-term planning system may be found in any POP process document.
+The authoritative, high-level summary of the long-term planning system may be found in any POP process document.
 
 Here we expand upon the details of that system.
 The plan for pre-operations and Survey Operations is embodied in:
 
-% PJM: milestones come first, logically:
 \begin{enumerate}
     \item
-        A set of \emph{Milestones}, each of which represents the delivery or availability of specific functionality. Each planning package culminates in a milestone, and may contain other milestones describing intermediate results.
+        A set of \emph{Milestones}, each of which represents the delivery of a major aspect of Rubin Operations or the availability of specific functionality. 
+        Milestones are officially defined in a \gls{JIRA} milestone issue.
     \item
-        A series of \emph{epics} describe major pieces of work. Epics are associated with concrete, albeit high-level, deliverables in the \gls{shape} of the above milestones, and have specific resource loads (staff assignments), start dates, and durations.
+        A series of \emph{epics} describe major pieces of work. 
+        Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific resource loads (staff assignments story point values) end dates. 
+        All epics are linked to the milestone they are created to help deliver, although some epics might exist without linking to a milestone (level of effort epics, for example).  
+    \item
+        A visualization of progress on work done towards achieving milestones is captured in Smartsheet, which directly tracks progress by rolling up issues that are completed inside of \gls{JIRA} epics that work together to deliver a given milestone.      
 \end{enumerate}
 
-Milestones are allocated to one of four levels, defined as follows:
+Milestones are allocated to one of three levels, defined as follows:
 
 \begin{description}
 \item[Level 1]
 These are at the full observatory level and owned by the Directors Office. 
-An example is the completion of an annual Data Release.
+Examples are the completion of a Data Preview, the beginning of nightly observations for the full survey, or the delivery of an annual Data Release. 
+Level 1 milestones are achieved by the culmination of effort defined by a set of Level 2 and Level 3 milestones. 
+Level 1 milestones are reported to the agencies.
 \item[Level 2]
 These reflect effort within a Department and are owned by an Associate Director, or are cross-Department commitments. 
 As such, they must be defined in consultation with the Director's Office.
+Level 2 milestones are achieved by the culmination of effort defined by a set of Level 3 milestones.
+Some Level 2 milestones may be reported to the agencies as defined by the annual POP. 
 \item[Level 3]
 These are internal to a particular Department and assigned to a team and can therefore be specified by a single team lead.
 \end{description}
 
-Some of these milestones are exposed to external reviewers (usually reserved for Level 1 milestones): it is vital that these be delivered on time and to specification.
-Low-level (3 and beyond) milestones are defined for use within Departments, but even here properly adhering to the plan is vital: your colleagues in other teams will use these milestones to align their schedules with yours, so they rely on you to be accurate.
+Some of these milestones are exposed to external reviewers (usually reserved for Level 1 milestones): it is important that these be delivered on time and to specification. 
+Level 1 and 2 milestones are under change control once they are defined and described in a \gls{JIRA} Milestone issue.  
+Level 3 milestones are defined for use within Departments and not required to go under project change control, but properly adhering to the plan is important: your colleagues in other teams will use these milestones to align their schedules with yours, so they rely on you to be accurate.
 
-Epics should help achieve milestones i.e. they may be blocking issues on the milestones.
+Epics should work to achieve milestones i.e. they may be blocking issues on the milestones.
 When a detailed description of work for a given \gls{epic} is known, it is described in \gls{JIRA}.
 It should then be assigned to the appropriate \glspl{cycle}.
 
-% PJM: need text describing clearly how sequeneces of epics build up to a milestone - and how the epics will be tracked such that progress towards the milestones is evident.
+Progress is tracked toward achieving milestones in Smartsheet by monitoring completed story points in \gls{JIRA} epics and rolling up the total progress. 
+To ensure success, \gls{JIRA} epics must be completely detailed out prior to a full 6-month cycle and total effort should be estimated out for an entire fiscal year of effort, as detailed below.  
 
 \subsection{Planning Research Work}
 \label{sec:long-term-research}
@@ -228,7 +235,7 @@ carefully controlled.
 \label{sec:cycle-plan}
 
 Short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
-Before the start of a \gls{cycle}, milestones should be confirmed by the Director's Office.
+Before the start of a \gls{cycle}, milestones are confirmed by the Director's Office, listed in Smartsheet, and detailed in the Milestone issue. Any team member can find the milestones in Jira.
 
 \subsection{Defining The Plan}
 
@@ -249,7 +256,7 @@ While developing the \gls{cycle}, please:
 \item
   Leave time for other necessary activities, such as cross-team collaboration meetings and writing documentation.
 \item
-  Per the \gls{cycle} cadence (\S\ref{sec:cycle-cadence}), ensure that new development will conclude (or, at a minimum, be in a releasable state) in time for the end of \gls{cycle} release.
+  Per the \gls{cycle} cadence, ensure that new development will conclude (or, at a minimum, be in a releasable state) in time for the end of \gls{cycle} release.
 \end{itemize}
 
 Obviously, ensure that the program of work being developed is achievable by your team in the time available: ultimately, you will want to compare the number of \glspl{SP} your team is able to deliver (\S\ref{sec:effort}) with the sum of the \glspl{SP} in the \glspl{epic} you have scheduled (\S\ref{sec:planning-epics}), while also considering the skills and availability of your team.
@@ -259,20 +266,23 @@ It is better to under-commit and over-deliver than vice-versa, but, ideally, aim
 \label{sec:planning-epics}
 
 The plan for a six month \gls{cycle} fundamentally consists of a set of resource loaded \glspl{epic} defined in \gls{JIRA}.
-Each \gls{epic} loaded into the plan must have:
+Each \gls{epic} loaded into the plan must have this minimum set of fields filled in:
 
 \begin{itemize}
 \item
   A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' (\S\ref{sec:bucket});
 \item
-  The \texttt{cycle} field set to the appropriate \gls{cycle};
+  The \texttt{Component} field set to the appropriate Department;
 \item
-  The \texttt{wbs} field set to the appropriate \gls{WBS} \emph{leaf} \gls{element}.
+  The \texttt{Due Date} field set to the appropriate date, which does not exceed the due date of the Milestone it is labeled to achieve.
 \item
   The \texttt{Story Points} field set to a (non-zero!) estimate of the effort required to complete the \gls{epic} in terms of \glspl{SP} (see \S\ref{sec:effort}).
-  \item
-  Tagged with the appropriate L3 or L2 milestone that the epic will contribute to schieving (or achieve in its totality).
+\item
+  The \texttt{RO Milestone ID} field set to the appropriate L3 or L2 milestone that the epic will contribute to achieving (or achieve in its totality).
+  The exact \texttt{RO Milestone ID}text can be found in the Milestone issue or Smartsheet.
 \end{itemize}
+
+The fields above are required to have values entered because they define the connection to Smartsheet where effort-tracking for the full project is done. Other fields in the epic can also be filled in as needed. 
 
 Be aware that: (Amanda: I don't think all of the following bullets are true or necessary in the Operations non-EVMS era.  Should clarify with Cathy and Wil.) 
 
@@ -280,12 +290,6 @@ Be aware that: (Amanda: I don't think all of the following bullets are true or n
 \item
   An \gls{epic} may only be assigned to a single \gls{cycle}.
   It is not possible to define an \gls{epic} that crosses the \gls{cycle} boundary (see \S\ref{sec:cycle-close} for the procedure when an \gls{epic} is not complete by the end of the \gls{cycle}).
-\item
-  An \gls{epic} may only be assigned to a single \gls{WBS} leaf \gls{element}.
-  It is not possible to define \glspl{epic} that cover multiple \gls{WBS} \glspl{element}.
-  See \S\ref{sec:cross-team} for information on scheduling work which requires resources from multiple \glspl{element}.
-\item
-  An \gls{epic} must descend from a single planning package (see \S\ref{sec:long-term-plan}).
 \item
   Indeed, where possible management activities \emph{should} be scheduled as \glspl{epic} with concrete deliverables in this \gls{element} rather than being handled as \gls{LOE}.
 \item
