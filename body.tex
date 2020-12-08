@@ -231,6 +231,34 @@ plan in this way can help in building up a detailed plan in a flexible,
 agile way, while also ensuring that scope, cost and schedule are
 carefully controlled.
 
+
+\subsection{Defining the Schedule with Milestones}
+
+Rubin Milestones are defined as Jira issues of type ``Milestone''. As indicated above, the Director (or their designate) defines the L1 milestones, the Associate Directors (ADs) define their departments' L2 milestones, and the Team Leaders and ADs define the L3 milestones for their teams.
+
+The following fields must be filled out when defining a new milestone:
+\begin{itemize} 
+\item 
+  The \texttt{Milestone Level}, ``L1,'' ``L2,'' or ``L3;''
+\item
+  The \texttt{RO Milestone ID}. This is a string like ``L2-DI-0003'' which indicates the level of the milestone, the department (for level 2 milestones) or team (for level 3 milestones) that owns it, and an ID number that serves to make the ID unique wbut which otherwise carries no meaning. The list of two-character department and team string identifiers can be found in the Appendix (``DI'' in the example stands for ``Directorate''). The ID number may get edited by teh Director's Office to ensure that it is unique: the Milestone IDs are only ever used in linking together the milestones for visualization in Smartsheet.
+\item
+  The number of \texttt{Story Points} worth of needed effort that is estimated to complete the milestone is zero: epics take effort, milestones are just points in time. Enter zero here. 
+  % PJM: Can we remove the "Story Points" field from Milestone issues, since they seem to need to be all zero?
+\item
+  The \texttt{Summary} field should contain sentence outlining either what needs to be done or delivered for the Milestone to be reached. Examples include \textit{``Deliver Data Preview 0.1 (DP0.1)''} (an L1 milestone) and \textit{``DP0.1 Data Release: science-ready catalogs released from the IDF''} (an L2 milestone that belongs to it).
+  % PJM: Should we homogenize the style here, and make Milestone summaries EITHER directives OR deliverables?
+\item  
+  The \texttt{POP Activity Description} text should contain one or maybe two sentences summarizing the activity needed to complete the milestone. Example:\textit{``Upgrade the WBS activity, labor and non-labor plans from V4 to V5 in order to capture a US DF at SLAC, a UK DF, and any other modifications needed, and estimate the corresponding budget.''} Only L1 (and sometimes L2) milestones are actually listed in the NOIRLab Program Operations Plan (POP), but Rubin adopts the same structure for all its milestones.
+\item
+  The \texttt{POP Deliverable Description} is very terse list of the deliverables needed to reach the Milestone. Example: \textit{``V5 WBS workbook and Preliminary Cost Calculator.''}
+\end{itemize}
+
+Milestone issues can either be assigned to (linked to) the epic that will lead to the milestone being achieved, or left unlinked. 
+% PJM: Might want to specify one way or another here, depending on the needs of Smartsheet?
+The Program Coordinators will ensure that the milestones you define are correctly linked together in the Smartsheet, so that their epics appear nested beneath them.
+
+
 \section{Short Term Planning}
 \label{sec:cycle-plan}
 
