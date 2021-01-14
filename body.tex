@@ -29,7 +29,7 @@ The Rubin Observatory Acting \ \gls{Director}  is Robert Blum, the Interim Deput
 They are the first point of contact for all issues regarding project management within \RO.
 
 The Program Coordinator is Cathy Petry.
-She monitors the budgets and maintains details within WeBud, the NOIRLab budgeting system. 
+She monitors budgets and maintains details within WeBud, the NOIRLab budgeting system. 
 She assists in developing the annual Program Operating Plan (POP), tracking milestones and reporting. 
 On the SLAC side, Christine Soldahl is the Business Manager who handles similar tasks. 
 
@@ -189,7 +189,7 @@ Milestones are allocated to one of three levels, defined as follows:
 
 \begin{description}
 \item[Level 1]
-These are at the full observatory level and owned by the Directors Office. 
+These are at the full observatory level and are owned by the Directors Office. 
 Examples are the completion of a Data Preview, the beginning of nightly observations for the full survey, or the delivery of an annual Data Release. 
 Level 1 milestones are achieved by the culmination of effort defined by a set of Level 2 and Level 3 milestones. 
 Level 1 milestones are reported to the agencies.
@@ -197,7 +197,7 @@ Level 1 milestones are reported to the agencies.
 These reflect effort within a Department and are owned by an Associate Director, or are cross-Department commitments. 
 As such, they must be defined in consultation with the Director's Office.
 Level 2 milestones are achieved by the culmination of effort defined by a set of Level 3 milestones.
-Some Level 2 milestones may be reported to the agencies as defined by the annual POP. 
+Some Level 2 milestones {\it may} be reported to the agencies as defined by the annual POP. 
 \item[Level 3]
 These are internal to a particular Department and assigned to a team and can therefore be specified by a single team lead.
 \end{description}
@@ -236,6 +236,10 @@ carefully controlled.
 
 Rubin Milestones are defined as Jira issues of type ``Milestone''. As indicated above, the Director (or their designate) defines the L1 milestones, the Associate Directors (ADs) define their departments' L2 milestones, and the Team Leaders and ADs define the L3 milestones for their teams.
 
+L1, L2 and most L3 milestones are defined as part of the annual planning cycle, and prior to the year in which the work associated with them is due to be carried out. ADs and Team Leaders communicate their milestones to the Program Coordinator, who enters them into Smartsheet and then creates a Jira issue of type ``milestone'' for each one. 
+
+During the year, it is sometimes necessary to create new milestones (primarily at Level 3) that were omitted during the earlier planning phase. In this case, the team leader or AD may create the Jira milestone directly, and alert the Program Coordinator to it for inclusion in the Smartsheet. 
+
 The following fields must be filled out when defining a new milestone:
 \begin{itemize} 
 \item 
@@ -245,7 +249,7 @@ The following fields must be filled out when defining a new milestone:
   This is a string like ``L2-DI-0003'' which indicates the level of the milestone, the department (for level 2 milestones) or team (for level 3 milestones) that owns it, and an ID number that serves to make the ID unique wbut which otherwise carries no meaning. 
   The list of two-character department and team string identifiers can be found in the Appendix (``DI'' in the example stands for ``Directorate''). 
   The ID number may get edited by the Director's Office to ensure that it is unique: the Milestone IDs are only ever used in linking together the milestones for visualization in Smartsheet. 
-  Good practice here is to look at the milestone list in Smartsheet and choose an ID number that leads to a milestone ID that has not already been taken, and which roughly fits your milestone into the time-ordered list.  
+  Good practice here is to look at the milestone list in Smartsheet and choose an ID number that leads to a milestone ID that has not already been taken, and which roughly fits the milestone into the time-ordered list.  
 \item
   The \texttt{Summary} field should contain a sentence outlining either what needs to be done, or what will be delivered for the Milestone to be reached. 
   Examples include \textit{``Deliver Data Preview 0.1 (DP0.1)''} (an L1 milestone) and \textit{``DP0.1 Data Release: science-ready catalogs released from the IDF''} (an L2 milestone that belongs to it).
@@ -255,7 +259,7 @@ The following fields must be filled out when defining a new milestone:
   Example: \textit{``Upgrade the WBS activity, labor and non-labor plans from V4 to V5 in order to capture a US DF at SLAC, a UK DF, and any other modifications needed, and estimate the corresponding budget.''} 
   Note that only L1 (and sometimes L2) milestones are actually listed in the NOIRLab Program Operations Plan (POP), but Rubin adopts the same structure for all its milestones.
 \item
-  The \texttt{POP Deliverable Description} is a very terse list of the deliverables needed to reach the Milestone. 
+  The \texttt{Deliverable Description} is a very terse list of the deliverables needed to reach the Milestone. 
   Example: \textit{``V5 WBS workbook and Preliminary Cost Calculator.''}
 \item 
   The \texttt{Due Date} is the latest date in the future by which the milestone needs to be reached. 
@@ -265,7 +269,7 @@ The following fields must be filled out when defining a new milestone:
   This is the date that the Smartsheet will use in a visual comparison between the fraction of work completed and the fraction of time elapsed, to help track progress on the epics. 
 \end{itemize}
 
-The Program Coordinators will ensure that the milestones you define are correctly linked together in the Smartsheet, so that their epics appear nested beneath them.
+The Program Coordinators will ensure that the milestones that have been defined are correctly linked together in the Smartsheet, so that their epics appear nested beneath them.
 
 
 \section{Short Term Planning}
