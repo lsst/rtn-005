@@ -109,9 +109,6 @@ However, as above, we generally aspire to minimize the fraction of \gls{LOE} for
 Rubin Operations assumes that a full-time individual works for a total of 1,800 hours per year: this figure is \emph{after} all vacations, sick leave, etc are taken into account.
 The Rubin operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin operations uses 1,800 hours per year as a fiducial value for effort estimation purposes.
 
-% PJM: generalize to ops staff
-% Staff appointed to ``developer''
-% positions are expected to devote this effort directly to \gls{LSST}.
 In general, staff in Rubin operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
 
 Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the Rubin Operations Plan for details).
@@ -126,7 +123,10 @@ This is handled through indirect rates at both NOIRLab and direct charges to res
 Science time is included in the subcontracts of our partners at affiliated institutions through indirect charges 
 similar to the case for NOIRLab.
 
-In Data Production, the base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
+In Data Production, the base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to 
+overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; 
+major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, 
+ad-hoc discussions and other interruptions.
 This work is counted as \gls{LOE}.
 It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
 
@@ -181,8 +181,8 @@ The plan for pre-operations and Survey Operations is embodied in:
         Milestones are officially defined in a \gls{JIRA} milestone issue.
     \item
         A series of \emph{epics} describe major pieces of work. 
-        Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific resource loads (staff assignments story point values) end dates. 
-        All epics are linked to the milestone they are created to help deliver, although some epics might exist without linking to a milestone (level of effort epics, for example).  
+        Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific resource loads (staff assignments story point values) and end dates. 
+        All epics are linked to the milestone they are created to help deliver, although some epics might exist without linking to a milestone (level of effort or emergent work epics, for example).  
     \item
         A visualization of progress on work done towards achieving milestones is captured in Smartsheet, which directly tracks progress by rolling up issues that are completed inside of \gls{JIRA} epics that work together to deliver a given milestone.      
 \end{enumerate}
