@@ -2,8 +2,10 @@
 
 
 This document provides a guide to the \VRO \   approach to annual planning.
-See also the the operations proposal \citeds{LDO-31}
-In operations, there is no \gls{Primavera} or \gls{EVMS} as there are for the Rubin Construction Project.
+See also the the operations proposal \citeds{LDO-31}.
+In operations, there is no formal \gls{EVMS} required from the funding Agencies so a schedule is planned in detail on an annual basis and effort towards that schedule is tracked through a level of effort process.
+
+The annual planning process starts by setting high level Milestones for the year, which are centered around releasing data to the public and major maintenance to the telescope system. The Leadership Team builds a series of milestone activities that are discrete pieces of work within Departments and Teams to collectively deliver the high level milestones.  Teams record their day to day work in Jira and overall progress is monitored automatically through Smartsheet and reported through our managing organizations. 
 
 There are a few main ways work will be managed, some within an Agile framework (particularly for data release planning). 
 The Agile method is a set of practices that allow the ability to adapt and respond to change through collaboration between self-managing, cross-functional teams.  
@@ -18,21 +20,21 @@ For either of these examples, we will maintain a set of tasks that need to be pe
 Each task could be described individually inside a JIRA ticket and grouped together in a set, so that any person doing the daily checks, for example, could be assigned the set of tasks, open the tickets, comment on results, pass additional work onto others as needed, and mark the tickets done as the work is completed.
 In this way, the completion of the checklist of tasks is transparent and traceable and can be monitored, and the efficiency of the steps in the flow of work can be improved upon continuously.
 
-Examples of scrum-like work include improving algorithms in response to user community feedback, optimizing the observing strategy as the survey progresses, and other incremental work needed to produce the annual data releases.
+Examples of scrum-like work include improving algorithms in response to the user community feedback, optimizing the observing strategy as the survey progresses, and other incremental work needed to produce the annual data releases.
 
 In this document, we lay out the procedural details for how we define and carry out plans, following the framework described above, to deliver on our milestones, maintain visibility in our workflows, remain responsive to change, and offer staff the ability to innovate and collaborate.
 
 \section{Rubin Operations Leadership and Annual Reporting}
 \label{sec:contacts}
 
-The Rubin Observatory Acting \ \gls{Director}  is Robert Blum, the Interim Deputy \gls{Director} for NOIRLab is Amanda Bauer, and the Deputy \gls{Director} for SLAC is Phil Marshall.
-They are the first point of contact for all issues regarding project management within \RO.
+Rubin Observatory is a Program of NSF's NOIRLab.
+The Rubin Observatory \ \gls{Director} is Robert Blum, the Deputy \gls{Director} for NOIRLab is Amanda Bauer, and the Deputy \gls{Director} for SLAC is Phil Marshall.
+They are the first point of contact for all issues regarding project management within \RO Operations.
 
 The Program Coordinator is Cathy Petry.
-
 She monitors the budgets and maintains details within the NOIRLab budgeting system. 
+She assists in developing the annual Program Operating Plan (POP), tracking milestones and reporting on progress. 
 
-She assists in developing the annual Program Operating Plan (POP), tracking milestones and reporting. 
 On the SLAC side, Christine Soldahl is the Business Manager who handles similar tasks. 
 
 The POP is a defined report and process for NOIRLab. 
@@ -42,20 +44,20 @@ For SLAC, the POP informs SLAC's annual planning, which culminates in a Field Wo
 
 The FWP is delivered in June of the current fiscal year, and covers the federal budget request for the next two fiscal years. 
 The FWP is previewed to SLAC management and DOE in February in advance of the final delivery in June. 
-Because the POP for NSF and FWP for DOE are out of phase, Rubin does high level planning in early Q2 of the financial year. 
-Detailed activity planning, including lower level milestones, continues though the year in advance of the next year. 
-This detailed planning is the subject of this document.
+Because the POP for NSF and FWP for DOE are out of phase, Rubin does high level planning in early Q2 of the financial year (January and February). 
+Detailed activity planning, including defining smaller chunks of work as lower level milestones, continues though the year in advance of the next year. 
+This detailed activity planning is the subject of this document.
 
 \section{Formal Organizational Structure}
 \label{sec:structure}
 
 Rubin Operations has four operational Departments in addition to the Director’s Office: RDO (Rubin Director’s Office), ROO (Rubin Observatory Operations), RDP (Rubin Data Production), RPF (Rubin System Performance), and REO (Rubin Education and Public Outreach). 
-Each operational Department is led by an Associate Director.
+Each operational Department is led by an Associate Director (AD).
 
 \subsection{Work Breakdown Structure}
 \label{sec:wbs}
 
-The \gls{WBS} provides a hierarchical description of the activity based organization of Rubin. 
+The \gls{WBS} provides a hierarchical description of the activity-based organization of Rubin. 
 The WBS provides a useful structure to organize Rubin Operations and plan annual work around. 
 Rubin is the level 1 of the WBS, the departments are level 2, and teams within the departments are level 3. 
 Individual roles on operations are level 4.   
@@ -83,13 +85,13 @@ Thus:
 
 Detailed work is planned in advance of each financial year at the team level. 
 Team leads will work with department associate directors to develop plans for activities that address specific milestones, projects, and level of effort activity. 
-Highest level milestones are reported regularly throughout the fiscal year to SLAC, AURA, NSF and DOE. 
+The highest level milestones are reported regularly throughout the fiscal year to SLAC, AURA, NSF and DOE. 
 
 
 \subsection{Level of Effort Work}
 \label{sec:loe}
 
-There is work throughout Rubin Operations that will be recorded as a \gls{LOE}. 
+There is work throughout Rubin Operations that is recorded as a \gls{LOE}. 
 These activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to deployed code.
 This may be particularly the case for technical managers or others in leadership roles.
 \gls{LOE} work is assumed to earn value (informally) simply through the passage of time.
@@ -179,8 +181,8 @@ The plan for pre-operations and Survey Operations is embodied in:
 
 \begin{enumerate}
     \item
-        A set of \emph{Milestones}, each of which represents the delivery of a major aspect of Rubin Operations or the availability of specific functionality. 
-        Milestones are officially defined in a \gls{JIRA} milestone issue.
+        A set of \emph{Milestones}, each of which represents the delivery of a major aspect of Rubin Operations, availability of specific functionality, or maintenance event for the telescope system. 
+        Milestones are planned in Smartsheet and then officially defined in a \gls{JIRA} milestone issue.
     \item
         A series of \emph{epics} describe major pieces of work. 
         Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific resource loads (staff assignments story point values) and end dates. 
@@ -315,17 +317,19 @@ Each \gls{epic} loaded into the plan must have this minimum set of fields filled
 
 \begin{itemize}
 \item
-  A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' (\S\ref{sec:bucket});
+  A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' or ``emergent work'' (\S\ref{sec:bucket});
 \item
   The \texttt{Component} field set to the appropriate Department;
 \item
-  The \texttt{Due Date} field set to the appropriate date, which does not exceed the due date of the Milestone it is labeled to achieve.
-\item
-  The \texttt{Story Points} field set to a (non-zero!) estimate of the effort required to complete the \gls{epic} in terms of \glspl{SP} (see \S\ref{sec:effort}).
+  The \texttt{Story Points} field set to a (non-zero) estimate of the effort required to complete the \gls{epic} in terms of \glspl{SP} (see \S\ref{sec:effort}).
 \item
   The \texttt{RO Milestone ID} field set to the appropriate L3 or L2 milestone that the epic will contribute to achieving (or achieve in its totality).
   The exact \texttt{RO Milestone ID}text can be found in the Milestone issue or Smartsheet.
 \end{itemize}
+\item
+  The \texttt{Due Date} field set to the appropriate date, which does not exceed the due date of the Milestone it is labeled to achieve.
+\item
+  The \texttt{label} field is set to identify the fiscal year during which the work will be done. Examples are FY22 or FY23.
 
 The fields above are required to have values entered because they define the connection to Smartsheet where effort-tracking for the full project is done. Other fields in the epic can also be filled in as needed. 
 
