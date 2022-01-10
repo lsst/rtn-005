@@ -58,6 +58,7 @@ Individual roles on operations are defined at the lowest level.
 Thus:
 
 % We want to add the next level down in this tables (include Teams). No need to refer to NOIRLab's WBS for Rubin.
+% Teams have been added as extra rows with an extra column for delineation, but there might be a better presentation format.
 \begin{longtable}[]{@{}lll@{}}
 \hline
 L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
@@ -116,20 +117,19 @@ Team leads will work with department associate directors to develop plans for ac
 The highest level milestones are reported regularly throughout the fiscal year to SLAC, AURA, NSF and DOE.
 
 
-\subsection{Level of Effort Work}
+\subsection{Activity Types}
 \label{sec:loe}
 
-There is work throughout Rubin Operations that is recorded as a \gls{LOE}.
-These activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to deployed code.
-This may be particularly the case for technical managers or others in leadership roles.
-\gls{LOE} work is assumed to earn value (informally) simply through the passage of time.
+There are two types of activities (or epics) that are planned:  activities that result in a deliverable, and level of effort (or support) activities.
+Progress can be tracked on activities with a deliverable by computing the percent complete based on completed stories linked to the epic.
+Progress on \gls{LOE} work is assumed to progress proportionally with the passage of time.
 
+\gls{LOE} activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to a deliverable or product.
+This may be particularly the case for technical managers or others in leadership roles.
 In general, we strive to minimize the fraction of effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
 However, in certain cases such as operations and maintenance of telescope and facility systems, pipelines or other systems, \gls{LOE} is perfectly acceptable.
-
-As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
-Technical staff in Chile at the summit facility may spend a much more significant fraction of time as  \gls{LOE}.
-However, as above, we generally aspire to minimize the fraction of \gls{LOE} for development activity.
+Technical staff in Chile at the summit facility may spend a much more significant fraction of time as \gls{LOE}.
+As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is planned and tracked against concrete deliverables.
 
 
 \section{Estimating Effort}
@@ -140,9 +140,9 @@ However, as above, we generally aspire to minimize the fraction of \gls{LOE} for
 % Note: there calculations are true for Construction but need to be updated for Rubin Operations since NOIRLab uses 1744 hours per year (83%) for scientists, scientists could have 20% or 50% for research, and research time is charged to RSS. 
 
 Rubin Operations assumes that a full-time individual works for a total of 1,800 hours per year: this figure is \emph{after} all vacations, sick leave, etc are taken into account.
-The Rubin operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin operations uses 1,800 hours per year as a fiducial value for effort estimation purposes.
+The Rubin Operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin Operations uses 1,800 hours per year as a fiducial value for effort estimation purposes.
 
-In general, staff in Rubin operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
+In general, staff in Rubin Operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
 
 Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the Rubin Operations Plan for details).
 That is, scientists are expected to devote 1,440 hours per
