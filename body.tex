@@ -54,11 +54,13 @@ The \gls{WBS} provides a hierarchical description of the activity-based organiza
 The WBS provides a useful structure to organize Rubin Operations and plan annual work around.
 Rubin is level 1 of the WBS, the departments are level 2, and teams within the departments are level 3 and in the case of Program Operations, level 4.
 Individual roles on operations are defined at the lowest level.
+% In the Planning Google sheets there is no level 4 as there is in the budget table in the Proposal, but there is a direct mapping in that it's rolled up.  We can decide whether to change the google tools to match the proposal budget tables (will help later with reconcilation), or we can make the mapping clearly described.  Also, in Google sheets 1.10 and 1.11 are rolled into Program Operations, and they are separate elements in this table, and in the budget tables.
 
 Thus:
 
 % We want to add the next level down in this tables (include Teams). No need to refer to NOIRLab's WBS for Rubin.
 % Teams have been added as extra rows with an extra column for delineation, but there might be a better presentation format.
+
 \begin{longtable}[]{@{}lll@{}}
 \hline
 L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
@@ -66,7 +68,7 @@ L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
 \endhead
 
 1 & & Rubin Director's Office  \tabularnewline
-  & 1.1 & Rubin Director's Office  \tabularnewline
+  & 1.1 & Director's Office  \tabularnewline
   & 1.2 & Safety  \tabularnewline
   & 1.3 & Program Operations  \tabularnewline
 %  & 1.3.1 & Program Operations  \tabularnewline
@@ -110,9 +112,12 @@ L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
 \hline
 \end{longtable}
 
+% I will have to look up how to implement a footnote in a longtable
+% Footnote:  Program Operations is made up of several groups at level 4 that are not presented here but are available for activity planning and budgeting
+
 %\subsection{The Control Account Manager}
 %\label{sec:cam}
-%Footnote:  Program Operations is made up of several groups at level 4 that are not presented here but are available for activity planning and budgeting.
+.
 
 Detailed work is planned in advance of each fiscal year at the team level.
 Team leads will work with department associate directors to develop plans for activities that address specific milestones, projects, and level of effort activity.
@@ -147,15 +152,17 @@ The Rubin Operations partners, SLAC and NOIRLab, may have different definitions 
 In general, staff in Rubin Operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
 
 Staff in ``scientist'' or ``engineer'' roles can allocate up to 2% of their time to training, 2% to administrative activities and 1% to outreach and DEI activities.
-% The party line has been that staff has up to 3% for Outreach and DEI but I don't know how that resolves to the budget numbers described in the previous sentence
+% I have heard it said that staff has up to 3% for Outreach and DEI but I don't know how that resolves to the budget numbers described in the previous sentence
+% Perhaps we just roll it all up into 5%, but it's a good place to reiterate that staff *are expected* to spend time on DEI 
 
 Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the Rubin Operations Plan for details).
 That is, scientists are expected to devote 1,440 hours per
 year to operations activity, and the remainder of their time to personal research.
 % Some scientists are 50% 
 
-Personal research time is charged to NOIRLab's Research and Science Services (RSS) and is prorated for staff who are fractionally allocated to Rubin Operations. 
-Training, administrative, and outreach and DEI time is charged to either RSS or ES depending on where staff will move into NOIRLab.
+Personal research time is charged to a NOIRLab's Research and Science Services (RSS) project code and is prorated for staff who are fractionally allocated to Rubin Operations. 
+Training, administrative, and outreach and DEI time is charged to either RSS or ES depending on where staff will move into NOIRLab (RSS or ES). 
+Functional Managers will ensure the proper project codes are available on your timecard.
 
 Rubin expects to pay the full rate for any scientist or engineer who contributes full-time or fractionally to operations.
 This is handled through indirect rates at NOIRLab and direct charges to research accounts at SLAC.
@@ -182,8 +189,8 @@ Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per
           & \multicolumn{2}{c}{Hours} & \multicolumn{1}{c}{\glspl{SP}} \\
           & Per year & Per month      & Per month \\
 \hline
-Full-time Developer & 1800     & 105            & 26.25 \\
-Full-time Scientist & 1440     &  84            & 21.00 \\
+Full-time Developer (ES) & 1800     & 105            & 26.25 \\
+Full-time Scientist (RSS) & 1440     &  84            & 21.00 \\
 \hline
 \end{longtable}
 \caption{Expected working rates for developers and scientists. Technicians and engineers follow the same rates as developers.}
@@ -198,7 +205,7 @@ Full-time Scientist & 1440     &  84            & 21.00 \\
 New or inexperienced developers, even when devoting their full attention to \gls{story}-pointed work, will likely be less productive than their more experienced peers.
 In this case, the ratio of hours to \glspl{SP} increases, but the number of hours remains constant.
 
-Note that specific activities related on ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
+Note that specific activities related to ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
 For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{SP}.
 
 \subsubsection{Technical Managers and other Leadership Roles}
