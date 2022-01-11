@@ -39,7 +39,7 @@ Because the POP for NSF and FWP for DOE are out of phase, Rubin does high level 
 Detailed activity planning, including defining smaller chunks of work as lower level milestones, continues though the year in advance of the next year.
 This detailed activity planning is the subject of this document.
 
-\section{Formal Organizational Structure}
+\section{Organizational Structure}
 \label{sec:structure}
 
 Rubin Operations has four operational Departments in addition to the Director’s Office: RDO (Rubin Director’s Office), ROO (Rubin Observatory Operations), RDP (Rubin Data Production), RPF (Rubin System Performance), and REO (Rubin Education and Public Outreach).
@@ -49,50 +49,94 @@ Each operational Department is led by an Associate Director (AD).
 \label{sec:wbs}
 
 The \gls{WBS} provides a hierarchical description of the activity-based organization of Rubin.
-The WBS provides a useful structure around which to organize Rubin Operations activity and plan annual work.
-Rubin is the level 1 of the WBS, the departments are level 2, and teams within the departments are level 3.
-Individual roles on operations are level 4.
+
+The WBS provides a useful structure to organize Rubin Operations and plan annual work around.
+Rubin is level 1 of the WBS, the departments are level 2, and teams within the departments are level 3 and in the case of Program Operations, level 4.
+Individual roles on operations are defined at the lowest level.
+% In the Planning Google sheets there is no level 4 as there is in the budget table in the Proposal, but there is a direct mapping in that it's rolled up.  We can decide whether to change the google tools to match the proposal budget tables (will help later with reconcilation), or we can make the mapping clearly described.  Also, in Google sheets 1.10 and 1.11 are rolled into Program Operations, and they are separate elements in this table, and in the budget tables.
+
 
 Thus:
 
 % We want to add the next level down in this tables (include Teams). No need to refer to NOIRLab's WBS for Rubin.
+% Teams have been added as extra rows with an extra column for delineation, but there might be a better presentation format.
+
 \begin{longtable}[]{@{}lll@{}}
 \hline
-\gls{WBS} & Description \tabularnewline
+L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
 \hline
 \endhead
 
-1 & Rubin Director's Office  \tabularnewline
-2 & Rubin Observatory Operations  \tabularnewline
-3 & Rubin Data Production \tabularnewline
-4 & Rubin System Performance  \tabularnewline
-5 & Rubin Education and Public Outreach \tabularnewline
+1 & & Rubin Director's Office  \tabularnewline
+  & 1.1 & Director's Office  \tabularnewline
+  & 1.2 & Safety  \tabularnewline
+  & 1.3 & Program Operations  \tabularnewline
+%  & 1.3.1 & Program Operations  \tabularnewline
+%  & 1.3.2 & Administrative Operations  \tabularnewline
+%  & 1.3.3 & Portfolio Management  \tabularnewline
+%  & 1.3.4 & Communications  \tabularnewline
+%  & 1.3.5 & Document Management  \tabularnewline
+%  & 1.3.6 & 5-Year Planning  \tabularnewline
+  & 1.4 & In-Kind Program Coordination  \tabularnewline
+  & 1.8 & Legacy Survey of Space and Time  \tabularnewline
+  & 1.10 & Sustainability  \tabularnewline
+  & 1.11 & Site Protection  \tabularnewline
+2 & & Rubin Observatory Operations  \tabularnewline
+  & 2.1 & Observatory Operations Management  \tabularnewline
+  & 2.2 & Observatory Science Operations  \tabularnewline
+  & 2.3 & Observatory Software  \tabularnewline
+  & 2.4 & Summit Operations  \tabularnewline
+  & 2.5 & Nighttime Operations  \tabularnewline
+  & 2.6 & Engineering  \tabularnewline
+3 & & Rubin Data Production \tabularnewline
+  & 3.1 & Data Production Management  \tabularnewline
+  & 3.2 & Infrastructure and Support  \tabularnewline
+  & 3.3 & Data and Processing Architecture  \tabularnewline
+%   & 3.4 & Execution (disabled)  \tabularnewline
+  & 3.5 & Algorithms and Pipelines  \tabularnewline
+  & 3.6 & Service Quality and Reliability Engineering  \tabularnewline
+  & 3.7 & DevOps Support  \tabularnewline
+  & 3.8 & Data Security  \tabularnewline
+4 & & Rubin System Performance  \tabularnewline
+  & 4.1 & System Performance Management  \tabularnewline
+  & 4.2 & Verification and Validation  \tabularnewline
+  & 4.3 & Community Engagement  \tabularnewline
+  & 4.4 & Survey Scheduling  \tabularnewline
+  & 4.5 & Systems Engineering  \tabularnewline
+5 & & Rubin Education and Public Outreach \tabularnewline
+  & 5.1 & EPO Management  \tabularnewline
+  & 5.2 & EPO Technical  \tabularnewline
+  & 5.3 & Education  \tabularnewline
+  & 5.4 & Outreach  \tabularnewline
 
 \hline
 \end{longtable}
 
+% I will have to look up how to implement a footnote in a longtable
+% \Footnote{Program Operations is made up of several groups at level 4 that are not presented here but are available for activity planning and budgeting.}
+
 %\subsection{The Control Account Manager}
 %\label{sec:cam}
+.
 
-Detailed work is planned in advance of each financial year at the team level.
+Detailed work is planned in advance of each fiscal year at the team level.
 Team leads will work with department associate directors to develop plans for activities that address specific milestones, projects, and level of effort activity.
 The highest level milestones are reported regularly throughout the fiscal year to SLAC, AURA, NSF and DOE.
 
 
-\subsection{Level of Effort Work}
+\subsection{Activity Types}
 \label{sec:loe}
 
-There is work throughout Rubin Operations that is recorded as a \gls{LOE}.
-These activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to deployed code.
-This may be particularly the case for technical managers or others in leadership roles.
-\gls{LOE} work is assumed to earn value (informally) simply through the passage of time.
+There are two types of activities (or epics) that are planned:  activities that result in a deliverable, and level of effort (or support) activities.
+Progress can be tracked on activities with a deliverable by computing the fraction of the effort that is complete (percent complete) based on completed stories linked to the epic.
+Progress on \gls{LOE} work is assumed to progress proportionally with the passage of time.
 
+\gls{LOE} activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to a deliverable or product.
+This may be particularly the case for technical managers or others in leadership roles.
 In general, we strive to minimize the fraction of effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
 However, in certain cases such as operations and maintenance of telescope and facility systems, pipelines or other systems, \gls{LOE} is perfectly acceptable.
-
-As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
-Technical staff in Chile at the summit facility may spend a much more significant fraction of time as  \gls{LOE}.
-However, as above, we generally aspire to minimize the fraction of \gls{LOE} for development activity.
+Technical staff in Chile at the summit facility may spend a much more significant fraction of time as \gls{LOE}.
+As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is planned and tracked against concrete deliverables.
 
 
 \section{Estimating Effort}
@@ -100,22 +144,28 @@ However, as above, we generally aspire to minimize the fraction of \gls{LOE} for
 
 \subsection{Basic Assumptions}
 
-% Note: there calculations are true for Construction but need to be updated for Rubin Operations since NOIRLab uses 1744 hours per year (83%) for scientists, scientists could have 20% or 50% for research, and research time is charged to RSS. 
+% Note: These calculations are true for Construction but need to be updated for Rubin Operations since NOIRLab uses 1744 hours per year (83%) for scientists, scientists could have 20% or 50% for research, and research time and Training, Admin & DEI time is charged to RSS.  For Engineers, Training, Admin & DEI time is charged to ES.
 
 Rubin Operations assumes that a full-time individual works for a total of 1,800 hours per year: this figure is \emph{after} all vacations, sick leave, etc are taken into account.
-The Rubin operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin operations uses 1,800 hours per year as a fiducial value for effort estimation purposes.
+The Rubin Operations partners, SLAC and NOIRLab, may have different definitions for tracking their staff time; Rubin Operations uses 1,800 hours per year as a fiducial value for effort estimation purposes.
 
-In general, staff in Rubin operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
+In general, staff in Rubin Operations roles at a given expected full-time equivalent (FTE) effort level are expected to devote that fraction of their total work time to \RO.
+
+Staff in ``scientist'' or ``engineer'' roles can allocate up to 2 \% of their time to training, 2 \% to administrative activities and 1 \% to outreach and DEI activities.
+% I have heard it said that staff has up to 3% for Outreach and DEI but I don't know how that resolves to the budget numbers described in the previous sentence
+% Perhaps we just roll it all up into 5%, but it's a good place to reiterate that staff *are expected* to spend time on DEI 
 
 Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the Rubin Operations Plan for details).
 That is, scientists are expected to devote 1,440 hours per
 year to operations activity, and the remainder of their time to personal research.
+% Some scientists are 50% 
 
-Personal research time is charged to Rubin along with the operations role time, the logic being that
-scientists in operations roles must be engaged in research as well in order to succeed in their operations role.
-Rubin expects to pay the full rate for an individual with research time who contributes 1,440 hours to
-operations.
-This is handled through indirect rates at both NOIRLab and direct charges to research accounts at SLAC.
+Personal research time is charged to a NOIRLab's Research and Science Services (RSS) project code and is prorated for staff who are fractionally allocated to Rubin Operations. 
+Training, administrative, and outreach and DEI time is charged to either RSS or ES depending on where staff will move into NOIRLab (RSS or ES). 
+Functional Managers will ensure the proper project codes are available on your timecard.
+
+Rubin expects to pay the full rate for any scientist or engineer who contributes full-time or fractionally to operations.
+This is handled through indirect rates at NOIRLab and direct charges to research accounts at SLAC.
 Science time is included in the subcontracts of our partners at affiliated institutions through indirect charges
 similar to the case for NOIRLab.
 
@@ -139,8 +189,8 @@ Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per
           & \multicolumn{2}{c}{Hours} & \multicolumn{1}{c}{\glspl{SP}} \\
           & Per year & Per month      & Per month \\
 \hline
-Full-time Developer & 1800     & 105            & 26.25 \\
-Full-time Scientist & 1440     &  84            & 21.00 \\
+Full-time Developer (ES) & 1800     & 105            & 26.25 \\
+Full-time Scientist (RSS) & 1440     &  84            & 21.00 \\
 \hline
 \end{longtable}
 \caption{Expected working rates for developers and scientists. Technicians and engineers follow the same rates as developers.}
@@ -155,7 +205,7 @@ Full-time Scientist & 1440     &  84            & 21.00 \\
 New or inexperienced developers, even when devoting their full attention to \gls{story}-pointed work, will likely be less productive than their more experienced peers.
 In this case, the ratio of hours to \glspl{SP} increases, but the number of hours remains constant.
 
-Note that specific activities related on ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
+Note that specific activities related to ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
 For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{SP}.
 
 \subsubsection{Technical Managers and other Leadership Roles}
