@@ -428,6 +428,16 @@ Obviously, this will impact the labor available for other activities in the next
 Having defined the plan for a \gls{cycle} following \S\ref{sec:cycle-plan}, we (RDP and RPF) execute it by means of a series of month-long sprints.
 In this section, we detail the procedures teams are expected to follow during the \gls{cycle}.
 
+\subsection{Detailing Work}
+\label{sec:detailing-work}
+
+\subsubsection{Issue Types}\label{issue-types}
+
+There are two \gls{JIRA} issue types that are used for planning work on epics: Story and Bug
+% story - describing a scheduled, self-contained task worked as part of an epic
+% bug - how are bug reports and feature requests accepted and assigned to epics?
+% task/subtask - not sure these are used
+
 \subsection{Defining Stories}
 \label{sec:defining-stories}
 
@@ -447,10 +457,44 @@ decision.
 It is not required to break all \glspl{epic} down into stories before the \gls{cycle} begins: it may be more appropriate to first schedule a few exploratory stories and use them to inform the development of the rest of the \gls{epic}.
 However, do break \glspl{epic} down to describe the stories which will be worked in an upcoming sprint (\S\ref{sec:sprinting}) before the sprint starts.
 When doing so, you may wish to leave some spare time to handle emergent work (discussed in \S\ref{sec:bugs}).
+Every epic should contain \emph{at least} one story.
 
 Note that there is no relationship enforced between the \gls{SP} total estimated for the \gls{epic} and the sum of the \glspl{SP} of its constituent stories.
 It is therefore possible to over- or under-load an \gls{epic}.
 This will have obvious ramifications for the schedule.
+After execution is complete, comparing the total number of SP on planned stories in an epic to the number of SP on the epic itself affords the opportunity to refine time estimates going forward. 
+
+\subsection{Handling Bugs \& Emergent Work}
+\label{sec:bugs}
+
+\subsubsection{Receiving Bug Reports}
+\label{receiving-bug-reports}
+
+Members of the project who have access to \gls{JIRA} may report bugs or make feature requests directly using \gls{JIRA}.
+As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor \gls{JIRA} for relevant tickets and ensure they are handled appropriately.
+
+Our code repositories are exposed to the world in general through \href{https://github.com/lsst/}{GitHub}.
+Each repository on GitHub has a bug tracker associated with it.
+Members of the public may report issues or make requests on the GitHub trackers.
+Per the \href{https://developer.lsst.io/processes/workflow.html}{Developer Workflow}, all new work must be associated with a \gls{JIRA} ticket number before it can be committed to the repository.
+It is therefore the responsibility of technical managers to file a \gls{JIRA} ticket corresponding to the GitHub ticket, to keep them synchronized with relevant information, and to ensure that the GitHub ticket is closed when the issue is resolved in \gls{JIRA}.
+
+The GitHub issue trackers are, in some sense, not a core part of our
+workflow, but they are fundamental to community expectations of how they
+can interact with the project. Ensure that issues reported on GitHub are
+serviced promptly.
+
+In some cases, the technical manager responsible for a given repository
+is obvious, and they can be expected to take the lead on handling
+tickets. Often, this is not the case: repositories regularly span team
+boundaries. Work together to ensure that all tickets are handled.
+
+\subsubsection{Emergent Work}
+\label{emergent-work}
+
+On occasion, work arises that is not anticipated and therefore not planned.  Epics for this type of work will have been set up every cycle so stories should be linked there.
+% Are these just added to the current sprint?
+
 
 \subsection{Sprinting}
 \label{sec:sprinting}
@@ -479,7 +523,7 @@ Broadly, executing a sprint falls into three stages:
 \item Execution.
 
   Daily management during the sprint is a local decision. Suggested best
-  practice includes holding regular ``standup'' meetings, at which
+  practice includes holding regular ``standup'' meetings (see \S\ref{sec:sup}), at which
   developers discuss their current activities and try to resolve
   ``blockers'' which are preventing them from making progress.
 
@@ -489,14 +533,14 @@ Broadly, executing a sprint falls into three stages:
   ensure that completed stories are marked as \texttt{done}:
   experience suggests that this can easily be forgotten as developers
   rush on to the next challenge, but it is required to enable us to
-  properly track earned value as per \S\ref{sec:cycle-value}.
+  properly track progress as per \S\ref{sec:tracking-progress}.
 
   When completing a \gls{story} we do not change the number of \glspl{SP} assigned to
   it: the \gls{SP} total reflects our initial estimate of the work involved,
   not the total time invested.
   However, we should \textit{also} record the true \glspl{SP} expended on the issue.
   This makes it possible to review the quality of our estimates at the end of the sprint.
-  Each individual, with guidance from their \gls{T/CAM}, should use this information as they strive to improve the accuracy of their planning and estimating.
+  Each individual, with guidance from their Team Lead, should use this information as they strive to improve the accuracy of their planning and estimating.
 
   Avoid adding more stories to a sprint in progress unless it is
   unavoidable (for example, the \gls{story} describes a critical bug that must
@@ -520,7 +564,7 @@ Broadly, executing a sprint falls into three stages:
 
 We use \gls{JIRA}'s
 \href{https://www.atlassian.com/software/jira/agile}{Agile} capabilities
-to manage our sprints. Each technical manager is responsible for
+to manage our sprints. Each Team Lead is responsible for
 defining and maintaining their own agile board. The board may be
 configured for either
 \href{https://en.wikipedia.org/wiki/Scrum_(software_development)}{Scrum}
@@ -542,36 +586,11 @@ An \gls{epic} may be marked as \texttt{done} when:
 \item There are no more incomplete \glspl{story} defined within it;
 \item There are no plans to add more \glspl{story};
 \item (If applicable, i.e. it is not a bucket, as defined in \S\ref{sec:bucket}) its concrete deliverable has been achieved.
+\item ``Bucket'' epics should be closed at the end of the time box (i.e. end of half fiscal year and end of fiscal year)
 \end{enumerate}
 
 Note that it is not permitted to close an \gls{epic} without defining at least one \gls{story} within it.
 Empty \glspl{epic} can never be completed.
-
-\subsection{Handling Bugs \& Emergent Work}
-\label{sec:bugs}
-
-\subsubsection{Receiving Bug Reports}\label{receiving-bug-reports}
-
-Members of the project who have access to \gls{JIRA} may report bugs or make feature requests directly using \gls{JIRA}.
-As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor \gls{JIRA} for relevant tickets and ensure they are handled appropriately.
-
-Our code repositories are exposed to the world in general through \href{https://github.com/lsst/}{GitHub}.
-Each repository on GitHub has a bug tracker associated with it.
-Members of the public may report issues or make requests on the GitHub trackers.
-Per the \href{https://developer.lsst.io/processes/workflow.html}{Developer Workflow}, all new work must be associated with a \gls{JIRA} ticket number before it can be committed to the repository.
-It is therefore the responsibility of technical managers to file a \gls{JIRA} ticket corresponding to the GitHub ticket, to keep them synchronized with relevant information, and to ensure that the GitHub ticket is closed when the issue is resolved in \gls{JIRA}.
-
-The GitHub issue trackers are, in some sense, not a core part of our
-workflow, but they are fundamental to community expectations of how they
-can interact with the project. Ensure that issues reported on GitHub are
-serviced promptly.
-
-In some cases, the technical manager responsible for a given repository
-is obvious, and they can be expected to take the lead on handling
-tickets. Often, this is not the case: repositories regularly span team
-boundaries. Work together to ensure that all tickets are handled.
-
-\subsubsection{Issue Types}\label{issue-types}
 
 
 \subsection{Jira Maintenance}
@@ -584,7 +603,7 @@ It is the responsibility of technical managers to ensure that new tickets are ha
 It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
 This indicates which manager is responsible for \gls{seeing} that the work is completed successfully.
 Available teams, and the associated managers, are listed in the \href{https://developer.lsst.io/processes/jira_agile.html}{Developer Guide}; generally speaking, they align with the the work breakdown structure described in \S\ref{sec:wbs}.
-Where there is uncertainty about which team should be responsible for a particular ticket, the “System Management” team may be used to indicate that the \gls{DM} \gls{Project Manager} is responsible for assigning the work.
+Where there is uncertainty about which team should be responsible for a particular ticket, the “Data Production Management” team may be used to indicate that the \gls{DM} \gls{Project Manager} is responsible for assigning the work.
 
 Please regularly monitor \gls{JIRA} for incomplete tickets and update them appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
@@ -597,6 +616,7 @@ Where tickets describe bugs or other urgent emergent work which cannot be deferr
  Cathy ?
 
 \subsection{Tracking Progress toward Milestones}
+\label{sec:track-progress}
 
 Progress on completing epics is visualized in Smartsheet.
 Smartsheet lists all Level 1 through Level 3 milestones in a gantt-chart style view.
