@@ -75,8 +75,8 @@ L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
 1 & & Rubin Director's Office  \tabularnewline
   & 1.1 & Director's Office  \tabularnewline
   & 1.2 & Safety  \tabularnewline
-  & 1.3 & Program Operations  \tabularnewline
-%  & 1.3.1 & Program Operations\footnotemark[1]  \tabularnewline
+  & 1.3 & Program Operations\footnotemark[1]  \tabularnewline
+%  & 1.3.1 & Program Operations  \tabularnewline
 %  & 1.3.2 & Administrative Operations  \tabularnewline
 %  & 1.3.3 & Portfolio Management  \tabularnewline
 %  & 1.3.4 & Communications  \tabularnewline
@@ -217,7 +217,7 @@ In this case, the ratio of hours to \glspl{SP} increases, but the number of hour
 Note that specific activities related to ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
 For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{SP}.
 
-\subsubsection{Technical Managers and other Leadership Roles}
+\subsubsection{Team Leads and other Leadership Roles}
 
 Individuals in leadership roles may find it necessary to assign a larger fraction of their time to \gls{LOE} type work, and therefore spend fewer hours generating \glspl{SP}.
 The ratio of hours to \glspl{SP} remains constant, but the number of hours decreases.
@@ -227,13 +227,15 @@ The ratio of hours to \glspl{SP} remains constant, but the number of hours decre
 \section{Long Term Planning}
 \label{sec:long-term-plan}
 
+\subsection{Components of Annual Planning}
+\label{sec:annual-planning}
 The authoritative, high-level summary of the long-term planning system may be found in any POP process document.
 
 Here we expand upon the details of that system.
-The plan for pre-operations and Survey Operations is embodied in:
+The plan for Pre-Operations and Survey Operations is embodied in:
 
 \begin{enumerate}
-    \item A set of \emph{Milestones}, each of which represents the delivery of a major aspect of Rubin Operations, availability of specific functionality, or maintenance event for the telescope system.
+    \item A set of \emph{milestones}, each of which represents the delivery of a major aspect of Rubin Operations, availability of specific functionality, or maintenance event for the telescope system.
         Milestones are planned in Smartsheet and then officially defined in a \gls{JIRA} milestone issue.
     \item A series of \emph{epics} describe major pieces of work.
         Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific resource loads (staff assignments story point values) and end dates.
@@ -260,11 +262,11 @@ Level 1 and 2 milestones are under change control once they are defined and desc
 
 Level 3 milestones are defined for use within Departments and not required to go under project change control, but properly adhering to the plan is important: your colleagues in other teams will use these milestones to align their schedules with yours, so they rely on you to be accurate.
 
-Epics should work to achieve milestones i.e. they may be blocking issues on the milestones.
+Epics should work to achieve milestones, i.e., they may be blocking issues on the milestones.
 When a detailed description of work for a given \gls{epic} is known, it is described in \gls{JIRA}.
 It should then be assigned to the appropriate \glspl{cycle}.
 
-Progress is tracked toward achieving milestones in Smartsheet by monitoring completed story points in \gls{JIRA} epics and rolling up the total progress.
+Progress is tracked toward achieving milestones in Smartsheet by monitoring completed story points on linked issues in \gls{JIRA} epics and rolling up the total progress.
 To ensure success, \gls{JIRA} epics must be completely detailed out prior to a full 6-month cycle and total effort should be estimated out for an entire fiscal year of effort, as detailed below.
 
 \subsection{Planning Research Work}
@@ -272,7 +274,7 @@ To ensure success, \gls{JIRA} epics must be completely detailed out prior to a f
 
 In order for \RO  to reach its science goals, new algorithmic or engineering approaches must sometimes be researched.
 It is appropriate to budget time for this research work in planning packages.
-
+% how are teams doing this?  We at least need to say it needs to be planning in an epic.  I think planning package is a relic from Construtcion.
 
 \subsection{Epic-Based Long Term Plans}
 
@@ -288,7 +290,7 @@ carefully controlled.
 
 \subsection{Defining the Schedule with Milestones}
 
-Rubin Milestones are defined as \gls{JIRA} issues of type ``Milestone''. As indicated above, the Director (or their designate) defines the L1 milestones, the Associate Directors (ADs) define their departments' L2 milestones, and the Team Leaders and ADs define the L3 milestones for their teams.
+Rubin Milestones are defined as \gls{JIRA} issues of type ``milestone''. As indicated above, the Director (or their designate) defines the L1 milestones, the Associate Directors (ADs) define their departments' L2 milestones, and the Team Leaders and ADs define the L3 milestones for their teams.
 
 L1, L2 and most L3 milestones are defined as part of the annual planning cycle, and prior to the year in which the work associated with them is due to be carried out. ADs and Team Leaders communicate their milestones to the Program Coordinator, who enters them into Smartsheet and then creates a \gls{JIRA} issue of type ``milestone'' for each one.
 
@@ -298,16 +300,18 @@ The following fields must be filled out when defining a new milestone:
 \begin{itemize}
 \item The \texttt{Milestone Level}, ``1,'' ``2,'' or ``3;''
 \item The \texttt{RO Milestone ID}.
-  This is a string like ``L2-DI-0003'' which indicates the level of the milestone, the department (for level 2 milestones) or team (for level 3 milestones) that owns it, and an ID number that serves to make the ID unique wbut which otherwise carries no meaning.
+  This is a string like ``L2-DI-0003'' which indicates the level of the milestone, the department (for level 2 milestones) or team (for level 3 milestones) that owns it, and an ID number that serves to make the ID unique but which otherwise carries no meaning.
   The list of two-character department and team string identifiers can be found in the Appendix (``DI'' in the example stands for ``Directorate'').
   The ID number may get edited by the Director's Office to ensure that it is unique: the Milestone IDs are only ever used in linking together the milestones for visualization in Smartsheet.
   Good practice here is to look at the milestone list in Smartsheet and choose an ID number that leads to a milestone ID that has not already been taken, and which roughly fits the milestone into the time-ordered list.
-\item The \texttt{Summary} field should contain a sentence outlining either what needs to be done, or what will be delivered for the Milestone to be reached.
+\item The \texttt{Summary} field is equivalent to the activity that will take place in order to produce the deliverable and meet the milestone.  It should contain a sentence outlining the activity to be performed in order for the milestone to be reached and the deliverable to be produced. In the POP document tables this is the "Activity".
   Examples include \textit{``Deliver Data Preview 0.1 (DP0.1)''} (an L1 milestone) and \textit{``DP0.1 Data Release: science-ready catalogs released from the IDF''} (an L2 milestone that belongs to it).
-\item The \texttt{Activity Description} text should contain one or maybe two sentences summarizing the activity needed to complete the milestone.
+\item The \texttt{Description} text should contain more information detailing the scope of activity needed to complete the milestone.
   Example: \textit{``Upgrade the WBS activity, labor and non-labor plans from V4 to V5 in order to capture a US DF at SLAC, a UK DF, and any other modifications needed, and estimate the corresponding budget.''}
   Note that only L1 (and sometimes L2) milestones are actually listed in the NOIRLab Program Operations Plan (POP), but Rubin adopts the same structure for all its milestones.
-\item The \texttt{Deliverable Description} is a very terse list of the deliverables needed to reach the Milestone.
+\item The \texttt{POP Milestone} is concise description of the when the milestone is reached.
+Example: \textit{``V5 WBS workbook and Preliminary Cost Calculator implementation complete.''}
+\item The \texttt{POP Deliverable} is a very terse list of the deliverables needed to reach the milestone.
   Example: \textit{``V5 WBS workbook and Preliminary Cost Calculator.''}
 \item The \texttt{Due Date} is the latest date in the future by which the milestone needs to be reached.
   This date should be before or the same as the milestone's parent milestone's ``Rubin Forecast Due Date'' as shown in the Smartsheet.
@@ -316,6 +320,7 @@ The following fields must be filled out when defining a new milestone:
 \end{itemize}
 
 The Program Coordinators will ensure that the milestones that have been defined are correctly linked together in the Smartsheet, so that their epics appear nested beneath them.
+% Should we describe the difference between Planning and Tracking sheets here?
 
 
 \section{Short Term Planning} \label{sec:cycle-plan}
@@ -353,21 +358,21 @@ Each \gls{epic} loaded into the plan must have this minimum set of fields filled
 \item The \texttt{Component} field set to the appropriate Department;
 \item The \texttt{Story Points} field set to a (non-zero) estimate of the effort required to complete the \gls{epic} in terms of \glspl{SP} (see \S\ref{sec:effort}).
 \item The \texttt{RO Milestone ID} field set to the appropriate L3 or L2 milestone that the epic will contribute to achieving (or achieve in its totality).
-  The exact \texttt{RO Milestone ID}text can be found in the Milestone issue or Smartsheet.
-\item The \texttt{Due Date} field set to the appropriate date, which does not exceed the due date of the Milestone it is labeled to achieve.
+  The exact \texttt{RO Milestone ID} can be found in the milestone issue or Smartsheet.
+\item The \texttt{Due Date} field set to the appropriate date, which does not exceed the due date of the milestone it is labeled to achieve.
 \item The \texttt{label} field is set to identify the fiscal year during which the work will be done. Examples are FY22 or FY23.
 
 \end{itemize}
 The fields above are required to have values entered because they define the connection to Smartsheet where effort-tracking for the full project is done. Other fields in the epic can also be filled in as needed.
 
-Be aware that: (Amanda: I don't think all of the following bullets are true or necessary in the Operations non-EVMS era.  Should clarify with Cathy and Wil.)
+Be aware that:
 
 \begin{itemize}
 \item An \gls{epic} may only be assigned to a single \gls{cycle}.
   It is not possible to define an \gls{epic} that crosses the \gls{cycle} boundary (see \S\ref{sec:cycle-close} for the procedure when an \gls{epic} is not complete by the end of the \gls{cycle}).
 \item Indeed, where possible management activities \emph{should} be scheduled as \glspl{epic} with concrete deliverables in this \gls{element} rather than being handled as \gls{LOE}.
 \item The \gls{epic} should be at an appropriate level of granularity.
-  While short \glspl{epic} (a few \glspl{SP}) may be suitable for some activities, in general \glspl{epic} will describe a few months of developer-time.
+  While short \glspl{epic} (a few \glspl{SP}) may be suitable for some activities, in general \glspl{epic} will describe a few months of time.
   \Glspl{epic} allocated multiple hundreds of \gls{story} points are likely too broad to be accurately estimated.
 \end{itemize}
 
@@ -406,9 +411,10 @@ Bucket \glspl{epic} have some similarities with \gls{LOE} work.
 As such, we acknowledge that they are necessary, but seek to minimize the fraction of our resources assigned to them.
 If more than a relatively small fraction of the work for a \gls{cycle} is assigned to bucket \glspl{epic}, please consider whether this is really necessary and appropriate.
 
-Be aware that even bucket \glspl{epic} must be assigned to a specific \emph{leaf} \gls{element} of the \gls{WBS}.
-That is, it is not in general possible to define an \gls{epic} which handles bug reports or emergent feature requests across the whole of the codebase unless a specific \gls{WBS} leaf \gls{element} is devoted to maintenance activities of this type.
-Instead, it may be necessary to define a different bucket \gls{epic} for each leaf of the \gls{WBS} tree.
+% I think this is a tie to the Construction EVMS and is not needed here.
+% Be aware that even bucket \glspl{epic} must be assigned to a specific \emph{leaf} \gls{element} of the \gls{WBS}.
+% That is, it is not in general possible to define an \gls{epic} which handles bug reports or emergent feature requests across the whole of the codebase unless a specific \gls{WBS} leaf \gls{element} is devoted to maintenance activities of this type.
+% Instead, it may be necessary to define a different bucket \gls{epic} for each leaf of the \gls{WBS} tree.
 
 
 \subsection{Closing the Cycle} \label{sec:cycle-close}
@@ -422,13 +428,24 @@ It is \emph{not} appropriate to close an in-progress \gls{epic} with a concrete 
 Obviously, this will impact the labor available for other activities in the next \gls{cycle}.
 (This does not apply to bucket \glspl{epic} (\S\ref{sec:bucket}), which are, by their nature, \gls{timebox}ed within the \gls{cycle}).
 
+Be aware that if a planned epic is not closed it may impact the completion of the milestone it contributes to.  Epics related to milesteones must be completed in order for the milestone to also be completed.
 
 \section{Execution} \label{sec:execution}
 
 Having defined the plan for a \gls{cycle} following \S\ref{sec:cycle-plan}, we (RDP and RPF) execute it by means of a series of month-long sprints.
 In this section, we detail the procedures teams are expected to follow during the \gls{cycle}.
 
-\subsection{Defining Stories}
+\subsection{Detailing Work}
+\label{sec:detailing-work}
+
+\subsubsection{Issue Types}\label{issue-types}
+
+There are two \gls{JIRA} issue types that are used for planning work on epics: Story and Bug
+% story - describing a scheduled, self-contained task worked as part of an epic
+% bug - how are bug reports and feature requests accepted and assigned to epics?
+% task/subtask - not sure these are used
+
+\subsubsection{Defining Stories}
 \label{sec:defining-stories}
 
 Epics have already been defined as part of the \gls{cycle} plan (see \S\ref{sec:planning-epics}).
@@ -447,10 +464,44 @@ decision.
 It is not required to break all \glspl{epic} down into stories before the \gls{cycle} begins: it may be more appropriate to first schedule a few exploratory stories and use them to inform the development of the rest of the \gls{epic}.
 However, do break \glspl{epic} down to describe the stories which will be worked in an upcoming sprint (\S\ref{sec:sprinting}) before the sprint starts.
 When doing so, you may wish to leave some spare time to handle emergent work (discussed in \S\ref{sec:bugs}).
+Every epic should contain \emph{at least} one story.
 
 Note that there is no relationship enforced between the \gls{SP} total estimated for the \gls{epic} and the sum of the \glspl{SP} of its constituent stories.
 It is therefore possible to over- or under-load an \gls{epic}.
 This will have obvious ramifications for the schedule.
+After execution is complete, comparing the total number of SP on planned stories in an epic to the number of SP on the epic itself affords the opportunity to refine time estimates going forward. 
+
+%\subsection{Handling Bugs \& Emergent Work}
+%label{sec:bugs}
+
+\subsubsection{Receiving Bug Reports}
+\label{receiving-bug-reports}
+
+Members of the project who have access to \gls{JIRA} may report bugs or make feature requests directly using \gls{JIRA}.
+As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor \gls{JIRA} for relevant tickets and ensure they are handled appropriately.
+
+Our code repositories are exposed to the world in general through \href{https://github.com/lsst/}{GitHub}.
+Each repository on GitHub has a bug tracker associated with it.
+Members of the public may report issues or make requests on the GitHub trackers.
+Per the \href{https://developer.lsst.io/processes/workflow.html}{Developer Workflow}, all new work must be associated with a \gls{JIRA} ticket number before it can be committed to the repository.
+It is therefore the responsibility of technical managers to file a \gls{JIRA} ticket corresponding to the GitHub ticket, to keep them synchronized with relevant information, and to ensure that the GitHub ticket is closed when the issue is resolved in \gls{JIRA}.
+
+The GitHub issue trackers are, in some sense, not a core part of our
+workflow, but they are fundamental to community expectations of how they
+can interact with the project. Ensure that issues reported on GitHub are
+serviced promptly.
+
+In some cases, the technical manager responsible for a given repository
+is obvious, and they can be expected to take the lead on handling
+tickets. Often, this is not the case: repositories regularly span team
+boundaries. Work together to ensure that all tickets are handled.
+
+\subsubsection{Emergent Work}
+\label{emergent-work}
+
+On occasion, work arises that is not anticipated and therefore not planned.  Epics for this type of work will have been set up every cycle so stories should be linked there.
+% Are these just added to the current sprint?
+
 
 \subsection{Sprinting}
 \label{sec:sprinting}
@@ -479,7 +530,7 @@ Broadly, executing a sprint falls into three stages:
 \item Execution.
 
   Daily management during the sprint is a local decision. Suggested best
-  practice includes holding regular ``standup'' meetings, at which
+  practice includes holding regular ``standup'' meetings (see \S\ref{sec:sup}), at which
   developers discuss their current activities and try to resolve
   ``blockers'' which are preventing them from making progress.
 
@@ -489,14 +540,14 @@ Broadly, executing a sprint falls into three stages:
   ensure that completed stories are marked as \texttt{done}:
   experience suggests that this can easily be forgotten as developers
   rush on to the next challenge, but it is required to enable us to
-  properly track earned value as per \S\ref{sec:cycle-value}.
+  properly track progress as per \S\ref{sec:tracking-progress}.
 
   When completing a \gls{story} we do not change the number of \glspl{SP} assigned to
   it: the \gls{SP} total reflects our initial estimate of the work involved,
   not the total time invested.
   However, we should \textit{also} record the true \glspl{SP} expended on the issue.
   This makes it possible to review the quality of our estimates at the end of the sprint.
-  Each individual, with guidance from their \gls{T/CAM}, should use this information as they strive to improve the accuracy of their planning and estimating.
+  Each individual, with guidance from their Team Lead, should use this information as they strive to improve the accuracy of their planning and estimating.
 
   Avoid adding more stories to a sprint in progress unless it is
   unavoidable (for example, the \gls{story} describes a critical bug that must
@@ -520,7 +571,7 @@ Broadly, executing a sprint falls into three stages:
 
 We use \gls{JIRA}'s
 \href{https://www.atlassian.com/software/jira/agile}{Agile} capabilities
-to manage our sprints. Each technical manager is responsible for
+to manage our sprints. Each Team Lead is responsible for
 defining and maintaining their own agile board. The board may be
 configured for either
 \href{https://en.wikipedia.org/wiki/Scrum_(software_development)}{Scrum}
@@ -532,10 +583,10 @@ for servicing user requests (e.g. providing developer support).
 \subsection{Closing Epics}
 \label{sec:epic-close}
 
-\subsubsection{Completing the Work}
-\label{sec:epic-done}
+%\subsubsection{Completing the Work}
+%\label{sec:epic-done}
 
-An \gls{epic} may be marked as \texttt{done} when:
+An \gls{epic} is considered complete and may be marked as \texttt{done} when:
 
 \begin{enumerate}
 \item It contains at least one completed \gls{story};
@@ -544,34 +595,9 @@ An \gls{epic} may be marked as \texttt{done} when:
 \item (If applicable, i.e. it is not a bucket, as defined in \S\ref{sec:bucket}) its concrete deliverable has been achieved.
 \end{enumerate}
 
+``Bucket'' epics should be closed at the end of the time box (i.e. end of half fiscal year and end of fiscal year).
 Note that it is not permitted to close an \gls{epic} without defining at least one \gls{story} within it.
 Empty \glspl{epic} can never be completed.
-
-\subsection{Handling Bugs \& Emergent Work}
-\label{sec:bugs}
-
-\subsubsection{Receiving Bug Reports}\label{receiving-bug-reports}
-
-Members of the project who have access to \gls{JIRA} may report bugs or make feature requests directly using \gls{JIRA}.
-As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor \gls{JIRA} for relevant tickets and ensure they are handled appropriately.
-
-Our code repositories are exposed to the world in general through \href{https://github.com/lsst/}{GitHub}.
-Each repository on GitHub has a bug tracker associated with it.
-Members of the public may report issues or make requests on the GitHub trackers.
-Per the \href{https://developer.lsst.io/processes/workflow.html}{Developer Workflow}, all new work must be associated with a \gls{JIRA} ticket number before it can be committed to the repository.
-It is therefore the responsibility of technical managers to file a \gls{JIRA} ticket corresponding to the GitHub ticket, to keep them synchronized with relevant information, and to ensure that the GitHub ticket is closed when the issue is resolved in \gls{JIRA}.
-
-The GitHub issue trackers are, in some sense, not a core part of our
-workflow, but they are fundamental to community expectations of how they
-can interact with the project. Ensure that issues reported on GitHub are
-serviced promptly.
-
-In some cases, the technical manager responsible for a given repository
-is obvious, and they can be expected to take the lead on handling
-tickets. Often, this is not the case: repositories regularly span team
-boundaries. Work together to ensure that all tickets are handled.
-
-\subsubsection{Issue Types}\label{issue-types}
 
 
 \subsection{Jira Maintenance}
@@ -584,7 +610,7 @@ It is the responsibility of technical managers to ensure that new tickets are ha
 It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
 This indicates which manager is responsible for \gls{seeing} that the work is completed successfully.
 Available teams, and the associated managers, are listed in the \href{https://developer.lsst.io/processes/jira_agile.html}{Developer Guide}; generally speaking, they align with the the work breakdown structure described in \S\ref{sec:wbs}.
-Where there is uncertainty about which team should be responsible for a particular ticket, the “System Management” team may be used to indicate that the \gls{DM} \gls{Project Manager} is responsible for assigning the work.
+Where there is uncertainty about which team should be responsible for a particular ticket, the “Data Production Management” team may be used to indicate that the \gls{DM} \gls{Project Manager} is responsible for assigning the work.
 
 Please regularly monitor \gls{JIRA} for incomplete tickets and update them appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
@@ -597,6 +623,7 @@ Where tickets describe bugs or other urgent emergent work which cannot be deferr
  Cathy ?
 
 \subsection{Tracking Progress toward Milestones}
+\label{sec:track-progress}
 
 Progress on completing epics is visualized in Smartsheet.
 Smartsheet lists all Level 1 through Level 3 milestones in a gantt-chart style view.
