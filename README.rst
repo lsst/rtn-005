@@ -4,7 +4,7 @@
    :target: https://github.com/rubin-observatory/rtn-005/actions/
 
 ##########################################################
-Management principles and use of Jira for Rubin Operations
+Work Management Systems for Rubin Operations
 ##########################################################
 
 RTN-005
