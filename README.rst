@@ -4,13 +4,13 @@
    :target: https://github.com/rubin-observatory/rtn-005/actions/
 
 ##########################################################
-Work Management Systems for Rubin Operations
+Rubin Operations Work Management and Budget Planning
 ##########################################################
 
 RTN-005
 =======
 
-We would like to give some guidelines for management of effort in Rubin ops and possibly more so in pre ops while we have more build up.
+Guidelines for budget planning, work planning, and management of effort in Rubin operations. Process development and implementation during pre-operations. 
 
 Links
 =====
