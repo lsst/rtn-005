@@ -55,18 +55,22 @@ This document describes how effort towards an annually-planned schedule is track
 \input{body}
 
 \appendix
+
+% A. References
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
 \renewcommand{\refname}{} % Suppress default Bibliography section
 \bibliography{local,lsst,lsst-dm,refs_ads,refs,books}
 
+% B. Glossary
 % Make sure lsst-texmf/bin/generateAcronyms.py is in your path
 %\section{Acronyms} \label{sec:acronyms}
 %\input{acronyms.tex}
 \printglossaries
 
-
+% C. Rubin Operations Planning Tools
+\input{planning-tools}
 
 
 
