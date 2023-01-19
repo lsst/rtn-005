@@ -356,16 +356,11 @@ L1, L2 and most L3 milestones are defined as part of the annual planning cycle, 
 
 During the year, it is sometimes necessary to create new milestones (primarily at Level 3) that were omitted during the earlier planning phase. In this case, the team leader or AD may create the \gls{JIRA} milestone directly, and alert the Program Coordinator to it for inclusion in the Smartsheet.
 
-The following fields must be filled out when defining a new milestone:
+The following Jira fields must be filled out when defining a new milestone:
 \begin{itemize}
 \item The \texttt{Milestone Level}, ``1,'' ``2,'' or ``3.''
 % We will remove references to the RO Milestone ID and deprecate the mapping google sheet which inventories all the IDs, as well as removing the field from the Milestone Issue Type
-%\item The \texttt{RO Milestone ID}.
-% This is a string like ``L2-DI-0003'' which indicates the level of the milestone, the department (for level 2 milestones) or team (for level 3 milestones) that owns it, and an ID number that serves to make the ID unique but which otherwise carries no meaning.
-%  The list of two-character department and team string identifiers can be found in the Appendix (``DI'' in the example stands for ``Directorate'').
-%  The ID number may get edited by the Director's Office to ensure that it is unique: the Milestone IDs are only ever used in linking together the milestones for visualization in Smartsheet.
-%  Good practice here is to look at the milestone list in Smartsheet and choose an ID number that leads to a milestone ID that has not already been taken, and which roughly fits the milestone into the time-ordered list.
-\item The \texttt{Summary}is also the milestone title, and is a concise description of the when the milestone is reached.
+\item The \texttt{Summary} is also the milestone title, and is a concise description of the when the milestone is reached.
 Example: \textit{``V5 WBS workbook and Preliminary Cost Calculator implementation complete.''}
 \item The \texttt{Milestone Activity} field is equivalent to the activity that will take place in order to produce the deliverable and meet the milestone.  It should contain a sentence outlining the activity to be performed in order for the milestone to be reached and the deliverable to be produced. In the POP document tables this is the "Activity".
   Examples include \textit{``Deliver Data Preview 0.1 (DP0.1)''} (an L1 milestone) and \textit{``DP0.1 Data Release: science-ready catalogs released from the IDF''} (an L2 milestone that belongs to it).
@@ -374,13 +369,11 @@ Example: \textit{``V5 WBS workbook and Preliminary Cost Calculator implementatio
 \item The \texttt{Description} text should contain more information detailing the scope of activity needed to complete the milestone.
   Example: \textit{``Upgrade the WBS activity, labor and non-labor plans from V4 to V5 in order to capture a US DF at SLAC, a UK DF, and any other modifications needed, and estimate the corresponding budget.''}
   Note that while only a subset of L1 and L2 milestones are actually listed in the NOIRLab Program Operations Plan (POP), Rubin adopts the same structure for all its milestones.
-
-
 \item The \texttt{Due Date} is the latest date in the future by which the milestone needs to be reached.
-  This date should be before or the same as the milestone's parent milestone's ``Rubin Forecast Due Date'' as shown in the Smartsheet.
+  This date should be before or the same as the milestone's parent milestone's ``Milestone Due Date'' as shown in the Smartsheet, or the ``Due Date'' of the parent milestone in Jira.
 %\item The \texttt{Start Date} is the date when the work for the milestone should begin.
 %  This is the date that the Smartsheet will use in a visual comparison between the fraction of work completed and the fraction of time elapsed, to help track progress on the epics.
-\item A \texttt{Linked Issues} should contain a \textit{``blocks''} link to the parent milestone to reflect how that milestone contributes to acheiving that milestone. 
+\item In the \texttt{Linked Issues} field, create a \textit{``blocks''} link to the parent milestone to reflect how that milestone contributes to acheiving that milestone. 
 \end{itemize}
 
 The Program Coordinators will ensure that the milestones that have been defined are correctly arranged in the Smartsheet, so that their epics appear nested beneath them.
