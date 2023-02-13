@@ -673,7 +673,7 @@ In May, the Departments and Teams hold a series of meetings to set their minor (
 Each department is given a ``sandbox'' workbook to work up during this period.
 This sandbox is initialized with the department's labor and non-labor plans (that were used in setting the budget), the current staffing plan, the progress against milestones in the current fiscal year, and the major milestones for the coming fiscal year.
 They are then invited to work this sandbox up with analysis of recent performance, and any changes they want to propose for the next fiscal year, based on the minor milestones and associated activities they want to prioritize.
-They are also invited to scrub their part of the risk register, and update their risk response plans in concert with their planned activities.
+They are also invited to scrub their part of the risk register, update their risk response plans in concert with their planned activities, and anticipate any requests beyond target they may need to make.
 
 Typically, each team works up its part of the sandbox mostly independently, and then presents it to the department's management team around mid-May in a sandbox pitch session.
 (A template slide deck for each team's pitch is provided by the Director's Office, to ensure that all aspects of the sandboxing exercise are addressed.)
@@ -698,21 +698,42 @@ The teams then plan work against their minor milestones in September, incorporat
 \end{figure}
 
 
-\subsection{Risk-aware Budgeting}
+\subsection{Risk-aware budgeting and Requests Beyond Target}
 
-Preamble on motivation.
-Management reserve for unknown unknowns, contingency reserve for known unknowns (in the risk regsiter).
-Different guidelines from different agencies. DOE allows reserves to be built up and carried forward at SLAC, and used as both contingency and management reserve. DOE holds additional mgmt reserve centrally.
-NSF allows line item budget over-estimates, which then also lead to carry-forward, which we then use as contingency reserve; NSF-side management reserve is held at the agency.
-Risk-aware budgeting: cost impact analysis of Risk register informs level of contingency reserve needed.
-Additional 8\% management reserve at SLAC, often needed to bridge gaps in federal funding. Reserve maintenance is accounted for in DOE budget requests.
-Status of reserve planning and risk analysis.
+The ground-up spending plan developed during the annual cycle is to cover operations work defined by the milestone activities, as well as any regular work captured in bucket epics.
+This work includes mitigation of risks held by the teams, as described in the response plans in the risk register.
+Any risks that are realized during the year will require action that is not budgeted for.
+Additional spending to address realized risks is enabled by Rubin's request beyond target (RBT) process, whereby reserve funds are released for use by the departments in response to a specific mid-year request made in a custom Jira ticket.
 
+Standard terminology for financial reserves is that ``management reserve'' describes funds held back to pay for the unknown unknowns, while ``contingency reserve'' is used for known unknowns (i.e.\ the risks in the risk register).
+Rubin Operations' two funding agencies offer differing guidelines on how reserve should be managed.
+DOE allows reserves to be built up and carried forward at SLAC, and used as both contingency and management reserve.
+DOE HEP holds additional reserves centrally, which can also be used as both contingency and management reserve.
+NSF AST allows line item budget over-estimation by up to 10%, to allow for increases in cost.
+These generate carry-forward (along with any other under-spending that may occur), which we use as contingency reserve.
+NSF also holds reserves of both kinds centrally, to cover high cost impact realized risks as well as unexpected events.
 
-\subsection{Requests Beyond Target}
+The cost impact analysis of the Rubin Operations risk register informs the level of contingency reserve needed.
+Residual (post-mitigation) cost exposure for each risk is computed by taking the  product of the residual probability of the risk being realized (in any given year) and the likely annual cost of addressing that risk.
+The total cost exposure is then the sum, over all risks in the register, of these products.
 
-Mid-year. Typically to mitigate or address risks. Leads to draw on reserves. Process for evaluating.
+Currently, the total cost exposure, and hence the needed level of contingency reserve, is approximately 15\% of the total annual operating budget at each operations partner.
+Included in the risk register is the risk of federal funding allocations being reduced, with a likely cost (if realized in any given year) of some $1.5M per operations partner.
+(At SLAC, for example, this would cover about 7\% of the operating expense -- enough to pay the labor bills during a 1 month funding allocation delay.)
 
+Reserve maintenance is accounted for in our federal budget requests, either as an explicit difference between cost and budget on the DOE side, or as line by line allowances for increases in cost on the NSF side.
+At both operations partners the reserve is maintained as carry-forward from one year's spending to the next, with it being spent down to zero either during the post-operations period (at SLAC), or at the end of each 5-year renewal period at NOIRLab.
+(The restriction on carrying forward funds between renewal periods means that the level of reserve held at NOIRLab varies significantly over the course of the 5 years.
+Risks that are realized early in the 5-year period are more likely to need supplemental funding from MSF's centrally-held reserves than those that are realized later on, when the carry-forward has been built up.
+It may be possible to purposefully hold back scope so as to build up the carry-forward quickly at the start of a renewal period.)
+
+Requests beyond target (RBTs) are typically made by the departments in order to address risks as they are realized.
+(They may also be made in order to take advantage of opportunities arising.)
+An RBT, if approved, leads to a draw on the reserve held at one of the operations partners.
+(At NOIRLab, carry-forward use must be declared a year in advance in the POP: this is why the sandboxing process includes a request that the operations teams pitch RBTs for the coming year at that stage.)
+The RBT itself is a Jira ticket submitted by a department's management team on behalf of the team that is addressing the risk.
+Review is by the Directorate team, as budget holders.
+The spending associated with an approved RBT is not captured in a change to the labor or non-labor plan (which together define the baseline spending plan), but instead is tracked as a variance relative to those plans.
 
 % ======================================================================
 \section{Personnel}
