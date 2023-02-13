@@ -1,14 +1,40 @@
 \section{Rubin Operations Planning Tools}
 \label{sec:planning-tools}
 
-Logical flow: WBS activities -> Labor and Nonlabor plans -> Staffing Plan. Staffing informs costing with Staff Data. Cost Calculator costs the plan.
+The cost and schedule of Rubin Operations is derived using a suite of planning tools, that capture the logical flowdown from the observatory's operations requirements to its work breakdown structure (WBS) and major milestones, and from there to its staffing plan and budget.
 
-Tool design. Must be: collaborative/shareable, easy to use. Custom, inter-connected Google sheets workbooks.
+Since the management of Rubin Operations is shared between two operations partners, NOIRLab and SLAC, whose staff are organized into integrated, multi-partner teams, these planning tools must be collaborative and shareable between institutions.
+Enabling ground-up development and delegated ownership of the overall plan leads to a further requirement that the planning tools be easy and intuitive to use.
+These two considerations have led to Rubin Operations' development of its planning tools as a set of custom-built, inter-connected Google sheets workbooks.
+The schedule itself is defined as a set of JIRA milestones, while work is planned using JIRA epics and stories; Smartsheet provides additional enterprise-level milestone planning and tracking capability.
 
-WBS notes.
+The Rubin planning tools are as follows:
 
-Staffing Plan notes.
+\begin(itemize}
 
-Cost Calculator notes.
+\item The \textbf{Data Preview and Release Planning Tool (DPRPT) workbook} supports the derivation of Rubin's primary set of major milestones, the LSST data releases.
+It also captures the high level planning of the data release contents, a critical activity during the pre-operations phases ``Data Previews.''
 
-Updating and Versioning
+\item The \textbf{Work Breakdown Structure (WBS) workbook} contains the WBS for Rubin Operations, leading to the derivation of the departments, teams and groups that make up the operations organization.
+It also hosts the Labor and Non-labor plans, defining the labor roles and their needed effort profiles, and the non-labor items (equipment, services, etc), that each team needs to carry out its part of the work.
+
+\item The \textbf{Staffing Plan workbook} shows how the labor plan is being staffed.
+(The WBS Labor plan shows the \textit{needed} FTE effort in each role, while the Staffing Plan shows the \textit{planned} FTE effort from each team member in each role.)
+It imports dynamically the WBS Labor plan, and provides a number of cross-checks against it.
+
+\item The \textbf{Cost Calculator (CC) workbook} imports dynamically the WBS Labor and Nonlabor plans, computes the cost profile associated with each item, and produces various summaries needed for our budget requests.
+The Staffing Plan is not used directly, but an approximate average salary per role is estimated externally using the Staffing Plan as a guide, and then entered into one of the CC's data sheets.
+The CC's costing is therefore approximate: we estimate that it forecasts with better than 1% precision.
+
+\end{itemize}
+
+Each tool is internally documented with a README and a Change Record, and cell comments are used for discussion of changes at that level. 
+
+\subsection{Updating and Versioning}
+
+These planning tools are being evolved continuously.
+A major update of the Staffing Plan, WBS, and Cost Calculator is carried out following each sandboxing exercise.
+Because they are all interconnected, they carry the same version number.
+Ideally, the joint operations review happens just before such an update is begun; a natural time to archive the current version and advance to the new version is when the plan is frozen for joint agency review.
+Mechanically, a copy of each workbook is made, with ``ARCHIVED'' at the end of its name, the connections are edited so that the archived Staffing PLan and CC workbooks import from the corresponding archived copy of the WBS and not the current version, and then all 3 archived copies are transferred to an Attic folder.
+The current versions are then renamed with the new version number, and edited until it is time to freeze them again.
