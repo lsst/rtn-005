@@ -11,13 +11,13 @@
 \input{aglossary.tex}
 \makeglossaries
 
-\title{Work Management Systems for Rubin Operations}
+\title{Rubin Operations Work Management and Budget Planning}
 
 % Optional subtitle
 % \setDocSubtitle{A subtitle}
 
 \author{%
-William O'Mullane, Amanda Bauer, Robert Blum, Phil Marshall, Cathy Petry
+William O'Mullane, Amanda Bauer, Robert Blum, Phil Marshall, Cathy Petry, Ranpal Gill
 }
 
 \setDocRef{RTN-005}
@@ -29,7 +29,10 @@ William O'Mullane, Amanda Bauer, Robert Blum, Phil Marshall, Cathy Petry
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-This document describes guidelines for the management of effort in Vera C. Rubin Observatory Operations. It describes the process for planning and executing agile-based work, including tasks that are carried out with regularity (nightly or monthly, etc), long-term development work that iteratively incorporates user feedback, and level of effort activity. The process for measuring progress towards an annually-planned schedule is described as well as the budget planning cycle and the tools used in this process.
+This document describes the budget and work planning process, and provided guidelines for the management of effort, in Vera C. Rubin Observatory Operations.
+It lays out the annual cycle of milestone setting, development of departmental budget guidance, ground-up spending plan ``sandboxing,'' and work planning, and introduces (in an appendix) the suite of Rubin Operations Planning Tools.
+It describes the process for planning and executing agile-based work, including tasks that are carried out with regularity (nightly or monthly, etc), long-term development work that iteratively incorporates user feedback, and level of effort activity.
+The process for measuring progress towards an annually-planned schedule is described, as well as the budget planning cycle and the Rubin planning tools used.
 }
 
 % Change history defined here.
@@ -37,8 +40,8 @@ This document describes guidelines for the management of effort in Vera C. Rubin
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-\addtohist{1}{2021-11-05}{Unreleased.}{William O'Mullane}
-\addtohist{2}{2023-01-13}{Updated with FY23 processes.}{Cathy Petry}
+\addtohist{1}{2021-11-05}{Initial version.}{William O'Mullane}
+\addtohist{1}{2023-02-17}{Extension to include budget planning, FY23 process updates.}{Phil Marshall \& Cathy Petry}
 }
 
 
@@ -52,18 +55,22 @@ This document describes guidelines for the management of effort in Vera C. Rubin
 \input{body}
 
 \appendix
+
+% A. References
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
 \renewcommand{\refname}{} % Suppress default Bibliography section
 \bibliography{local,lsst,lsst-dm,refs_ads,refs,books}
 
+% B. Glossary
 % Make sure lsst-texmf/bin/generateAcronyms.py is in your path
 %\section{Acronyms} \label{sec:acronyms}
 %\input{acronyms.tex}
 \printglossaries
 
-
+% C. Rubin Operations Planning Tools
+\input{planning-tools}
 
 
 
