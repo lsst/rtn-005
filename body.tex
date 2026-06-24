@@ -69,12 +69,13 @@ Rubin is level 1 of the \gls{WBS}, the departments are level 2, and teams within
 Individual roles in operations are defined at the lowest level.
 % In the Planning Google sheets there is no level 4 as there is in the budget table in the Proposal, but there is a direct mapping in that it's rolled up.  We can decide whether to change the google tools to match the proposal budget tables (will help later with reconcilation), or we can make the mapping clearly described.  Also, in Google sheets 1.10 and 1.11 are rolled into Program Operations, and they are separate elements in this table, and in the budget tables.
 
-This table shows the level 2 and level 3 elements of the \gls{Rubin Operations} work breakdown structure.
+\tabref{tab:wbs} shows the level 2 and level 3 elements of the \gls{Rubin Operations} work breakdown structure.
 
 % This table is not auto-numbered and the next table is numbered "3" so this will have to be figured out.
 
 % \begin{table}
 \begin{longtable}[]{@{}lll@{}}
+\caption{WBS elements for Rubin Observatory \label{tab:wbs}}\\
 
 \hline
 \gls{L2} \gls{WBS} & \gls{L3} \gls{WBS} & Description \tabularnewline
@@ -204,7 +205,6 @@ Rather than working in hours, our \gls{JIRA} based system uses Story Points (\gl
 
 Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per \emph{average} month respectively.
 
-\begin{table}
 \begin{longtable}[]{@{}lrrr@{}}
 \hline
           & \multicolumn{2}{c}{Hours} & \multicolumn{1}{c}{\glspl{SP}} \\
@@ -213,10 +213,9 @@ Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per
 Full-time Developer & 1800     & 105            & 26.25 \\
 Full-time Scientist & 1440     &  84            & 21.00 \\
 \hline
-\end{longtable}
 \caption{Expected working rates for developers and scientists. Technicians and engineers follow the same rates as developers.}
 \label{tab:working-rate}
-\end{table}
+\end{longtable}
 
 \subsection{Special Cases}
 
