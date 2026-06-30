@@ -71,9 +71,6 @@ Individual roles in operations are defined at the lowest level.
 
 \tabref{tab:wbs} shows the level 2 and level 3 elements of the \gls{Rubin Operations} work breakdown structure.
 
-% This table is not auto-numbered and the next table is numbered "3" so this will have to be figured out.
-
-% \begin{table}
 \begin{longtable}[]{@{}lll@{}}
 \caption{WBS elements for Rubin Observatory \label{tab:wbs}}\\
 
@@ -86,12 +83,6 @@ Individual roles in operations are defined at the lowest level.
   & 1.1 & \hspace{0.5cm} \gls{Director}'s Office  \tabularnewline
   & 1.2 & \hspace{0.5cm} \gls{Safety}  \tabularnewline
   & 1.3 & \hspace{0.5cm} Program \gls{Operations}\footnotemark[1]  \tabularnewline
-%  & 1.3.1 & Program Operations  \tabularnewline
-%  & 1.3.2 & Administrative Operations  \tabularnewline
-%  & 1.3.3 & Portfolio Management  \tabularnewline
-%  & 1.3.4 & Communications  \tabularnewline
-%  & 1.3.5 & Document Management  \tabularnewline
-%  & 1.3.6 & 5-Year Planning  \tabularnewline
   & 1.4 & \hspace{0.5cm} In-Kind Program Coordination  \tabularnewline
   & 1.5 & \hspace{0.5cm} Legacy Survey of Space and Time  \tabularnewline
   & 1.6 & \hspace{0.5cm} Change and Risk Management  \tabularnewline
@@ -104,56 +95,48 @@ Individual roles in operations are defined at the lowest level.
   & 2.5 & \hspace{0.5cm} Nighttime \gls{Operations}  \tabularnewline
   & 2.6 & \hspace{0.5cm} Summit Engineering  \tabularnewline
   & 2.7 & \hspace{0.5cm} Camera  \tabularnewline
-  & 2.6 & \hspace{0.5cm} Summit Systems Engineering  \tabularnewline
+  & 2.8 & \hspace{0.5cm} Summit Systems Engineering  \tabularnewline
 3 & & Rubin Data Management \tabularnewline
   & 3.1 & \hspace{0.5cm} \gls{RDM} Management  \tabularnewline
-  & 3.2 & \hspace{0.5cm} US Data Facility  \tabularnewline
-  & 3.3 & \hspace{0.5cm} France Data Facility  \tabularnewline
-  & 3.4 & \hspace{0.5cm} UK Data Facility \tabularnewline
-  & 3.5 & \hspace{0.5cm} DevOps  \tabularnewline
+  & 3.2 & \hspace{0.5cm} Data Facilities  \tabularnewline
+  & 3.5 & \hspace{0.5cm} Summit DevOps  \tabularnewline
   & 3.6 & \hspace{0.5cm} Pipeline Middleware  \tabularnewline
   & 3.7 & \hspace{0.5cm} Data Engineering  \tabularnewline
   & 3.8 & \hspace{0.5cm} Algorithms and Pipelines  \tabularnewline
-  & 3.8 & \hspace{0.5cm} Campaign Management  \tabularnewline
-  & 3.8 & \hspace{0.5cm} Service Quality and Reliability Engineering  \tabularnewline
-  & 3.8 & \hspace{0.5cm} QServ  \tabularnewline
-  & 3.8 & \hspace{0.5cm} Build Engineering  \tabularnewline
-  & 3.8 & \hspace{0.5cm} Community Science  \tabularnewline
-  & 3.8 & \hspace{0.5cm} Data Validation  \tabularnewline
+  & 3.9 & \hspace{0.5cm} Campaign Management  \tabularnewline
+  & 3.10 & \hspace{0.5cm} Service Quality and Reliability Engineering  \tabularnewline
+  & 3.11 & \hspace{0.5cm} QServ  \tabularnewline
+  & 3.12 & \hspace{0.5cm} Build Engineering  \tabularnewline
+  & 3.13 & \hspace{0.5cm} Community Science  \tabularnewline
+  & 3.14 & \hspace{0.5cm} Data Validation  \tabularnewline
 5 & & \gls{REO} \tabularnewline
   & 5.1 & \hspace{0.5cm} Education and Public Outreach  \tabularnewline
 
 \hline
 
-% footnote text
-\footnotetext[1]{Program \gls{Operations} is made up of several groups at level 4 that are not presented here but are available for activity planning and budgeting.}
 \end{longtable}
-% Using a caption needs the "table" environment currently commented
-% \caption{The level 2 and level 3 elements of the Rubin Operations work breakdown structure.}
-% \label{tab:wbs}
-% \end{table}
 
 %\subsection{The Control Account Manager}
 %\label{sec:cam}
 
 Detailed work is planned in advance of each fiscal year at the team level.
 Team leads will work with department \glspl{AD} to develop plans for activities that address specific milestones, projects, and level of effort activity.
-Progress towards the highest level milestones is reported regularly throughout the fiscal year to \gls{SLAC}, \gls{AURA}, \gls{NSF} and \gls{DOE}.
+Progress towards the highest level milestones is reported regularly throughout the fiscal year to \gls{SLAC}, \gls{AURA}, \gls{NOIRLab}, \gls{NSF} and \gls{DOE}.
 
 
 \subsection{Activity Types}
 \label{sec:loe}
 
-There are two types of activities (or epics) that are planned:  activities that result in a deliverable, and level of effort (or support) activities.
-Progress can be tracked on activities with a deliverable by computing the fraction of the effort that is complete (percent complete) based on completed stories linked to the \gls{epic}.
+%There are two types of activities (or epics) that are planned:  activities that result in a deliverable, and level of effort (or support) activities.
+Progress is tracked at the milestone level by a combination of computing the fraction of time that has passed coupled with progress input from the \gls{AD}.
 Progress on \gls{LOE} work is assumed to progress proportionally with the passage of time.
 
 \gls{LOE} activities include attending meetings, reporting on milestones, or taking part in other activities which do not directly map to a deliverable or product.
 This may be particularly the case for technical managers or others in leadership roles.
-In general, we strive to minimize the fraction of effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
-However, in certain cases such as operations and maintenance of telescope and facility systems, pipelines or other systems, \gls{LOE} is perfectly acceptable.
+%In general, we strive to minimize the fraction of effort which is devoted to \gls{LOE} activities and favor those which are more directly accountable.
+Additionally in certain cases such as operations and maintenance of telescope and facility systems, pipelines or other systems, \gls{LOE} is perfectly acceptable.
 Technical staff in Chile at the summit facility may spend a much more significant fraction of time as \gls{LOE}.
-As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is planned and tracked against well-defined deliverables.
+%As an example, a first-order estimate is that developers will spent 30\% of their time on \gls{LOE} type activities, and the remaining 70\% of their effort is planned and tracked against well-defined deliverables.
 
 
 % ======================================================================
@@ -165,41 +148,33 @@ As an example, a first-order estimate is that developers will spent 30\% of thei
 % Note: These calculations are true for Construction but need to be updated for Rubin Operations since NOIRLab uses 1744 hours per year (83%) for scientists, scientists could have 20% or 50% for research, and research time and Training, Admin & DEI time is charged to RSS.  For Engineers, Training, Admin & DEI time is charged to ES.
 % We could also refer to the effort planning tool Phil has made ("Team Effort Planner" in Staffing Plan).  Right now, most people have "Commenter" permission in the STaffing Plan workbook and this is not sufficient to use the dropdown filter that TLs and ADs would need to use this tool.  We could move this to a stand-alone workbook.
 
-Rubin \gls{Operations} assumes that a full-time individual works for a total of 1,800 hours per year: this figure is \emph{after} all vacations, sick leave, etc are taken into account.
-The \gls{Rubin Operations} partners, \gls{SLAC} and \gls{NOIRLab}, may have different definitions for tracking their staff time; \gls{Rubin Operations} uses 1,800 hours per year as a fiducial value for effort estimation purposes.
+\gls{Rubin Operations} uses 1,726 hours per year as a fiducial value for effort estimation purposes. This figure is \emph{after} all vacations, sick leave, etc are taken into account. The \gls{Rubin Operations} partners, \gls{SLAC} and \gls{NOIRLab}, may have different definitions for tracking their staff time; 
 
 In general, staff in \gls{Rubin Operations} roles at a given expected full-time equivalent (\gls{FTE}) effort level are expected to devote that fraction of their total work time to \RO.
 
 % Remove Feb 2025
 % Staff in ``scientist'' or ``engineer'' roles can allocate up to 2\% of their time to training, 2\% to administrative activities and 1\% to outreach and \gls{DEI} activities.
 
-Staff in ``scientist'' roles are expected to spend 20\% of their time on personal research (see the \gls{Rubin Operations} Plan for details).
-That is, scientists are expected to devote 1,440 hours per
-year to operations activity, and the remainder of their time to personal research.
-% Some scientists are 50%
+Staff in ``scientist'' roles spend either 20\% (259 hours) or 50\% (777 hours) of their time on personal research (see the \citeds{RDO-018} Plan for details).
 
 % Confirmation on how we will be having staff charge for ES/RSS budgeted time in FY22 will be needed.  One suggestion is to not worry about this until FY23 when staff are contributing more than 50% of their time to NOIRLab.
 % Removed DEI time
 Personal research time is charged to a \gls{NOIRLab}'s \gls{RSS} project code and is prorated for staff who are fractionally allocated to \gls{Rubin Operations}.
-Training, administrative, and outreach time is charged to either \gls{RSS} or \gls{ES} depending on where staff will move into \gls{NOIRLab} (\gls{RSS} or \gls{ES}).
-Functional Managers will ensure the proper project codes are available on your timecard.
+Training, administrative, and outreach time is charged to either \gls{RSS}, \gls{ES}, \gls{DMS}, \gls{CEE} depending on where staff are allocated into \gls{NOIRLab}.
+Functional Managers together with Program Operations will ensure the proper project codes are available on timecards.
 
 Rubin expects to pay the full rate for any scientist or engineer who contributes full-time or fractionally to operations.
 This is handled through indirect rates at \gls{NOIRLab} and direct charges to research accounts at \gls{SLAC}.
-Science time is included in the subcontracts of our partners at affiliated institutions through indirect charges
-similar to the case for \gls{NOIRLab}.
+% Science time is included in the subcontracts of our partners at affiliated institutions through indirect charges similar to the case for \gls{NOIRLab}.
 
-In Data Production, the base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to
-overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc;
-major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.},
-ad-hoc discussions and other interruptions.
-This work is counted as \gls{LOE}.
-It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
+% In \gls{RDM}, the base assumption is that 30\% of an individual's \RO operations time (i.e. 540 hours/year for a full-time developer, 432 hours/year for a full-time scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{SP}.}, ad-hoc discussions and other interruptions.
+%This work is counted as \gls{LOE}.
+%It is actively encouraged to allocate less than 30\% of an individuals time to \gls{LOE} where that is possible.
 
-Assuming no variation throughout the year, we therefore expect 105 hours of productive work from a developer, or 84 hours from a scientist, per month.
-Note that this is averaged across the year: some months, such as those containing major holidays, will naturally involve less working time than others: the remainder will necessarily include more working time to compensate. For other staff, the \gls{LOE} will be higher but include much more day to day activity than for the developer case.
+%Assuming no variation throughout the year, we therefore expect 105 hours of productive work from a developer, or 84 hours from a scientist, per month.
+%Note that this is averaged across the year: some months, such as those containing major holidays, will naturally involve less working time than others: the remainder will necessarily include more working time to compensate. For other staff, the \gls{LOE} will be higher but include much more day to day activity than for the developer case.
 
-Rather than working in hours, our \gls{JIRA} based system uses Story Points (\gls{SP}), with one \gls{SP} being defined as equivalent to four hours of effort (half a day's work) by a competent developer.
+%Rather than working in hours, our \gls{JIRA} based system uses Story Points (\gls{SP}), with one \gls{SP} being defined as equivalent to four hours of effort (half a day's work) by a competent developer.
 
 Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{SP} per \emph{average} month respectively.
 
