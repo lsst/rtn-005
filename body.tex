@@ -75,7 +75,7 @@ Individual roles in operations are defined at the lowest level.
 \caption{WBS elements for Rubin Observatory \label{tab:wbs}}\\
 
 \hline
-\gls{L2} \gls{WBS} & \gls{L3} \gls{WBS} & Description \tabularnewline
+L2 \gls{WBS} & L3 \gls{WBS} & Description \tabularnewline
 \hline
 \endhead
 
@@ -148,7 +148,7 @@ Technical staff in Chile at the summit facility may spend a much more significan
 % Note: These calculations are true for Construction but need to be updated for Rubin Operations since NOIRLab uses 1744 hours per year (83%) for scientists, scientists could have 20% or 50% for research, and research time and Training, Admin & DEI time is charged to RSS.  For Engineers, Training, Admin & DEI time is charged to ES.
 % We could also refer to the effort planning tool Phil has made ("Team Effort Planner" in Staffing Plan).  Right now, most people have "Commenter" permission in the STaffing Plan workbook and this is not sufficient to use the dropdown filter that TLs and ADs would need to use this tool.  We could move this to a stand-alone workbook.
 
-\gls{Rubin Operations} uses 1,726 hours per year as a fiducial value for effort estimation purposes. This figure is \emph{after} all vacations, sick leave, etc are taken into account. \gls{SLAC} may have different definitions for tracking their staff time. This value is used to estimate effort for activities and deliverables at the department level through planing epics and determines FTE needs.  
+\gls{Rubin Operations} uses 1,726 hours per year as a fiducial value for effort estimation purposes. This figure is \emph{after} all vacations, sick leave, etc are taken into account. \gls{SLAC} may have different definitions for tracking their staff time. This value is used to estimate effort for activities and deliverables at the department level through planing epics and determines FTE needs.
 
 In general, staff in \gls{Rubin Operations} roles at a given expected full-time equivalent (\gls{FTE}) effort level are expected to devote that fraction of their total work time to \RO.
 
@@ -244,13 +244,13 @@ Our basic annual timeline is laid out below; for more detail on the budget plann
       \item May: next \gls{FY} Sandboxing:
          \begin{itemize}
             \item Early May: Prepare and issue sandbox workbooks, one per department.
-            \item Early May Department management teams facilitate team-level sandbox pitches (including \gls{L2}/L3 milestones, changes to spending plans)
+            \item Early May Department management teams facilitate team-level sandbox pitches (including L2/L3 milestones, changes to spending plans)
             \item Late May: Sandboxing Workshop, for all ops teams and \gls{Director}'s Office.
          \end{itemize}
    \end{itemize}
 \item June-July: implement sandboxed changes.
    \begin{itemize}
-      \item Implement proposed changes to Staffing Plan, \gls{Risk} Register, \gls{JIRA}/Smartsheet \gls{L2}/L3 milestones
+      \item Implement proposed changes to Staffing Plan, \gls{Risk} Register, \gls{JIRA}/Smartsheet L2/L3 milestones
       \item End of June: Final Labor and Nonlabor budget for \gls{NOIRLab} \gls{POP}
       \item Update lab-wide budget models (\gls{RAS}) from Staffing and Nonlabor plans, for quarterly forecasting.
       \item July: derive next \gls{FY} contract and \gls{MPO} \glspl{SOW}.
@@ -331,9 +331,9 @@ carefully controlled.
 
 \subsection{Defining the Schedule with Milestones}
 
-Rubin Milestones are defined as \gls{JIRA} issues of type ``milestone''. As indicated above, the \gls{Director} (or their designate) defines the \gls{L1} milestones, the \glspl{AD} define their departments' \gls{L2} milestones, and the Team Leaders and \glspl{AD} define the \gls{L3} milestones for their teams.
+Rubin Milestones are defined as \gls{JIRA} issues of type ``milestone''. As indicated above, the \gls{Director} (or their designate) defines the L1 milestones, the \glspl{AD} define their departments' L2 milestones, and the Team Leaders and \glspl{AD} define the L3 milestones for their teams.
 
-\gls{L1}, \gls{L2} and most \gls{L3} milestones are defined as part of the annual planning \gls{cycle}, and prior to the year in which the work associated with them is due to be carried out. \glspl{AD} and Team Leaders communicate their milestones to the Program Coordinator, who enters them into Smartsheet and then creates a \gls{JIRA} issue of type ``milestone'' for each one.
+L1, L2 and most L3 milestones are defined as part of the annual planning \gls{cycle}, and prior to the year in which the work associated with them is due to be carried out. \glspl{AD} and Team Leaders communicate their milestones to the Program Coordinator, who enters them into Smartsheet and then creates a \gls{JIRA} issue of type ``milestone'' for each one.
 
 During the year, it is sometimes necessary to create new milestones (primarily at Level 3) that were omitted during the earlier planning phase. In this case, the team leader or \gls{AD} may create the \gls{JIRA} milestone directly, and alert the Program Coordinator to it for inclusion in the Smartsheet.
 
@@ -344,12 +344,12 @@ The following \gls{JIRA} fields must be filled out when defining a new milestone
 \item The \texttt{Summary} is also the milestone title, and is a concise description of when the milestone is reached.
 Example: \textit{``V5 \gls{WBS} workbook and Preliminary Cost Calculator implementation complete.''}
 \item The \texttt{Milestone Activity} field is equivalent to the activity that will take place in order to produce the deliverable and meet the milestone.  It should contain a sentence outlining the activity to be performed in order for the milestone to be reached and the deliverable to be produced. In the \gls{POP} document tables this is the ``Activity.''
-  Examples include \textit{``Deliver Data Preview 0.1 (DP0.1)''} (an \gls{L1} milestone) and \textit{``DP0.1 \gls{Data Release}: science-ready catalogs released from the \gls{IDF}''} (an \gls{L2} milestone that belongs to it).
+  Examples include \textit{``Deliver Data Preview 0.1 (DP0.1)''} (an L1 milestone) and \textit{``DP0.1 \gls{Data Release}: science-ready catalogs released from the \gls{IDF}''} (an L2 milestone that belongs to it).
 \item The \texttt{Deliverable} is a very terse list of the deliverables needed to reach the milestone.
   Example: \textit{``V5 \gls{WBS} workbook and Preliminary Cost Calculator.''}
 \item The \texttt{Description} text should contain more information detailing the scope of activity needed to complete the milestone.
   Example: \textit{``Upgrade the \gls{WBS} activity, labor and non-labor plans from V4 to V5 in order to capture a \gls{US} \gls{DF} at SLAC, a \gls{UK} \gls{DF}, and any other modifications needed, and estimate the corresponding budget.''}
-  Note that while only a subset of L1 and \gls{L2} milestones are actually listed in the \gls{NOIRLab} Program \gls{Operations} Plan (\gls{POP}), Rubin adopts the same structure for all its milestones.
+  Note that while only a subset of L1 and L2 milestones are actually listed in the \gls{NOIRLab} Program \gls{Operations} Plan (\gls{POP}), Rubin adopts the same structure for all its milestones.
 \item The \texttt{Due Date} is the latest date in the future by which the milestone needs to be reached.
   This date should be before or the same as the milestone's parent milestone's ``Milestone Due Date'' as shown in the Smartsheet, or the ``Due Date'' of the parent milestone in \gls{JIRA}.
 %\item The \texttt{Start Date} is the date when the work for the milestone should begin.
@@ -676,7 +676,7 @@ Progress on individual milestones is shown as the weighted total of Story Points
 
 High level milestone progress will be reported to \gls{SLAC} and \gls{NOIRLab} regularly.
 \gls{NOIRLab} reports will flow quarterly (or monthly) to the \gls{NSF}.
-Rubin will show progress on all \gls{L1} milestones and any \gls{L2} milestones called out in the \gls{POP}.
+Rubin will show progress on all L1 milestones and any L2 milestones called out in the \gls{POP}.
 
 % ======================================================================
 \section{Annual Budget Planning}
@@ -704,7 +704,7 @@ In May, the Departments and Teams hold a series of meetings to set their minor (
 We provide each department with a ``sandbox'' workbook to work up during this period.
 We initialize this sandbox with the department's labor and non-labor plans (that were used in setting the budget), the current staffing plan, the progress against milestones in the current fiscal year, and the major milestones for the coming fiscal year.
 We then invite them to ``scrub'' their plans, by working this sandbox up with analysis of recent performance, and any changes they want to propose for the next fiscal year, based on the minor milestones and associated activities they want to prioritize.
-We also invite them to scrub their part of the risk register, update their risk response plans in concert with their planned activities, and anticipate any requests beyond target they may need to make.
+We also invite them to scrub their part of the risk register, update their risk response plans in concert with their planned activities, and anticipate any \glspl{RBT} they may need to make.
 
 Typically, each team works on its part of the sandbox mostly independently, and then presents their scrubbed plan to the department's management team around mid-May in a ``pitch'' session.
 (We provide a template slide deck for each team's pitch, to ensure that all aspects of the sandboxing/scrubbing exercise are addressed.)
@@ -736,7 +736,7 @@ In September, the teams then plan work (for the first half of the new fiscal yea
 The ground-up spending plan developed during the annual \gls{cycle} is to cover operations work defined by the milestone activities, as well as any regular work captured in bucket epics.
 This work includes mitigation of risks held by the teams, as described in the response plans in the risk register.
 Any risks that are realized during the year will require action that is not budgeted for.
-Additional spending to address realized risks is enabled by Rubin's request beyond target (\gls{RBT}) process, whereby reserve funds are released for use by the departments in response to a specific mid-year request made in a custom Jira ticket.
+Additional spending to address realized risks is enabled by Rubin's \gls{RBT} process, whereby reserve funds are released for use by the departments in response to a specific mid-year request made in a custom Jira ticket.
 
 Standard terminology for financial reserves is that ``management reserve'' describes funds held back to pay for the unknown unknowns, while ``contingency reserve'' is used for known unknowns (i.e.\ the risks in the risk register).
 Rubin \gls{Operations}' two funding agencies offer differing guidelines on how reserve should be managed.
