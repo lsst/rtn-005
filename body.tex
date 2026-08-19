@@ -379,17 +379,17 @@ Before the start of a \gls{cycle}, milestones are confirmed by the \gls{Director
 The first essential step of developing the short term plan is to produce an outline of the program of work to be executed.
 In general, this should flow directly from the long term plan (\secref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
 
-While developing the \gls{cycle}, please:
+While developing the \gls{cycle}:
 
 \begin{itemize}
 \item Do not add \emph{artificial} padding or buffers to make the schedule look good;
 \item Do budget appropriate time for handling bugs and emergent issues;
-\item Reserve time for planning the following \gls{cycle}: it will have to be defined before this \gls{cycle} is complete;
+\item Reserve time for planning the following \gls{cycle}: it will have to be defined before the current \gls{cycle} is complete;
 \item Leave time for other necessary activities, such as cross-team collaboration meetings and writing documentation.
 \item Per the \gls{cycle} \gls{cadence}, ensure that new development will conclude (or, at a minimum, be in a releasable state) in time for the end of \gls{cycle} release.
 \end{itemize}
 
-Obviously, ensure that the program of work being developed is achievable by your team in the time available: ultimately, you will want to compare the number of \glspl{SP} your team is able to deliver (\secref{sec:effort}) with the sum of the \glspl{SP} in the \glspl{epic} you have scheduled (\secref{sec:planning-epics}), while also considering the skills and availability of your team.
+Ensure that the program of work being planned is achievable by the assigned team in the time available also considering the skills and availability of the team.
 It is better to under-commit and over-deliver than vice-versa, but, ideally, aim to estimate accurately.
 
 \subsubsection{Defining Epics} \label{sec:planning-epics}
@@ -400,13 +400,13 @@ Each \gls{epic} loaded into the plan must have this minimum set of fields filled
 \begin{itemize}
 \item A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' or ``emergent work'' (\secref{sec:bucket});
 \item The \texttt{Component} field set to the appropriate Department;
-\item The \texttt{Story Points} field set to a (non-zero) estimate of the effort required to complete the \gls{epic} in terms of \glspl{SP} (see \secref{sec:effort}).
 \item In the \texttt{Linked Issues} field, create a \textit{``blocks''} link to the parent milestone to reflect how that milestone contributes to achieving that milestone.
+\item The \texttt{Start Date} field set to the appropriate date, which is not earlier than the start date of the milestone it is labeled to achieve.
 \item The \texttt{Due Date} field set to the appropriate date, which does not exceed the due date of the milestone it is labeled to achieve.
 \item The \texttt{label} field is set to identify the fiscal year during which the work will be done. Examples are \gls{FY23} or \gls{FY24}.
 
 \end{itemize}
-The fields above are required to have values entered because they define the connection to Smartsheet where effort-tracking for the full project is done. Other fields in the \gls{epic} can also be filled in as needed.
+The fields above are required to have values entered because they define the tracking of progress. Other fields in the \gls{epic} can also be filled in as needed.
 
 Be aware that:
 
@@ -415,12 +415,9 @@ Be aware that:
   It is not possible to define an \gls{epic} that crosses the \gls{cycle} boundary (see \secref{sec:cycle-close} for the procedure when an \gls{epic} is not complete by the end of the \gls{cycle}).
 \item Indeed, where possible management activities \emph{should} be scheduled as \glspl{epic} with concrete deliverables in this \gls{element} rather than being handled as \gls{LOE}.
 \item The \gls{epic} should be at an appropriate level of granularity.
-  While short \glspl{epic} (a few \glspl{SP}) may be suitable for some activities, in general \glspl{epic} will describe a few months of time.
-  \Glspl{epic} allocated multiple hundreds of \gls{story} points are likely too broad to be accurately estimated.
-\end{itemize}
+  While short duration \glspl{epic} may be suitable for some activities, in general \glspl{epic} will describe a few months of time.
 
-
-Although it is possible---indeed, encouraged---to set the \texttt{assignee} field in \gls{JIRA} to the individual who is expected to carry out the bulk of the work in an \gls{epic}, this does not provide sufficient granularity for those cases when more than one person will be contributing.
+Although it is possible---indeed, encouraged---to set the \texttt{assignee} field in \gls{JIRA} to the individual who is expected to carry out the bulk of the work or is responsible for the work in an \gls{epic}, this does not provide sufficient granularity for those cases when more than one person will be contributing.
 
 % I don't see how this is done in \gls{JIRA} - Assignee only takes user names.  Do we want to be able to track resources or loading?  How is DM doing this in \gls{JIRA} now?
 % In fact, it is only required to provide a staff assignment in terms of ``resource types'' (i.e. scientists, senior scientists, developers, senior developers, etc).
@@ -439,7 +436,7 @@ deliver some particular new \gls{algorithm} based on the results of research
 is impossible: we cannot predict with any confidence when the
 breakthrough will occur.
 
-We therefore schedule research in \gls{timebox}ed \glspl{epic}: we allocate a certain amount of time based on the resources available, rather than on an estimate of time to completion.
+We therefore schedule research in \gls{timebox}ed \glspl{epic}: we allocate a certain amount of time based on the resources available.
 However, note that these \gls{timebox}ed \glspl{epic} should still provide concrete deliverables: they are not open-ended ``buckets'' as discussed elsewhere.
 
 \subsubsection{Bucket Epics} \label{sec:bucket}
@@ -496,8 +493,8 @@ There are two \gls{JIRA} issue types that are used for planning work on epics: S
 Epics have already been defined as part of the \gls{cycle} plan (see \secref{sec:planning-epics}).
 However, the \gls{epic} is not at an appropriate level for scheduling day-to-day work.
 Rather, each \gls{epic} is broken down into a series of self-contained ``stories''.
-A \gls{story} describes a planned activity worth between a small fraction of a SP and several \glspl{SP} (more than about 10 is likely an indication that the \gls{story} has not been sufficiently refined).
-It must be possible to schedule a \gls{story} within a single sprint, so no \gls{story} should ever be allocated more than 26 \glspl{SP}.
+A \gls{story} describes a planned activity with duration of a few days.
+It must be possible to schedule a \gls{story} within a single sprint, so no \gls{story} should ever be allocated more than the number of work days in the month in which it is planned.
 
 The process for breaking \glspl{epic} down into stories is not mandated. In
 some circumstances, it may be appropriate for the technical manager to
@@ -509,12 +506,9 @@ decision.
 It is not required to break all \glspl{epic} down into stories before the \gls{cycle} begins: it may be more appropriate to first schedule a few exploratory stories and use them to inform the development of the rest of the \gls{epic}.
 However, do break \glspl{epic} down to describe the stories which will be worked in an upcoming sprint (\secref{sec:sprinting}) before the sprint starts.
 When doing so, you may wish to leave some spare time to handle emergent work (discussed in \secref{sec:bucket}).
-Every \gls{epic} should contain \emph{at least} one \gls{story} with non-zero \gls{story} points assigned.
+Every \gls{epic} should contain \emph{at least} some time for this.
 
-Note that there is no relationship enforced between the \gls{SP} total estimated for the \gls{epic} and the sum of the \glspl{SP} of its constituent stories.
-It is therefore possible to over- or under-load an \gls{epic}.
-This will have obvious ramifications for the schedule.
-After execution is complete, comparing the total number of \gls{SP} on planned stories in an \gls{epic} to the number of \gls{SP} on the \gls{epic} itself affords the opportunity to refine time estimates going forward.
+After execution is complete, comparing the orignal planned duration to the actual duration affords the opportunity to refine  estimates going forward.
 
 %\subsection{Handling Bugs \& Emergent Work}
 %label{sec:bugs}
