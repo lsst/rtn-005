@@ -193,6 +193,7 @@ This is handled through indirect rates at \gls{NOIRLab} and direct charges to re
 
 %\subsection{Special Cases}
 
+\iffalse
 \subsubsection{Newcomers}
 \label{sec:newcomers}
 
@@ -201,11 +202,14 @@ In this case, the ratio of hours to \glspl{SP} increases, but the number of hour
 
 Note that specific activities related to ``onboarding'' and getting up to speed with operations can be ticketed as regular work.
 For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{SP}.
+\fi
 
+\iffalse
 \subsubsection{Team Leads and other Leadership Roles}
 
 Individuals in leadership roles may find it necessary to assign a larger fraction of their time to \gls{LOE} type work, and therefore spend fewer hours generating \glspl{SP}.
 The ratio of hours to \glspl{SP} remains constant, but the number of hours decreases.
+\fi
 
 % ======================================================================
 \section{Long Term Planning}
@@ -233,12 +237,12 @@ Our basic annual timeline is laid out below; for more detail on the budget plann
          \begin{itemize}
             \item \glspl{AD} review and/or add/edit major milestones
             \item Discuss in Ops Exec
-            \item Implement changes in Smartsheet and \gls{JIRA}
+            \item Implement changes in \gls{JIRA}
          \end{itemize}
       \item Late April: set next \gls{FY} (and \gls{FY}+2) budget:
          \begin{itemize}
             \item Early April: freeze planning tools (\gls{WBS} and Cost Calculator)
-            \item \gls{JOR}
+            \item \gls{JOR} - timing can vary
             \item \gls{RDO} issues departmental budget guidance based on costed and reviewed plan.
          \end{itemize}
       \item May: next \gls{FY} Sandboxing:
@@ -250,7 +254,7 @@ Our basic annual timeline is laid out below; for more detail on the budget plann
    \end{itemize}
 \item June-July: implement sandboxed changes.
    \begin{itemize}
-      \item Implement proposed changes to Staffing Plan, \gls{Risk} Register, \gls{JIRA}/Smartsheet L2/L3 milestones
+      \item Implement proposed changes to Staffing Plan, \gls{Risk} Register, \gls{JIRA} L2/L3 milestones
       \item End of June: Final Labor and Nonlabor budget for \gls{NOIRLab} \gls{POP}
       \item Update lab-wide budget models (\gls{RAS}) from Staffing and Nonlabor plans, for quarterly forecasting.
       \item July: derive next \gls{FY} contract and \gls{MPO} \glspl{SOW}.
@@ -261,8 +265,8 @@ Our basic annual timeline is laid out below; for more detail on the budget plann
       \item Semi-annual process of planning epics and L3s for next six months
       \item Planning for 2nd half may trigger major milestone changes needed in next \gls{FY}:
       \begin{itemize}
-         \item Collect requests, study feasibility in Smartsheet
-         \item Discuss at Ops-Exec, import changes into \gls{JIRA} and Smartsheet
+         \item Collect requests, study feasibility
+         \item Discuss at Ops-Exec, import changes into \gls{JIRA}
       \end{itemize}
    \end{itemize}
 \end{itemize}
@@ -276,11 +280,11 @@ The plan for Pre-Operations and Full Survey \gls{Operations} is embodied in:
 
 \begin{enumerate}
     \item A set of \emph{milestones}, each of which represents the delivery of a major aspect of \gls{Rubin Operations}, availability of specific functionality, or maintenance event for the telescope system.
-        Milestones are planned in Smartsheet and then officially defined in a \gls{JIRA} milestone issue.
+        Milestones are planned in the scrub workbook and then officially defined in a \gls{JIRA} milestone issue.
     \item A series of \emph{epics} describe major pieces of work.
-        Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific resource loads (staff assignments \gls{story} point values) and end dates.
-        All epics are linked to the milestone they are created to help deliver, although some epics might exist without linking to a milestone (level of effort or emergent work epics, for example).
-    \item A visualization of progress on work done towards achieving milestones is captured in Smartsheet, which directly tracks progress by rolling up issues that are completed inside of \gls{JIRA} epics that work together to deliver a given milestone.
+        Epics are associated with concrete, albeit high-level, deliverables or outcomes that culminate in the achievement of the above milestones, and have specific staff assignments and end dates.
+        All epics are linked to the milestone they are created to help deliver.
+    \item A visualization of progress toward achieving milestones is captured based on time-phased \gls{LOE}, with progress verified and, where necessary, adjusted by the Team Lead. Progress is directly tracked by rolling up the completion of issues within \gls{JIRA} epics, with the linked issues collectively contributing to the delivery of a given milestone.
 \end{enumerate}
 
 Milestones are allocated to one of three levels, defined as follows:
@@ -298,16 +302,17 @@ Some Level 2 milestones {\it may} be reported to the agencies as defined by the 
 \end{description}
 
 Some of these milestones are exposed to external reviewers; it is important that these be delivered on time and to specification.
-Level 1 and 2 milestones are under change control once they are defined and described in a \gls{JIRA} Milestone issue. Note the change control process is under development as a Pre-\gls{Operations} activity.
+Level 1 and 2 milestones are under change control once they are defined and described in a \gls{JIRA} Milestone issue. Any change there after must follow the defined Change Control process.
 
-Level 3 milestones are defined for use within Departments and not required to go under project change control, but properly adhering to the plan is important: your colleagues in other teams will use these milestones to align their schedules with yours, so they rely on you to be accurate.
+Level 3 milestones are defined for use within Departments and not required to go under project change control, but properly adhering to the plan is important: other teams will use these milestones to align their schedules, so they rely on accuracy.
 
 Epics should work to achieve milestones, i.e., they may be blocking issues on the milestones.
 When a detailed description of work for a given \gls{epic} is known, it is described in \gls{JIRA}.
 It should then be assigned to the appropriate \glspl{cycle}.
 
-Progress is tracked toward achieving milestones in Smartsheet by \gls{monitoring} completed \gls{story} points on linked issues in \gls{JIRA} epics and rolling up the total progress.
-To ensure success, \gls{JIRA} epics must be completely detailed out prior to a full 6-month \gls{cycle} and total effort should be estimated out for an entire fiscal year of effort, as detailed below.
+Progress is tracked against milestones in issues linked to \gls{JIRA} epics. For activities with defined start and end dates, progress is initially estimated based on elapsed time—for example, an activity scheduled over six months would be assumed to be 50% complete after three months. This time-based progress is then verified by the Team Lead and may be adjusted to reflect the actual status of the activity.
+
+To ensure success, \gls{JIRA} epics must be completely detailed out prior to a full 6-month \gls{cycle} and start and due dates must be estimated.
 All milestones should appear in \gls{JIRA} with a milestone issue type as the source of truth.
 
 \subsection{Planning Research Work}
@@ -333,9 +338,9 @@ carefully controlled.
 
 Rubin Milestones are defined as \gls{JIRA} issues of type ``milestone''. As indicated above, the \gls{Director} (or their designate) defines the L1 milestones, the \glspl{AD} define their departments' L2 milestones, and the Team Leaders and \glspl{AD} define the L3 milestones for their teams.
 
-L1, L2 and most L3 milestones are defined as part of the annual planning \gls{cycle}, and prior to the year in which the work associated with them is due to be carried out. \glspl{AD} and Team Leaders communicate their milestones to the Program Coordinator, who enters them into Smartsheet and then creates a \gls{JIRA} issue of type ``milestone'' for each one.
+L1, L2 and most L3 milestones are defined as part of the annual planning \gls{cycle}, and prior to the year in which the work associated with them is due to be carried out. \glspl{AD} and Team Leaders specify their milestones in the annual scrub from where the Program Coordinator takes the information and then creates a \gls{JIRA} issue of type ``milestone'' for each one.
 
-During the year, it is sometimes necessary to create new milestones (primarily at Level 3) that were omitted during the earlier planning phase. In this case, the team leader or \gls{AD} may create the \gls{JIRA} milestone directly, and alert the Program Coordinator to it for inclusion in the Smartsheet.
+During the year, it is sometimes necessary to create new milestones (primarily at Level 3) that were omitted during the earlier planning phase. In this case, the team leader or \gls{AD} may create the \gls{JIRA} milestone directly, and alert the Program Coordinator to it for tracking purposes.
 
 The following \gls{JIRA} fields must be filled out when defining a new milestone:
 \begin{itemize}
@@ -357,7 +362,7 @@ Example: \textit{``V5 \gls{WBS} workbook and Preliminary Cost Calculator impleme
 \item In the \texttt{Linked Issues} field, create a \textit{``blocks''} link to the parent milestone to reflect how that milestone contributes to achieving that milestone.
 \end{itemize}
 
-The Program Coordinators will ensure that the milestones that have been defined are correctly arranged in the Smartsheet, so that their epics appear nested beneath them.
+The Program Coordinators will ensure that the milestones that have been defined are correctly arranged so that their epics appear nested beneath them.
 % Should we describe the difference between Planning and Tracking sheets here?
 
 
@@ -365,7 +370,7 @@ The Program Coordinators will ensure that the milestones that have been defined 
 \section{Short Term Work Planning} \label{sec:cycle-plan}
 
 Short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
-Before the start of a \gls{cycle}, milestones are confirmed by the \gls{Director}'s Office, listed in Smartsheet, and detailed in the Milestone issue. Any team member can find the milestones in \gls{JIRA}.
+Before the start of a \gls{cycle}, milestones are confirmed by the \gls{Director}'s Office, and detailed in the Milestone Jira issue. Any team member can find the milestones in \gls{JIRA}.
 
 \subsection{Defining The Plan}
 
