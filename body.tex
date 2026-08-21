@@ -356,7 +356,7 @@ Example: \textit{``V5 \gls{WBS} workbook and Preliminary Cost Calculator impleme
   Example: \textit{``Upgrade the \gls{WBS} activity, labor and non-labor plans from V4 to V5 in order to capture a \gls{US} \gls{DF} at SLAC, a \gls{UK} \gls{DF}, and any other modifications needed, and estimate the corresponding budget.''}
   Note that while only a subset of L1 and L2 milestones are actually listed in the \gls{NOIRLab} Program \gls{Operations} Plan (\gls{POP}), Rubin adopts the same structure for all its milestones.
 \item The \texttt{Due Date} is the latest date in the future by which the milestone needs to be reached.
-  This date should be before or the same as the milestone's parent milestone's ``Milestone Due Date'' as shown in the Smartsheet, or the ``Due Date'' of the parent milestone in \gls{JIRA}.
+  This date should be before or the same as the milestone's parent milestone's ``Due Date'' of the parent milestone in \gls{JIRA}.
 %\item The \texttt{Start Date} is the date when the work for the milestone should begin.
 %  This is the date that the Smartsheet will use in a visual comparison between the fraction of work completed and the fraction of time elapsed, to help track progress on the epics.
 \item In the \texttt{Linked Issues} field, create a \textit{``blocks''} link to the parent milestone to reflect how that milestone contributes to achieving that milestone.
@@ -556,7 +556,7 @@ Broadly, executing a sprint falls into three stages:
 \item Preparation.
 
   The team assigns the work that will be addressed during the sprint by choosing from the pre-defined stories (\secref{sec:defining-stories}).
-  Each team member should be assigned a plausible amount of work, based on the per-\gls{story} \gls{SP} estimates and the likely working rate of the developer (see \secref{sec:effort}).
+  Each team member should be assigned a plausible amount of work, based on the \gls{story}.
 
   The process by which work is assigned to team members is a local
   management decision: the orthodox approach is to call a team-wide
@@ -582,10 +582,8 @@ Broadly, executing a sprint falls into three stages:
   rush on to the next challenge, but it is required to enable us to
   properly track progress as per \secref{sec:track-progress}.
 
-  When completing a \gls{story} we do not change the number of \glspl{SP} assigned to
-  it: the \gls{SP} total reflects our initial estimate of the work involved,
-  not the total time invested.
-  However, we should \textit{also} record the true \glspl{SP} expended on the issue.
+  When completing a \gls{story} we may have changed the due date if it was taking longer than expected. 
+  In the history of the ticket one can see such changes.
   This makes it possible to review the quality of our estimates at the end of the sprint.
   Each individual, with guidance from their Team Lead, should use this information as they strive to improve the accuracy of their planning and estimating.
 
@@ -648,15 +646,16 @@ Please remind your team of the best practice in this respect (\jira{RFC-147}).
 It is the responsibility of technical managers to ensure that new tickets are handled appropriately, updating the schedule to include them where necessary.
 
 It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
+%Both RFCs mentioned above a very old from 2016 - i'm not sure they are still current with out set up?
 This indicates which manager is responsible for seeing that the work is completed successfully.
 Available teams, and the associated managers, are listed in the \href{https://developer.lsst.io/processes/jira_agile.html}{Developer Guide}; generally speaking, they align with the the work breakdown structure described in \secref{sec:wbs}.
-Where there is uncertainty about which team should be responsible for a particular ticket, the “Data Production Management” team may be used to indicate that the \gls{AD} of Data Production is responsible for assigning the work.
+Where there is uncertainty about which team should be responsible for a particular ticket, the “Data Management” team may be used to indicate that the \gls{AD} of Data Management is responsible for assigning the work.
 
-Please regularly monitor \gls{JIRA} for incomplete tickets and update them appropriately.
+\gls{JIRA} should be regularly monitored for incomplete, overdue or unassigned tickets and updated appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \secref{sec:bucket}.
 
-\subsection{Coordination Standup}
-\label{sec:sup}
+%\subsection{Coordination Standup}
+%\label{sec:sup}
 
 
 % ======================================================================
@@ -666,15 +665,15 @@ Where tickets describe bugs or other urgent emergent work which cannot be deferr
 \subsection{Tracking Progress toward Milestones}
 \label{sec:track-progress}
 
-Progress on completing epics is visualized in Smartsheet.
-Smartsheet lists all Level 1 through Level 3 milestones in a gantt-chart style view.
+%Progress on completing epics is visualized in Smartsheet.
+%Smartsheet lists all Level 1 through Level 3 milestones in a gantt-chart style view.
 Each Level 1 milestone is achieved by completing a series of Level 2 and/or Level 3 milestones.
-Smartsheet tracks Story Points marked as complete in individual \gls{JIRA} epics in real time.
-Progress on individual milestones is shown as the weighted total of Story Points within each \gls{epic} contributing to the successful completion of the milestone.
+Progress is tracked against milestones in issues linked to JIRA epics. For activities with defined
+start and end dates, progress is estimated based on elapsed time
 
 \subsection{Reporting Cycle}
 
-High level milestone progress will be reported to \gls{SLAC} and \gls{NOIRLab} regularly.
+High level milestone progress will be reported to \gls{SLAC} and \gls{NOIRLab} monthly.
 \gls{NOIRLab} reports will flow quarterly (or monthly) to the \gls{NSF}.
 Rubin will show progress on all L1 milestones and any L2 milestones called out in the \gls{POP}.
 
@@ -710,7 +709,7 @@ Typically, each team works on its part of the sandbox mostly independently, and 
 (We provide a template slide deck for each team's pitch, to ensure that all aspects of the sandboxing/scrubbing exercise are addressed.)
 The teams then address the feedback they have been given by the management team, and then they present their scrubbed plans to the other teams in the department, the Directorate and Program \gls{Operations} teams from the \gls{Director}'s Office, and the teams in the other departments, at the sandbox workshop at the end of the month.
 This sandbox workshop at the end of May / beginning of June gives all the departments, including the \gls{Director}'s Office, a chance to review, and probe, the ground-up planning in each team.
-(In practice, only the four technical departments' management teams are likely to sit through the entire workshop, although it is organized inclusively so that anyone could choose to review all the scrubbed plans.)
+(In practice, only the three technical departments' management teams are likely to sit through the entire workshop, although it is organized inclusively so that anyone could choose to review all the scrubbed plans.)
 
 In most cases a team's proposed changes in effort distribution, staffing, and purchasing will either involve only small deviations from budget guidance, or stay within the ``box'' given to them.
 Teams may also coordinate their proposed changes so as to keep the department's overall spending plan within its budget.
@@ -743,6 +742,7 @@ Rubin \gls{Operations}' two funding agencies offer differing guidelines on how r
 \gls{DOE} allows reserves to be built up and carried forward at \gls{SLAC}, and used as both contingency and management reserve.
 \gls{DOE} \gls{HEP} holds additional reserves centrally, which can also be used as both contingency and management reserve.
 \gls{NSF} \gls{AST} allows line item budget over-estimation by up to 10\%, to allow for increases in cost.
+%do we need to mention NSF Office of Research Infrastructure (ORI)
 These generate carry-forward (along with any other under-spending that may occur), which we use as contingency reserve.
 \gls{NSF} holds management reserve centrally, to handle unexpected events.
 
@@ -754,6 +754,7 @@ While Rubin holds a number of potentially very costly risks, these are generally
 Currently, the total cost exposure, and hence the needed level of contingency reserve, is expected to be approximately 15\% of the total annual operating budget at each operations partner.
 Included in the risk register is the risk of federal funding allocations being reduced, with a likely cost (if realized in any given year) of some \$1.5M per operations partner.
 (At \gls{SLAC}, for example, this would cover about 7\% of the operating expense -- enough to pay the labor bills during a 1 month funding allocation delay.)
+%checking the above paragraph
 
 Reserve maintenance is accounted for in our federal budget requests, either as an explicit difference between cost and budget on the \gls{DOE} side, or as line by line allowances for increases in cost on the \gls{NSF} side.
 At both operations partners carry forward is maintained from one year's plan to the next, with it being spent down to zero either during the post-operations period (at \gls{SLAC}), or before the end of each 5-year renewal period at \gls{NOIRLab}.
@@ -777,25 +778,24 @@ The spending associated with an approved \gls{RBT} is not captured in a change t
 
 In addition to onboarding procedures at your local institution, please
 be aware of
-
 \begin{itemize}
 \item The \gls{LSST} \href{https://project.lsst.org/onboarding}{New Employee
   Onboarding} material, and
 \end{itemize}
+and direct new recruits to them when they join your team\footnote{As per \secref{sec:newcomers}, remember that newcomers should be allocated a Story for working through this material.}.
 
-and direct new recruits to them when they join your team\footnote{As per \secref{sec:newcomers}, remember that newcomers should be allocated \glspl{SP} for working through this material.}.
-
-The responsible   must also complete an \href{https://project.lsst.org/onboarding/form}{onboarding form} for the new recruit.
-When members of staff team leave the project, the \gls{T/CAM} should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
+The responsible must also complete an \href{https://project.lsst.org/onboarding/form}{onboarding form} for the new recruit.
+When team members leave the project, the team leader/supervisor should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
 
 
 % ======================================================================
+\iffalse
 \section{Open issues}
 
 \begin{itemize}
 \item Kanban for \gls{LOE} operations work
 \item Need section on more procedural driven work on mountain and \gls{DF}.
 \end{itemize}
-
+\fi
 
 % ======================================================================
